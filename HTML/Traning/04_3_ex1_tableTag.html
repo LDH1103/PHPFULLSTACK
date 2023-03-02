@@ -6,14 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table {
-            border: 1px solid black;
-            border-collapse: collapse;
+        
+        table,th,td {
+            border: 1px solid #ccc;
         }
+
 
         th,td {
             border: 1px solid black;
+            padding:  10px 20px;
         }
+
+        td:last-child {
+            width: 200px;
+        }
+
     </style>
 </head>
 
@@ -31,7 +38,9 @@
             <td>90점</td>
         </tr>
     </table>
-    <br><br><br>
+
+    <br><hr><br>
+
     <table>
         <caption>반 성적</caption>
         <tr>
@@ -45,6 +54,29 @@
         <tr>
             <th>90점</th>
             <td>80점</td>
+        </tr>
+    </table>
+
+<br><hr><br>
+
+    <h1>수습 국원 지원 양식</h1>
+    <table>
+        <tr>
+            <th rowspan="3">개인정보</th>
+            <th>이름</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>학과/학번</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>연락처</th>
+            <td></td>
+        </tr>
+        <tr>
+            <th>지원 분야</th>
+            <td colspan="2"></td>
         </tr>
     </table>
 
