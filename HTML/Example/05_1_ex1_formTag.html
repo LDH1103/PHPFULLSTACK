@@ -18,13 +18,97 @@
             <!--label은 없어도되지만, 유저의 편의성을 위해 사용, ID라는 글자를 클릭해도 포커스를 입력창으로 잡아줌-->
             <label for="id">ID</label>
             <!--input은 입력창을 만들어줌-->
-            <input type="text" name="id" id="id">
             <!--name값은 중복될수있지만, id값은 중복되면안됨-->
-            <input type="text" name="id" id="id_1">
-            <br>
+            <!--maxlength값은 최대입력갯수 제한,프론트에서도 제한하지만 백앤드에서도 자한하는 잉는 악성유저의 해킹을 막기위함(개발자모드)-->
+            <!--size는 입력창의 width를 조절함-->
+            <input type="text" name="id" id="id" maxlength="10" size="10">
+            <br><br>
+
+            <!--현업에서 쓰는 암시적인 label,위의 label은 명시적, 명시적으로 적기를 권장-->
+            <label>
+                ID_1
+                    <input type="text" name="id_1" id="id_1">
+            </label>
+
+            <br><br>
             <label for="pw">PW</label>
             <!--input type="password"값은 입력값을 *로표시-->
-            <input type="password" name="pw" id="pw">
+            <input type="password" name="pw" id="pw" maxlength="15" size="10">
+            <br><br>
+
+            <!--search는 검색창, 웹브라우저가 검색창이라고 인식하게함-->
+            <label for="search">search</label>
+            <input type="search" name="search" id="search">
+            <br><br>
+
+            <!--url은 웹 주소를 입력,웹주소가 맞는지 확인해줌,현업에선 쓰이지않음-->
+            <label for="url">url</label>
+            <input type="url" name="url" id="url">
+            <br><br>
+
+            <!--email은 email양식이 맞는지 확인해줌,현업에선 쓰지않음-->
+            <label for="email">email</label>
+            <input type="email" name="email" id="email">
+            <br><br>
+            
+            <!--tel은 전화번호 입력,PC는 확인해주지않고, 모바일에서 확인해줌
+                모바일에서 키보드가 올라올때,숫자로 올라옴-->
+            <label for="tel">tel</label>
+            <input type="tel" name="tel" id="tel">
+            <br><br>
+            
+            <!--checkbox는 체크박스,보통 div로 묶어줌-->
+            <ul>
+                <li>
+                    <label for="sb">딸기</label>
+                    <input type="checkbox" name="sb" id="sb">
+                </li>
+                <li>
+                    <label for="banana">바나나</label>
+                    <input type="checkbox" name="banana" id="banana">
+                </li>
+                <li>    
+                    <label for="wm">수박</label>
+                    <input type="checkbox" name="wm" id="wm">
+                </li>
+            </ul>
+            <br><br>
+            
+            <!--radio태그는 체크박스를 만들지만, 하나밖에 체크할수없음,name값을 하나로 통일-->
+            <!--input value=""에는 백엔드로 전송되는 값, 보통 약속된 값을 넣음-->
+            <ul>
+                <li>
+                    <label for="r_sb">딸기</label>
+                    <input value="1" type="radio" name="fruit" id="r_sb">
+                </li>
+                <li>
+                    <label for="r_banana">바나나</label>
+                    <input value="2" type="radio" name="fruit" id="r_banana">
+                </li>
+                <li>    
+                    <label for="r_wm">수박</label>
+                    <input value="3" type="radio" name="fruit" id="r_wm">
+                </li>
+            </ul>
+            <br><br>
+
+            <!--number은 숫자만 입력가능,숫자값 조절 화살표 버튼도 생김-->
+            <!--value=""은 초기에 입력될 값을 적어줌, min은 최솟값, max는 최댓값-->
+            <label for="number">Number</label>
+            <input type="number" value="5" min="1" max="5">
+            <br><br>
+            
+            <!--range는 슬라이더 바-->
+            <label for="range">Range</label>
+            <input type="range" value="3" min="1" max="5">
+            <br><br>
+            
+            <!--date는 달력,min은 선택할수있는 최소날짜, max는 최대날짜-->
+            <label for="date">date</label>
+            <input type="date" min="2023-03-01" max="2023-03-07">
+            <br><br>
+
+            <button>버튼</button>
         </fieldset>
         <fieldset>
             <legend>배송 정보</legend>
