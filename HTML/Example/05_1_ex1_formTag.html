@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!--action은 백앤드랑 연결-->
+    <!--method="get"방식은 입력값을 URL에 보여줌, post방식은 입력값 암호화됨(id,pw,전화번호 등)-->
+    <form action="" method="">
+        <!--fieldset태그는 하나로묶어줌-->
+        <fieldset>
+            <legend>고객 정보</legend>
+            <!--input 태그를 사용할때 lael과 함께 사용함, label for는 input의 id=""값과 맞춰줘야함-->
+            <!--label은 없어도되지만, 유저의 편의성을 위해 사용, ID라는 글자를 클릭해도 포커스를 입력창으로 잡아줌-->
+            <label for="id">ID</label>
+            <!--input은 입력창을 만들어줌-->
+            <input type="text" name="id" id="id">
+            <!--name값은 중복될수있지만, id값은 중복되면안됨-->
+            <input type="text" name="id" id="id_1">
+            <br>
+            <label for="pw">PW</label>
+            <!--input type="password"값은 입력값을 *로표시-->
+            <input type="password" name="pw" id="pw">
+        </fieldset>
+        <fieldset>
+            <legend>배송 정보</legend>
+        </fieldset>
+    </form>
+
+</body>
+</html>
