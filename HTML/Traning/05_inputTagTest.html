@@ -7,44 +7,48 @@
     <title>Document</title>
 </head>
 <body>
+    
     <h1>회원 가입을 환영합니다</h1>
+
     <form action="">
         <fieldset>
             <legend>사용자 정보</legend>
             <ul>
                 <li>
                     <label for="id">아이디</label>
-                    <input type="text" required placeholder="4자 ~ 10자 사이, 공백 없이">
+                    <input type="text" id="id" required placeholder="4자 ~ 10자 사이, 공백 없이">
                 </li>
                 <li>
                     <label for="email">이메일</label>
-                    <input type="email">
+                    <input type="email" id="email">
                 </li>
                 <li>
                     <label for="pw">비밀번호</label>
-                    <input type="password" required placeholder="문자와 숫자, 특수 기호 포함">
+                    <input type="password" id="pw" required placeholder="문자와 숫자, 특수 기호 포함">
                 </li>
                 <li>
-                    <label for="pw">비밀번호 확인</label>
-                    <input type="password" required>
+                    <label for="pwr">비밀번호 확인</label>
+                    <input type="password" id="pwr" required>
                 </li>
             </ul>
         </fieldset>
-
         <fieldset>
             <legend>이벤트와 새로운 소식</legend>
-            <input type="radio" name="mailing" id="mailing_y" value="mailing_y">
-            <label for="mail_y">메일 수신</label>
+            <!--div로 묶어주지 않아도 되지만, 현업에서는 개발자들의 가독성을 위해 같은 기능을 하면 div로 그룹화 해서 감싸줌-->
+            <div>
+                <input type="radio" name="mailing" id="mail_y" value="mailing_y">
+                <label for="mail_y">메일 수신</label>
 
-            <input type="radio" name="mailing" id="mailing_n" value="mailing_n">
-            <label for="mail_n">메일 수신 안 함</label>
+                <input checked type="radio" name="mailing" id="mail_n" value="mailing_n">
+                <label for="mail_n">메일 수신 안 함</label>
+            </div>
         </fieldset>
+        <!--버튼은 주변을 누르지않고 버튼만을 누르기때문에, 굳이 편의성을 위해 label을 줄필요 없음-->
+        <!--<button>가입하기</button>도 브라우저에서 submit과 동일하게 인식해주지만, button태그만으로 쓰면, 브라우저마다 구동방식이 다르기때문에, 예기치못한 버그가 생길수있음-->
+        <!--label이 없으니 name,id는 없어도 구동되긴 하지만, 백앤드에서 name,id가 변수가 되기때문에 넣어줌-->
+        <input type="submit" value="가입하기" name="submit" id="submit">
+        <input type="reset" value="취소" name="reset" id="reset">
         
-        <label for="button"></label>
-        <input type="button" value="가입하기">
-        <label for="reset"></label>
-        <input type="reset" value="취소">
-
     </form>
 
 </body>
