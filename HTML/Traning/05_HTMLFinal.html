@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 2</title>
+    <style>
+        #container {
+            width:520px;
+            border: 1px solid balck;
+            padding: 20px 40px;
+            margin: 0 auto;
+        }
+        fieldset {margin-bottom: 15px;}
+        legend {font-weight: bold;}
+        ul {list-style-type: none;}
+        li {line-height: 30px;}
+    </style>
+</head>
+<body>
+    <fieldset>
+        <div id="container">
+            <h1>프런트엔드 개발자 지원서</h1>
+            <p>HTML, CSS, Javascript에 대한 기술적 이해하고 실무 경험이 있는 분을 찾습니다.</p>
+            <hr>
+            <form>
+                <legend>개인 정보</legend>
+                <ul>
+                    <li>
+                        <label for="name">이름</label>
+                        <input type="text" id="name" name="name" placeholder="공백 없이 입력하세요">
+                    </li>
+                    <li>
+                        <label for="tel">연락처</label>
+                        <input type="tel" id="tel" name="tel">
+                    </li>
+                </ul>
+                <legend>지원 분야</legend>
+                    <ul>
+                        <li>
+                            <input type="radio" value="0" name="sel" id="selw" checked>
+                            <label for="selw">웹 퍼블리싱</label>
+                        </li>
+                        <li>
+                            <input type="radio" value="1" name="sel" id="selwa">
+                            <label for="selwa">웹 애플리케이션 개발</label>
+                        </li>
+                        <li>
+                            <input type="radio" value="2" name="sel" id="seld">
+                            <label for="seld">개발 환경 개선</label>
+                        </li>
+                    </ul>
+                <legend>지원 동기</legend>
+                <label for="textbox"></label>
+                <textarea name="memo" id="textbox" cols="60" rows="5" placeholder="본사 지원 동기를 간략히 써 주세요."></textarea>
+                <br>
+                <div>
+                    <input type="submit" value="접수하기">
+                    <input type="reset" value="다시쓰기">
+                </div>
+            </form>
+        </div>
+    </fieldset>
+
+</body>
+</html>
