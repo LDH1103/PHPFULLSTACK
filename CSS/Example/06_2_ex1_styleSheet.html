@@ -5,20 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!--link태그로 css파일을 불러옴-->
+    <link rel="stylesheet" href="./css/06_2_ex1.css">
     <style>
-        /*h1은 선택자, color은 속성, red는 속성값*/
+        /*h1은 선택자(셀렉터), color은 속성, red는 속성값*/
+        /*html안에 css를 넣으면 내부 스타일, css파일을 따로 만들면 외부 스타일, 현업에서는 거의 외부스타일만 사용*/
         h1 {
             color: red;
             background-color: yellow;
-        }
-        span {
-            background-color: aqua;
         }
     </style>
 </head>
 <body>
     <!--태그로 감싸고있는 정보는 요소라고함-->
-    <h1>요리</h1>
-    <span>밥</span>
+    <h1>내부 스타일 적용</h1>
+
+    <span>외부 스타일 적용</span>
+
+    <!--태그 안에 넣으면 인라인 스타일, 현업에서는 인라인 스타일을 사용하지않음-->
+    <p style="color: blue;">인라인 스타일 적용</p>
+    
+
 </body>
 </html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /*css에서 *은 All,전체 선택자 */
+        * {
+            margin: 0;
+        }
+        
+        /* h1, a, span등의 태그는 타입 선택자 */
+        h1 {
+            color: blue;
+        }
+
+        /*class=""속성을 줘서 사용하면 클래스 선택자*/
+        .bk_gray {
+            background-color: gray;
+        }
+
+        /*id=""속성을 줘서 사용하면 ID 선택자*/
+        #cook1 {
+            font-size: large;
+        }
+
+        /*여러개의 태그나,아이디 등을 선택하면 그룹 선택자*/
+        p, em {
+            font-size: 50px;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="bk_gray">
+        <h1>요리</h1>
+        <span id="cook1">탕수육</span>
+        <p>탕수육 영어로 아시는분</p>
+        <em>아~ 탕수육</em>
+    </div>
+</body>
+</html>
