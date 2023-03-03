@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <!--action은 백앤드랑 연결-->
+    <!--form="action"은 백앤드랑 연결-->
     <!--method="get"방식은 입력값을 URL에 보여줌, post방식은 입력값 암호화됨(id,pw,전화번호 등)-->
     <form action="" method="">
         <!--fieldset태그는 하나로묶어줌-->
@@ -104,9 +104,30 @@
             <br><br>
             
             <!--date는 달력,min은 선택할수있는 최소날짜, max는 최대날짜-->
+            <!--type="" date, month, week 값도 있음-->
             <label for="date">date</label>
             <input type="date" min="2023-03-01" max="2023-03-07">
             <br><br>
+
+            <!--submit은 서버로 전송해줄수 있는 버튼을 만듦-->
+            <label for="submit"></label>
+            <!--value=""는 안의 값을 버튼안에 넣어줌-->
+            <input type="submit" value="submit">
+            <br><br>
+
+            <!--reset 값은 초기화버튼을 만듦, 같은 form태그 안의값만 지워줌-->
+            <label for="reset"></label>
+            <input type="reset">
+            <br><br>
+
+            <!--button은 가장 기본적인 아무것도 없는 버튼,value값을 지정해줘야함-->
+            <!--button은 아무런 기능이 없지만,javascript로 기능을 추가해줄수 있음-->
+            <label for="button"></label>
+            <input type="button" value="button">
+            <br><br>
+
+            <!--hidden은 label이 필요없음,관리자 모드에도 보이지않음, 유저에게 보여줄필요 없는 값을 세팅할때 사용-->
+            <input type="hidden" value="hidden_1">
 
             <button>버튼</button>
         </fieldset>
