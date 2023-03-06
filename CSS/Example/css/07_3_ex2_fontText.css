@@ -1,0 +1,26 @@
+.red {
+    border: 1px solid red;
+}
+/* text-align은 글자 정렬방향 */
+.tl_left {
+    text-align: left;
+}
+.tl_right {
+    text-align: right;
+}
+.tl_center {
+    text-align: center;
+}
+/* line-heigt는 줄간격,height와 같은값 */
+.tl_height {
+    line-height: 3em;
+    background-color: #b6afaf;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+}
+/* text-decoration은 글자 장식 */
+/* underline = 밑줄, line-through = 취소선 */
+.tl_deco {
+    text-decoration: none;  
+}

@@ -1,0 +1,19 @@
+/* text-shadow는 글자에 그림자넣기, 가로px , 세로px, 번짐 정도, 색깔 */
+.h1_shadow {
+    text-shadow: -5px -5px 5px black;
+}
+
+/* text-transform은 대소문자 바꾸기, capitalize = 첫글자를 대문자로, uppercase = 전체를 대문자로, lowercase = 전체를 소문자로 */
+.h1_tran {
+    text-transform: capitalize;
+}
+
+/* letter-spaacing은 글자간 간격 */
+.h1_spacing {
+    letter-spacing: 2em;
+}
+
+/* word-spacing은 단어간 간격, 현업에서는 사용하지 않음 */
+.h1_w_spacing {
+    word-spacing: 2em;
+}

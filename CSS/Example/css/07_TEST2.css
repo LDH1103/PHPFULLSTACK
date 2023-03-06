@@ -1,0 +1,11 @@
+span {
+    color: #ad3000;
+    font-weight: bold;
+}
+ul {
+    line-height: 2em;
+    height: 2em;
+}
+ul, li { 
+    list-style-type: none;
+}

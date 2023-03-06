@@ -1,0 +1,17 @@
+/* list-style-type은 목록 앞의 불릿모양 */
+/* decimal = 숫자, circle = 속이 빈 원, square = 속이 찬 사각형 */
+.cook_1 {
+    list-style-type: decimal;
+    /* list-style-position은 들여쓰기 */
+    list-style-position: inside;
+}
+
+/* 이미지 넣기 */
+.cook_2 {
+    list-style-image: url(../IMG/bullet.png);
+} 
+
+.cook_3 {
+    /* 한곳에 몰아써도됨 */
+    list-style: decimal inside;
+}
