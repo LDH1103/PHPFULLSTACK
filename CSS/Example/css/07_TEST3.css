@@ -7,7 +7,14 @@ h1 {
     padding-top: 10px;
 }
 .bk_black_a {
-    background-color: rgba(0, 0, 0,0.7)
+    position: absolute;
+    top: 65%;
+    margin: auto;
+}
+.bk_black_aa {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 800px;
+    margin-left: 0px;
 }
 .orange {
     color: #ffa500;
@@ -35,4 +42,11 @@ p {
 }
 .small {
     font-size: small;
+}
+.img_con {
+    position: relative;
+}
+.img {
+    width: 800px;
+    object-fit:cover
 }
