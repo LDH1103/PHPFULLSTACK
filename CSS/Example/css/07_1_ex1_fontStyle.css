@@ -1,0 +1,41 @@
+/* 굴림체가 있다면 굴림, 없다면 그다음으로 적은 바탕체가 적용됨 */
+html {
+    font-family: '굴림', '바탕';
+}
+
+.p1 {
+    font-size: medium;
+}
+.p2 {
+    font-size: xx-small;
+}
+.p3 {
+    font-size: xx-large;
+}
+.p1_px {
+    font-size: 20px;
+}
+/* em은 부모 요소가 가지고있는 크기대비 배율 */
+.p2_em {
+    font-size: 2em;
+}
+/* rem은 최상위 요소의 배율 (=<html>) */
+.p3_rem {
+    font-size: 2rem;
+}
+html {
+    font-size: 10px;
+}
+div {
+    font-size: 16px;
+}
+
+.p1_weight1 {
+    font-weight: 100;
+}
+.p1_weight2 {
+    font-weight: 400;
+}
+.p1_weight3 {
+    font-weight: 900;
+}

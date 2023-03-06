@@ -1,0 +1,28 @@
+table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,td {
+    border: 1px solid black;
+    padding: 10px;
+}
+h1 {
+    color: #FF0000;
+    border: 3px solid #ffaa00;
+    display: inline-block;
+}
+h2 {
+    border: 3px solid #ffaa00;
+}
+#size2 {
+    display: inline-block;
+}
+.blue {
+    color: #1500ff;
+    display: inline-block;
+}
+ol {
+    color:#03a600;
+    border: 3px solid #ffaa00;
+    inline-size: 15em;
+}
