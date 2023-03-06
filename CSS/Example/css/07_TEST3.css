@@ -1,0 +1,38 @@
+body {
+    font-weight: 900;
+}
+h1 {
+    color: white;
+    margin-left: 30px;
+    padding-top: 10px;
+}
+.bk_black_a {
+    background-color: rgba(0, 0, 0,0.7)
+}
+.orange {
+    color: #ffa500;
+    margin-left: 15px;
+    line-height: 1.5em;
+    padding-bottom: 10px;
+}
+.bk_black {
+    background-color: black;
+    color: #ffffff;
+    height: 2em;
+    line-height: 2em;
+}
+.center {
+    text-align: center;
+}
+h2 {
+    color: #ff0000;
+}
+.blue {
+    color: #0000ff;
+}
+p {
+    line-height: 1.5em;
+}
+.small {
+    font-size: small;
+}

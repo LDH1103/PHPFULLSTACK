@@ -1,0 +1,13 @@
+table {
+    /* border는 테이블에 선 넣기 = 굵기, 모양, 색깔 */
+    /* solid = 실선, dotted = 점선 */
+    border: 1px solid #000;
+    /* border-collapse는 표안의 간격 조절 */
+    /* collapse = 붙이기, separate = 띄우기 */
+    border-collapse: collapse;
+    /* caption-side는 캡션의 위치조절 */
+    caption-side: top;
+}
+th, td { 
+    border: 1px dotted #000;
+}
