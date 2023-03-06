@@ -8,27 +8,27 @@
 </head>
 <body>
     <form action="">
-        <!--textbox는 메모창을 만들어줌-->
+        <!-- textbox는 메모창을 만들어줌 -->
         <label for="textbox">메모</label>
-        <!--cols는 열(가로)길이, rows는 행(세로)길이-->
+        <!-- cols는 열(가로)길이, rows는 행(세로)길이 -->
         <textarea name="memo" id="textbox" cols="30" rows="10"></textarea>
         <br><br>
 
-        <!--select는 선택창(도시,나이 등)-->
-        <!--size를 넣으면, 선택란의 크기가 숫자만큼 늘어나지만, 거의 쓰이진않음-->
-        <!--multiple은 컨트롤키를 누르면 여러개 선택할수 있지만, 현업에서 쓰이진 않음, 보통 checkbox로 대체함-->
+        <!-- select는 선택창(도시,나이 등) -->
+        <!-- size를 넣으면, 선택란의 크기가 숫자만큼 늘어나지만, 거의 쓰이진않음 -->
+        <!-- multiple은 컨트롤키를 누르면 여러개 선택할수 있지만, 현업에서 쓰이진 않음, 보통 checkbox로 대체함 -->
         <select name="select" id="select" size="5" multiple>
-            <!--select\option은 선택가능한 값,value는 백앤드로 전송되는 값-->
+            <!-- select\option은 선택가능한 값,value는 백앤드로 전송되는 값 -->
             <option value="0">탕수육</option>
             <option value="1">커피</option>
-            <!--selected는 기본적으로 선택되어있는 값-->
+            <!-- selected는 기본적으로 선택되어있는 값 -->
             <option value="2" selected>밥</option>
         </select>
         <br><br>
 
-        <!--datalist는 input태그와 적어줘야 보임,value값을 보여주기때문에 현업에선 사용하지않음-->
+        <!-- datalist는 input태그와 적어줘야 보임,value값을 보여주기때문에 현업에선 사용하지않음 -->
         <label for="cook">요리</label>
-        <!--list 값은 id와 같아야함-->
+        <!-- list 값은 id와 같아야함 -->
         <input type="text" id="cook" list="datalist">
         <datalist name="datalist" id="datalist">
             <option value="0">밥</option>
@@ -37,7 +37,7 @@
         </datalist>
         <br><br>
 
-        <!--input태그의 버튼과의 차이점은, TTS에서 버튼이라고 알려줌-->
+        <!-- input태그의 버튼과의 차이점은, TTS에서 버튼이라고 알려줌 -->
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>
         <button type="button">Button</button>

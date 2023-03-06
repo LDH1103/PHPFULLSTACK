@@ -8,24 +8,24 @@
 </head>
 <body>
 
-    <!--form="action"은 백앤드랑 연결-->
-    <!--method="get"방식은 입력값을 URL에 보여줌, post방식은 입력값 암호화됨(id,pw,전화번호 등)-->
+    <!-- form="action"은 백앤드랑 연결 -->
+    <!-- method="get"방식은 입력값을 URL에 보여줌, post방식은 입력값 암호화됨(id,pw,전화번호 등) -->
     <form action="" method="">
-        <!--fieldset태그는 하나로묶어줌-->
+        <!-- fieldset태그는 하나로묶어줌 -->
         <fieldset>
             <legend>고객 정보</legend>
-            <!--input 태그를 사용할때 lael과 함께 사용함, label for는 input의 id=""값과 맞춰줘야함-->
-            <!--label은 없어도되지만, 유저의 편의성을 위해 사용, ID라는 글자를 클릭해도 포커스를 입력창으로 잡아줌-->
-            <!--입력창으로 포커스를 잡아줄려면, label for=""값과 input의 id값이 같아야함-->
+            <!-- input 태그를 사용할때 lael과 함께 사용함, label for는 input의 id=""값과 맞춰줘야함 -->
+            <!-- label은 없어도되지만, 유저의 편의성을 위해 사용, ID라는 글자를 클릭해도 포커스를 입력창으로 잡아줌 -->
+            <!-- 입력창으로 포커스를 잡아줄려면, label for=""값과 input의 id값이 같아야함 -->
             <label for="id">ID</label>
-            <!--input은 입력창을 만들어줌-->
-            <!--name값은 중복될수있지만, id값은 중복되면안됨-->
-            <!--maxlength값은 최대입력갯수 제한,프론트에서도 제한하지만 백앤드에서도 자한하는 잉는 악성유저의 해킹을 막기위함(개발자모드)-->
-            <!--size는 입력창의 width를 조절함-->
+            <!-- input은 입력창을 만들어줌 -->
+            <!-- name값은 중복될수있지만, id값은 중복되면안됨 -->
+            <!-- maxlength값은 최대입력갯수 제한,프론트에서도 제한하지만 백앤드에서도 자한하는 잉는 악성유저의 해킹을 막기위함(개발자모드) -->
+            <!-- size는 입력창의 width를 조절함 -->
             <input type="text" name="id" id="id" maxlength="10" size="10">
             <br><br>
 
-            <!--현업에서 쓰는 암시적인 label,위의 label은 명시적, 명시적으로 적기를 권장-->
+            <!-- 현업에서 쓰는 암시적인 label,위의 label은 명시적, 명시적으로 적기를 권장 -->
             <label>
                 ID_1
                     <input type="text" name="id_1" id="id_1">
@@ -33,32 +33,32 @@
 
             <br><br>
             <label for="pw">PW</label>
-            <!--input type="password"값은 입력값을 *로표시-->
+            <!-- input type="password"값은 입력값을 *로표시 -->
             <input type="password" name="pw" id="pw" maxlength="15" size="10">
             <br><br>
 
-            <!--search는 검색창, 웹브라우저가 검색창이라고 인식하게함-->
+            <!-- search는 검색창, 웹브라우저가 검색창이라고 인식하게함 -->
             <label for="search">search</label>
             <input type="search" name="search" id="search">
             <br><br>
 
-            <!--url은 웹 주소를 입력,웹주소가 맞는지 확인해줌,현업에선 쓰이지않음-->
+            <!-- url은 웹 주소를 입력,웹주소가 맞는지 확인해줌,현업에선 쓰이지않음 -->
             <label for="url">url</label>
             <input type="url" name="url" id="url">
             <br><br>
 
-            <!--email은 email양식이 맞는지 확인해줌,현업에선 쓰지않음-->
+            <!-- email은 email양식이 맞는지 확인해줌,현업에선 쓰지않음 -->
             <label for="email">email</label>
             <input type="email" name="email" id="email">
             <br><br>
             
-            <!--tel은 전화번호 입력,PC는 확인해주지않고, 모바일에서 확인해줌
-                모바일에서 키보드가 올라올때,숫자로 올라옴-->
+            <!-- tel은 전화번호 입력,PC는 확인해주지않고, 모바일에서 확인해줌
+                모바일에서 키보드가 올라올때,숫자로 올라옴 -->
             <label for="tel">tel</label>
             <input type="tel" name="tel" id="tel">
             <br><br>
             
-            <!--checkbox는 체크박스,보통 div로 묶어줌-->
+            <!-- checkbox는 체크박스,보통 div로 묶어줌 -->
             <ul>
                 <li>
                     <label for="sb">딸기</label>
@@ -75,8 +75,8 @@
             </ul>
             <br><br>
             
-            <!--radio태그는 체크박스를 만들지만, 하나밖에 체크할수없음,name값을 하나로 통일-->
-            <!--input value=""에는 백엔드로 전송되는 값, 보통 약속된 값을 넣음-->
+            <!-- radio태그는 체크박스를 만들지만, 하나밖에 체크할수없음,name값을 하나로 통일 -->
+            <!-- input value=""에는 백엔드로 전송되는 값, 보통 약속된 값을 넣음 -->
             <ul>
                 <li>
                     <label for="r_sb">딸기</label>
@@ -93,41 +93,41 @@
             </ul>
             <br><br>
 
-            <!--number은 숫자만 입력가능,숫자값 조절 화살표 버튼도 생김-->
-            <!--value=""은 초기에 입력될 값을 적어줌, min은 최솟값, max는 최댓값-->
+            <!-- number은 숫자만 입력가능,숫자값 조절 화살표 버튼도 생김 -->
+            <!-- value=""은 초기에 입력될 값을 적어줌, min은 최솟값, max는 최댓값 -->
             <label for="number">Number</label>
             <input type="number" value="5" min="1" max="5">
             <br><br>
             
-            <!--range는 슬라이더 바-->
+            <!-- range는 슬라이더 바 -->
             <label for="range">Range</label>
             <input type="range" value="3" min="1" max="5">
             <br><br>
             
-            <!--date는 달력,min은 선택할수있는 최소날짜, max는 최대날짜-->
-            <!--type="" date, month, week 값도 있음-->
+            <!-- date는 달력,min은 선택할수있는 최소날짜, max는 최대날짜 -->
+            <!-- type="" date, month, week 값도 있음 -->
             <label for="date">date</label>
             <input type="date" min="2023-03-01" max="2023-03-07">
             <br><br>
 
-            <!--submit은 서버로 전송해줄수 있는 버튼을 만듦-->
+            <!-- submit은 서버로 전송해줄수 있는 버튼을 만듦 -->
             <label for="submit"></label>
-            <!--value=""는 안의 값을 버튼안에 넣어줌-->
+            <!-- value=""는 안의 값을 버튼안에 넣어줌 -->
             <input type="submit" value="submit">
             <br><br>
 
-            <!--reset 값은 초기화버튼을 만듦, 같은 form태그 안의값만 지워줌-->
+            <!-- reset 값은 초기화버튼을 만듦, 같은 form태그 안의값만 지워줌 -->
             <label for="reset"></label>
             <input type="reset">
             <br><br>
 
-            <!--button은 가장 기본적인 아무것도 없는 버튼,value값을 지정해줘야함-->
-            <!--button은 아무런 기능이 없지만,javascript로 기능을 추가해줄수 있음-->
+            <!-- button은 가장 기본적인 아무것도 없는 버튼,value값을 지정해줘야함 -->
+            <!-- button은 아무런 기능이 없지만,javascript로 기능을 추가해줄수 있음 -->
             <label for="button"></label>
             <input type="button" value="button">
             <br><br>
 
-            <!--hidden은 label이 필요없음,관리자 모드에도 보이지않음, 유저에게 보여줄필요 없는 값을 세팅할때 사용-->
+            <!-- hidden은 label이 필요없음,관리자 모드에도 보이지않음, 유저에게 보여줄필요 없는 값을 세팅할때 사용 -->
             <input type="hidden" value="hidden_1">
 
             <button>버튼</button>

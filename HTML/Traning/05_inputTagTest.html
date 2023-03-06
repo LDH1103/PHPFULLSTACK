@@ -31,7 +31,7 @@
                     <input type="password" id="pwr" required>
                 </li>
                 <li>
-                    <!--span태그는 아무의미 없이, 태그로 감싸주기를 위한 태그-->
+                    <!-- span태그는 아무의미 없이, 태그로 감싸주기를 위한 태그 -->
                     <span>가입 경로</span><br>
 
                     <label for="select">가입 경로</label>
@@ -49,7 +49,7 @@
         </fieldset>
         <fieldset>
             <legend>이벤트와 새로운 소식</legend>
-            <!--div로 묶어주지 않아도 되지만, 현업에서는 개발자들의 가독성을 위해 같은 기능을 하면 div로 그룹화 해서 감싸줌-->
+            <!-- div로 묶어주지 않아도 되지만, 현업에서는 개발자들의 가독성을 위해 같은 기능을 하면 div로 그룹화 해서 감싸줌 -->
             <div>
                 <input type="radio" name="mailing" id="mail_y" value="mailing_y">
                 <label for="mail_y">메일 수신</label>
@@ -58,9 +58,9 @@
                 <label for="mail_n">메일 수신 안 함</label>
             </div>
         </fieldset>
-        <!--버튼은 주변을 누르지않고 버튼만을 누르기때문에, 굳이 편의성을 위해 label을 줄필요 없음-->
-        <!--<button>가입하기</button>도 브라우저에서 submit과 동일하게 인식해주지만, button태그만으로 쓰면, 브라우저마다 구동방식이 다르기때문에, 예기치못한 버그가 생길수있음-->
-        <!--label이 없으니 name,id는 없어도 구동되긴 하지만, 백앤드에서 name,id가 변수가 되기때문에 넣어줌-->
+        <!-- 버튼은 주변을 누르지않고 버튼만을 누르기때문에, 굳이 편의성을 위해 label을 줄필요 없음 -->
+        <!-- <button>가입하기</button>도 브라우저에서 submit과 동일하게 인식해주지만, button태그만으로 쓰면, 브라우저마다 구동방식이 다르기때문에, 예기치못한 버그가 생길수있음 -->
+        <!-- label이 없으니 name,id는 없어도 구동되긴 하지만, 백앤드에서 name,id가 변수가 되기때문에 넣어줌 -->
         <input type="submit" value="가입하기" name="submit" id="submit">
         <input type="reset" value="취소" name="reset" id="reset">
         
