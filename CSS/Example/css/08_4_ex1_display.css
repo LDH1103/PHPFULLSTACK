@@ -1,0 +1,33 @@
+.art_1 {
+    border: 3px solid red;
+    /* display: none은 화면에 표시되지않고, 영역을 차지하지않음 */
+    /* 접어두기 같은 기능을 구현할때 사용 */
+    /* display: none; */
+    /* display: block은 기본값 */
+    display: inline-block;
+}
+.div_2 {
+    border: 3px solid orange;
+}
+
+div {
+    border: 3px solid orange;
+}
+span {
+    border: 3px solid black;
+}
+/* art_2 > div는 art_2안에 있는 div태그만 */
+.art_2 > div,
+.art_2 > span {
+    display: inline-block;
+    
+    width: 150px;
+    height: 150px;
+}
+
+/* div태그(블록 레벨 요소)에만 width,height가 적용되고,
+span(인라인 요소)에는 되지않지만, display: inline-block을 준다면 적용됨 */
+.wh {
+    width: 150px;
+    height: 150px;
+}

@@ -1,0 +1,11 @@
+/* float : 떠있다, */
+img {
+    width: 150px;
+    float: left;
+}
+/* folat 취소시키기 : 
+취소시키고싶은 부분부터 clear:(float에 넣은 값 =left or right)
+both는 둘 다, 현업에서는 both를 많이사용 */
+.p_2 {
+    clear: both;
+}
