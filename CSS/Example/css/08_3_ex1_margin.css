@@ -1,0 +1,10 @@
+/* margin 중첩 : 세로로 나열된 상황에서는 
+    두 margin값 중 큰값만 들어감 */
+.container_1 {
+    border: 1px solid #000;
+    margin: 20px;
+}
+.container_2 {
+    border: 1px solid #000;
+    margin: 20px;
+}

@@ -1,0 +1,33 @@
+.div_border {
+    border: 1px solid #000000;
+}
+.div_none {
+    /* none값으로 굳이 설정해주는 이유 : javascript를 사용해서 클릭하면 사라지는 등의 액션을 넣기위해 */
+    border-style: none;
+}
+.div_solid {
+    border-style: solid;
+    /* border-width는 테두리의 두께, 
+    2개의 값을 넣으면 상하, 좌우
+    3개의 값을 넣으면 상, 좌우, 하
+    4개의 값을 넣으면 상, 우, 하, 좌 순서대로 설정가능 */
+    /* border-width: 1px 5px 10px 15px; */
+    
+    /* border-radius는 테두리를 둥글게 */
+    /* border-radius: 40%; */
+
+    /* border-top-left-radius 는 한쪽 모서리만 둥글게 */
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.div_dotted {
+    border-style: dotted;
+    /* border-color는 테두리의 색깔 */
+    border-color: #0000ff;
+}
+.div_dashed {
+    border-style: dashed;
+}
+.div_double {
+    border-style: double;
+}

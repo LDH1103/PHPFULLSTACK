@@ -1,12 +1,24 @@
 /* 크롬 개발자모드로 확인 */
+/* Box Sizing 속성은 HTML요소의 너비와 높이를 계산하는 방법을 지정합니다.
+
+    border-box
+	테두리와 안쪽 여백도 요소의 크기(width, height)로 고려합니다.
+	width를 100px로 설정하고 테두리와 안쪽 여백을 추가하면,
+	콘텐츠 영역이 줄어들어 총 너비 100px을 유지합니다.
+	대부분의 경우 이 편이 크기를 조절할 때 쉽습니다.
+
+	content-box
+	기본 CSS 박스 크기 결정법 입니다.
+	요소의 width를 100px로 설정하면 콘텐츠 영역이 100px 너비를 가지고,
+	테두리와 안쪽 여백은 별도로 설정 됩니다. */
 .h1_1 {
     background-color: gray;
     margin: 10px;
     padding: 20px;
     border: 3px solid red;
-    width: 100px;
-    height: 200px;
-    /* border-box는 안의 content기준이 아닌, */
+    width: 150px;
+    height: 150px;
+    /* content + margin + border 합쳐서 width값이 나오게 */
     box-sizing: border-box;
 }
 .h1_2 {
@@ -14,10 +26,15 @@
     margin: 10px;
     padding: 20px;
     border: 3px solid red;
-    width: 100px;
-    height: 200px;
-    /* content-box는 content의 너비와 높이, 현업에서는 잘 사용하지않음 */
+    width: 150px;
+    height: 150px;
+    /* content값만 width값이 나오게 */
     box-sizing: content-box;
+}
+/* 박스모델에 그림자 넣기, 수평거리, 수직거리, 흐림정도, 번짐정도, 색상, inset */
+/* inset은 그림자를 박스안으로 넣기 */
+.div_3 {
+    box-shadow: 10px 10px 15px 5px #000;
 }
 span {
     background-color: aqua;
