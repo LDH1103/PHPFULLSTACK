@@ -1,12 +1,12 @@
 #container {
     width: 1200px;
 }
-.header, .footer {
+header, footer {
     text-align: center;
     border: 1px solid #000;
     background-color: rgba(134, 130, 130, 0.103);
 }
-.header {
+header {
     height: 120px;
     line-height: 120px;
     text-align: center;
@@ -33,7 +33,7 @@
     line-height: 600px;
     text-align: center;
 }
-.footer {
+footer {
     height: 100px;
     line-height: 100px;
     clear: both;
