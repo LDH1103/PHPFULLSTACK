@@ -1,0 +1,48 @@
+main, section, article {
+    padding: 20px;
+}
+main {
+    background-color: yellow;
+}
+section {
+    background-color: aqua;
+    /* position: relative; */
+}
+article {
+    background-color: rgba(0, 0, 255, 0.404);
+    
+}
+.div_static {
+    background-color: white;
+    /* static은 기본값 */
+    /* position: static; */
+}
+.div_relative {
+    background-color: red;
+    /* relative는 원래위치에서 (top, bottom, ...) 30px만큼 이동, -값도 이동가능 */
+    /* 내가 기준 */
+    /* position: relative;
+    left: -30px; */
+}
+.div_absolute {
+    background-color: gray;
+    /* absolute는 기준점이 부모요소 중 static이 아닌 요소, 기본은 body태그 */
+    /* 부모태그가 기준 */
+    /* position: absolute;
+    top: 30px; */
+}
+.div_fixed {
+    background-color: green;
+    /* fixed는 viewport(실제 브라우저에 보이는 영역) 기준 */
+    /* 위로가기같은 고정되어있는것들 구현할때 사용 */
+    /* position: fixed;
+    bottom: 10%;
+    right: 10%; */
+}
+.div_sticky {
+    background-color: blueviolet;
+    /* sticky는 스크롤하면 고정됨 */
+    /* 부모요소 기준으로, 부모요소 안에서만 움직임 */
+    position: sticky;
+    top: 10px;
+}

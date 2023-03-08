@@ -1,0 +1,27 @@
+main {
+    width: 800px;
+    height: 900px;
+    border: 1px solid #000;
+    position: relative;
+}
+div {
+    border: 1px solid #000;
+}
+.pos1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 250px;
+}
+.pos2 {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    width: 250px;
+}
+.pos3 {
+    position: absolute;
+    left: 100px;
+    bottom: 100px;
+    width: 250px;
+}

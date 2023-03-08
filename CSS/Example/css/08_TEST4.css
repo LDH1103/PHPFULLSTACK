@@ -24,9 +24,11 @@ header {
 }
 .sb_left {
     width: 250px;
+    float: left;
 }
 .sb_right {
     width: 150px;
+    float: right;
 }
 .main {
     width: 800px;

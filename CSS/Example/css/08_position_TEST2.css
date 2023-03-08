@@ -1,0 +1,38 @@
+main {
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    width: 800px;
+    height: 600px;
+}
+div {
+    border: 1px solid #000;
+}
+.static {
+    background-color: #e7e5e5;
+    width: 600px;
+    height: 200px;
+    position: static;
+    margin: 5px 5px;
+}
+.relative-1 {
+    width: 600px;
+    height: 200px;
+    background-color: #e7e5e5;
+    position: relative;
+    margin: 10px 5px;
+}
+.relative-2 {
+    width: 600px;
+    height: 200px;
+    background-color: #e7e5e5;
+    position: relative;
+    left: 100px;
+    top: -50px;
+}
+.fixed {
+    width: 100px;
+    height: 100px;
+    background-color: #222;
+    position: fixed;
+    right: 30px;
+    top: 30px;
+}
