@@ -10,5 +10,5 @@ h1 {
     /* color: rgba(255, 0, 0, 0.5); */
 
     /* hs1은 현업에서 쓰이지않음, hue=색상, saturation=채도, lightness=명도*/
-    color: hsl(360, 100%, 50%);
+    color: hsl(0, 100%, 50%);
 }

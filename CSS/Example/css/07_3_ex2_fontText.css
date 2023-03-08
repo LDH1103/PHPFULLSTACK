@@ -22,5 +22,5 @@
 /* text-decoration은 글자 장식 */
 /* underline = 밑줄, line-through = 취소선 */
 .tl_deco {
-    text-decoration: none;  
+    text-decoration: line-through;  
 }
