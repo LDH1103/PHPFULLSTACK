@@ -1,0 +1,12 @@
+.bold {
+    font-weight: 1000;
+}
+body {
+    color: white;
+    background: url('../IMG/cat.jpg') repeat-x left bottom fixed ;
+    background-size: contain;
+    background-color: gray;
+}
+p {
+    font-size: 20px;
+}

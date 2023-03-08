@@ -1,0 +1,16 @@
+.div_liner {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #000;
+    /* 백그라운드에 선형 그라데이션 주기 */
+    /* to 방향(or 각도deg), 색깔 (%), 색깔 */
+    background: linear-gradient(45deg, red, orange 50%, yellow, green, blue, indigo, purple);
+}
+.div_radial {
+    width: 400px;
+    height: 200px;
+    border: 1px solid #000;
+    /* 백그라운드에 원형 그라데이션 주기 */
+    /* circle은 원형, ellipse는 타원형 */
+    background: radial-gradient(circle closest-side at 10% 20%,#f80909, #fbff05);
+}

@@ -1,0 +1,60 @@
+/* body {
+    background-image: url('../IMG/apple.png');
+} */
+.div_img {
+    /* background-img는 배경에 이미지넣기 */
+    /* 이미지 주소넣을때는 ' ' 안에넣기, 안넣어도 보통은 작동하지만, 경로상에 특수문자, 띄어쓰기가 있다면 에러남 */
+    /* 여러개 넣을수있음, 첫번째 이미지가 없다면 두번째, 두번째이미지가 없다면 세번째 */
+    background-image: url('../IMG/cat.jpg'), url('../IMG/bird.jpg');
+    width: 500px;
+    height: 400px;
+    /* background-size는 이미지의 크기 조절 */
+    /* px, %, em 가능 */
+    /* cover는 꽉차는 이미지로 만듦, 더큰쪽의 이미지는 자름
+    contain은 요소안에 이미지가 다 나타나게함(비율에 맞게 큰사이즈만 맞는사이즈로 조절) */
+    background-size: cover;
+}
+.background-repeat {
+    width: 2000px;
+    height: 1000px;
+    background-image: url('../IMG/bird.jpg');
+    /* background-repeat는 배경이미지를 반복할지,
+    기본값은 repeat, no-repeat는 반복안함
+    repeat-x는 x축으로 반복
+    repeat-y는 y축으로 반복
+    */
+    background-repeat: repeat-x;
+}
+.div_position {
+    border: 1px solid #000;
+    width: 1000px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-image: url('/CSS/Example/IMG/salad.jpg');
+    /* background-position은 어느위치를 기준으로 repeat할지 */
+    background-position: bottom 100px right 50px;
+    background-size: 50%;
+}
+.at_img {
+    background-image: url('/CSS/Example/IMG/salad.jpg');
+    background-attachment: scroll;
+    width: 150px;
+    height: 200px;
+    display: inline-block;
+    border: 1px solid rgb(136, 255, 0);
+    /* overflow: scroll은 div밖으로 content가 튀어 나간다면, 어떻게 처리할것인지 */
+    overflow: scroll;
+    background-size: 70%;
+}
+.div_im_scroll {
+    /* background-attachment: scroll는 스크롤을 내릴때 이미지 고정 */
+    background-attachment: scroll;
+}
+.div_im_fixed {
+    /* fixed는 viewport의 스크롤에 영향을 받음 */
+    background-attachment: fixed;
+}
+.div_im_local {
+    /* local은 이미지가 같이 스크롤됨 */
+    background-attachment: local;
+}

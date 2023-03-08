@@ -1,0 +1,10 @@
+h1 {
+    background-color: #ff0000;
+    border: 10px dashed #000;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    /* background-clip은 어느영역까지 배경색이 적용될지*/
+    /* 기본값은 border-box */
+    background-clip: content-box;
+}
