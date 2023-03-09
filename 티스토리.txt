@@ -1,6 +1,6 @@
 HTML용
 
-<h2 style="border-bottom: 3px solid #707070; font-weight: bold; padding: 5px;" data-ke-size="size26"></h2>
+<h2 style="border-bottom: 3px solid #707070; font-weight: bold; padding: 5px;" data-ke-size="size26"><a name=""></a></h2>
 <p data-ke-size="size16">&nbsp;</p>
 <pre id="code_1678196645180" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code></code></pre>
 <hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style7" />
@@ -8,7 +8,7 @@ HTML용
 
 HTML+CSS용
 
-<h2 style="border-bottom: 3px solid #707070; font-weight: bold; padding: 5px;" data-ke-size="size26"></h2>
+<h2 style="border-bottom: 3px solid #707070; font-weight: bold; padding: 5px;" data-ke-size="size26"><a name=""></a></h2>
 <p data-ke-size="size16">&nbsp;</p>
 <pre id="code_1678280880760" class="css" data-ke-language="css" data-ke-type="codeblock"><code></code></pre>
 <pre id="code_1678196645180" class="html xml" data-ke-language="html" data-ke-type="codeblock"><code></code></pre>
