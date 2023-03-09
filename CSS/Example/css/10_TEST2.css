@@ -14,6 +14,9 @@ fieldset {
     background-image: url('../IMG/uncle-sam.jpg');
     background-size: cover;
 }
+ul {
+    padding: 0;
+}
 li {
     margin: 20px;
     margin-left: 5px;
