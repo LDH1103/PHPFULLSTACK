@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+legend {
+    font-size: 40px;
+    font-weight: 900;
+    color: hotpink;
+}
+fieldset {
+    background-image: url(../IMG/cat.jpg);
+    background-size: cover;
+}
+li {
+    margin: 20px;
+    margin-left: 5px;
+    list-style: none;
+}
+.f_red::before {
+    content: '*';
+    color: red;
+}
+textarea {
+    background: none;
+    outline-color: red;
+}
+input:focus {
+    outline: none;
+    border: 1px solid red;
+}
+#name, #age {
+    background: none;
+}
+.button_hover {
+    border: 1px solid #000;
+    background-color: #000;
+    color: white;
+    position: absolute;
+    left: 30px;
+    visibility: hidden;
+}
+.div_hover  {
+    position: relative;
+}

@@ -1,0 +1,96 @@
+/* 
+    :link : 아직 방문하지 않은 요소에만 스타일을 적용
+    :visited : 방문 한적이 있는 요소에만 스타일을 적용
+    :hover : 마우스 포인터를 요소 위에 올렸을때 스타일을 적용
+    :active : 활성화(클릭, ...) 한 요소에 스타일을 적용
+    :focus : 포커스를 받은 요소에 스타일을 적용
+    :target : 앵커 대상에 스타일을 적용
+
+    위에적힌 순서 지키는게 좋음
+
+    :nth-child(n) : n번째 자식요소에 스타일을 적용, odd는 홀수 even은 짝수
+    A:nth-of-type(n) : A태그의 n번째 자식요소에 스타일을 적용
+    :not(selector) : (selector)가 아닌 자식 요소에 스타일을 적용
+
+    ::first-letter : 첫번째 글자만 스타일을 적용
+    ::first-line : 첫번째 줄만 스타일을 적용
+    ::before : ,content: ''; 안에 글자를 적어줄수있음
+    ::after : before과 마찬가지, 뒤에적어줌
+    ::selection : 드래그를 하면 스타일이 적용됨
+*/  
+
+ul {
+    list-style-type: none;
+}
+li a{
+    text-decoration: none;
+    color: white;
+}
+li a:hover {
+    color: black;
+}
+li {
+    float: left;
+    background-color: black;
+    width: 90px;
+    height: 7px;
+    line-height: 7px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid white;
+    font-weight: 500;
+    font-size: 1.4em;
+}
+li:hover {
+    background-color: rgba(0, 0, 0, 0.178);
+}
+.test:link {
+    color: aqua;
+}
+
+.test:visited {
+    color: yellowgreen;
+}
+
+.test:hover {
+    color: black;
+}
+input:focus {
+    outline: none;
+    border: 1px solid purple;
+}
+a:active {
+    background-color: aqua;
+}
+#target_1:target {
+    background-color: burlywood;
+}
+
+.container :nth-child(3) {
+    background-color: yellow;
+}
+.container h2:nth-of-type(2) {
+    background-color: greenyellow;
+}
+.container :not(p) {
+    background-color: pink;
+}
+.container_2 .pf_1::first-letter {
+    background-color: cornflowerblue;
+    font-size: 30px;
+}
+.container_2 .pf_2::first-line {
+    background-color: orange;
+}
+.pf_1 > span::before {
+    content: '중요';
+    color: red;
+}
+.pf_2 > span::after {
+    content: '중요';
+    color: red;
+}
+.container_2 p::selection {
+    background-color: aqua;
+    color: rgb(208, 255, 0);
+}
