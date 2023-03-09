@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-weight: 900;
 }
 legend {
     font-size: 40px;
@@ -9,7 +10,8 @@ legend {
     color: hotpink;
 }
 fieldset {
-    background-image: url(../IMG/cat.jpg);
+    width: 600px;
+    background-image: url('../IMG/uncle-sam.jpg');
     background-size: cover;
 }
 li {
@@ -29,17 +31,23 @@ input:focus {
     outline: none;
     border: 1px solid red;
 }
+.memo {
+    position: relative;
+    top: -110px;
+}
 #name, #age {
     background: none;
 }
+input:checked + label {
+    color: red;
+}
 .button_hover {
+    width: 240px;
     border: 1px solid #000;
     background-color: #000;
     color: white;
-    position: absolute;
-    left: 30px;
-    visibility: hidden;
+    display: none;
 }
-.div_hover  {
-    position: relative;
+#hover:hover + .button_hover{
+    display: inline-block;
 }
