@@ -4,7 +4,7 @@
     /* 접어두기 같은 기능을 구현할때 사용 */
     /* display: none; */
     /* display: block은 기본값 */
-    display: inline-block;
+    display: block;
 }
 .div_2 {
     border: 3px solid orange;

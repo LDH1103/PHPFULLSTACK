@@ -11,14 +11,14 @@
     2개의 값을 넣으면 상하, 좌우
     3개의 값을 넣으면 상, 좌우, 하
     4개의 값을 넣으면 상, 우, 하, 좌 순서대로 설정가능 */
-    /* border-width: 1px 5px 10px 15px; */
+    border-width: 1px 5px 10px 15px;
     
     /* border-radius는 테두리를 둥글게 */
     /* border-radius: 40%; */
 
     /* border-top-left-radius 는 한쪽 모서리만 둥글게 */
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
 }
 .div_dotted {
     border-style: dotted;
