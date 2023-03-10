@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.grid_container {
+    width: 50vw;
+    background-color: beige;
+    /* display: grid로 지정해주기 */
+    display: grid;
+    /* 100px을 가지는 행을 3개 만들어주겠다 */
+    /* grid-template-columns: 100px 100px 100px; */
+    /* fr : 비율, 1 : 2 : 1 비율로 넣고싶다 = 1fr 2fr 1fr*/
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    /* repeat(autofit,크기) : 반응형으로 만듬 */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* 반응형으로 늘어나고 줄어들 최저치,최대치를 정해줌 */
+    /* grid-template-rows: minmax(100px, 200px) minmax(100px, 200px); */
+    /* 열의크기를 순서대로 지정해줌 */
+    /* grid-template-rows: 1fr 1fr; */
+    /* grid 사이의 여백을 조절해줌, 위아래여백 좌우여백 순서 */
+    /* grid-gap: 10px 20px ; */
+}
+.grid_container2 {
+    width: 50vw;
+    background-color: beige;
+    display: grid;
+    /* auto-fit과의 차이 : fit은 빈공간을 메꿔주고, fill은 빈공간이 생김 */
+    grid-template-columns: repeat(auto-fill, minmax(100px,1fr));
+}
+.grid_item {
+    background-color: aqua;
+}
+.grid_item:nth-child(odd) {
+    background-color: darkkhaki;
+}
+.grid_item_1 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.grid_item_4 {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    /* grid-row: 2/3 이라고도 씀 */
+}

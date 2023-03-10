@@ -24,7 +24,7 @@
     /* nowrap은 기본값, 줄바꿈을 해주지 않음 */
     /* flex-wrap: nowrap; */
     /* wrap은 자식박스를 표시하기에 부모박스가 작다면, 줄바꿈을 해줌 */
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
     /* wrap-reverse는 주축을 뒤집어주며 줄을바꿔줌 */
     /* flex-wrap: wrap-reverse; */
 
@@ -50,10 +50,20 @@
     /* align-items: flex-end; */
     /* center는 중앙정렬 */
     /* align-items: center; */
+    
+    /* align-content : 교차축 기준으로 여러줄일때 정렬 방법을 지정 */
+    /*  */
+    align-content: space-between;
+}
+.item_3 {
+    /* align-self : 교차축을 기준으로 특정 항목만 정렬,자식 요소에 줘야함 */
+    /* flex-start는 기본값 */
+    /* align-self: flex-start; */
+    /* align-self: center; */
 }
 .flex_item {
     border: 1px solid #000;
-    width: 5vw;
-    height: 5vh;
+    width: 15vw;
+    height: 15vh;
     background-color: aqua;
 }
