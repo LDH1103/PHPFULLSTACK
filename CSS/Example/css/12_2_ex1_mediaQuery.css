@@ -1,0 +1,32 @@
+/* width가 900px이하일때 p태그의 background를 red로 주겠다 */
+/* @media (min-width: 900px) {
+    p {
+        background-color: red;
+    }
+} */
+/* width가 901 이상일때 p태그의 background를 blue로 주겠다 */
+/* @media (max-width: 901px) {
+    p {
+        background-color: blue;
+    }
+} */
+/* @media (max-width: 500px) {
+    p {
+        background-color: red;
+    }
+}
+@media (min-width: 501px) and (max-width: 700px) {
+    p {
+        background-color: blue;
+    }
+}
+@media (min-width: 701px) {
+    p {
+        background-color: green;
+    }
+} */
+
+/* HTML파일에 link로 넣어도됨 */
+@import url('./12_2_ex1.css');
+@import url('./12_2_ex1\ copy.css');
+@import url('./12_2_ex1\ copy\ 2.css');

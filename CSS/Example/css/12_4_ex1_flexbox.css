@@ -1,0 +1,59 @@
+/* flex에서 가로 : 주축, 세로 : 교차축이라고 함 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.flex_container {
+    background-color: gray;
+    width: 60vw;
+    height: 60vh;
+    display: flex;
+    /* flex-direction : 주축과 방향을 지정하는 속성 */
+    /* row는 기본값 : 주축 = 가로, 방향 = 왼쪽에서 오른쪽으로
+    flex-direction: row; */
+    /* row-reverse는 주축 = 가로, 방향 - 오른쪽에서 왼쪽으로
+    flex-direction: row-reverse; */
+
+    /* column은 주축 = 세로, 방향 = 위에서 아래로
+    flex-direction: column; */
+    /* column-reverse는 주축 = 세로, 방향 = 아래에서 위로
+    flex-direction: column-reverse; */
+
+    /* flex-wrap : 항목의 줄을 바꿔줄지 말지 정함 */
+    /* nowrap은 기본값, 줄바꿈을 해주지 않음 */
+    /* flex-wrap: nowrap; */
+    /* wrap은 자식박스를 표시하기에 부모박스가 작다면, 줄바꿈을 해줌 */
+    /* flex-wrap: wrap; */
+    /* wrap-reverse는 주축을 뒤집어주며 줄을바꿔줌 */
+    /* flex-wrap: wrap-reverse; */
+
+    /* flex-flow를 사용해 한번에 적어줄수있음 */
+    /* flex-flow: column wrap; */
+
+    /* justify-content : 주축 방향을 기준으로 정렬 */
+    /* flex-start는 기본값 */
+    /* justify-content: flex-start; */
+    /* end는 순서는 뒤집지 않고, 주축이 끝나는부분부터 배치 */
+    /* justify-content: end; */
+    /* center는 중앙정렬 */
+    /* justify-content: center; */
+    /* space-between은 시작점에 첫번째 자식블록을 두고, 끝부분에도 마지막 자식블록을 두며, 그 사이에 똑같은 간격으로 여백을 두고 나머지 자식 블록을 배치해줌 */
+    /* justify-content: space-between; */
+    /* space-aroun는 시작점과 끝점에도 여백을 줌 */
+    /* justify-content: space-around; */
+
+    /* align-items : 교차축을 기준으로 정렬 */
+    /* flex-start는 기본값 */
+    /* align-items: flex-start; */
+    /* flex-end는 끝점을 기준으로 정렬 */
+    /* align-items: flex-end; */
+    /* center는 중앙정렬 */
+    /* align-items: center; */
+}
+.flex_item {
+    border: 1px solid #000;
+    width: 5vw;
+    height: 5vh;
+    background-color: aqua;
+}
