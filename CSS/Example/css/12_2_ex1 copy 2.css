@@ -1,0 +1,5 @@
+@media (min-width: 701px) {
+    p {
+        background-color: green;
+    }
+}

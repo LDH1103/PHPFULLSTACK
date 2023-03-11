@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+div { 
+    /* viewport로 크기 지정해주기, width는 vw단위, height는 vh단위 */
+    /* 1당 viewport크기의 1% */
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 255, 0.356);
+    text-align: center;
+    font-size: 5vw;
+    font-weight: 900;
+    color: white;
+}
