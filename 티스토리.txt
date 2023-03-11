@@ -3,6 +3,9 @@
 
 <a name="1"></a>
 
+<hr contenteditable="false" data-ke-type="horizontalRule" data-ke-style="style7" />
+<p data-ke-size="size16">&nbsp;</p>
+
 HTML용
 
 <h2 style="border-bottom: 3px solid #707070; font-weight: bold; padding: 5px;" data-ke-size="size26"><a name=""></a></h2>
