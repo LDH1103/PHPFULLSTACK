@@ -1,5 +1,5 @@
 목록
-<li><a href="#1"> . </a></li>
+<li><a href="#1"></a></li>
 
 <a name="1"></a>
 
