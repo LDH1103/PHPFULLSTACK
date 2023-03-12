@@ -14,10 +14,16 @@ a {
     position: relative;
     place-items: center;
 }
+header {
+    margin: 0 auto;
+    width: 60vw;
+    min-width: 400px;
+    max-width: 500px;
+}
 .lang_choice {
     position: absolute;
     top: 1vh;
-    right: 1vw;
+    right: 0;
     display: block;
     min-width: 95px;
 }
