@@ -4,18 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>네이버 : 로그인</title>
+    <link rel="shortcut icon" href="../Example/IMG/naver.ico">
     <link rel="stylesheet" href="../Example/css/naverLogin_test.css">
 </head>
 <body>
     <header>
-        
+        <div class="top">
+            <a href="https://www.naver.com" class="logo"></a>
+            <div class="lang_choice">
+                <label for="language"></label>
+                <select name="language" id="language" title="언어 선택">
+                    <option value="kr">한국어</option>
+                    <option value="en">English</option>
+                    <option value="cn">中文(简体)</option>
+                    <option value="tw">中文(台灣)</option>
+                </select>
+            </div>
+        </div>
     </header>
     <main>
-
+        <form action="">
+            <div class="container_login">
+                <div class="login_menu">
+                    <ul class="menu_wrap">
+                        <li><a href="#" class="login_id">ID 로그인</a></li>
+                        <li><a href="#" class="color_ccc login_num">일회용 번호</a></li>
+                        <li><a href="#" class="color_ccc login_qr">QR코드</a></li>
+                    </ul>
+                </div>
+                <div class="id_pw">
+                    <label for="id"></label>
+                    <input class="idbox" type="text" id="id" name="id" placeholder="아이디" title="아이디" required autofocus>
+                    <label for="pw"></label>
+                    <input class="pwbox" type="pw" id="pw" name="pw" placeholder="비밀번호" title="비밀번호" required>
+                    <div class="login_etc">
+                        <span class="keep_login">
+                            <input type="checkbox" id="keep_login_checkbox">
+                            <label for="keep_login_checkbox" class="padding">로그인 상태 유지</label>
+                        </span>
+                        <span class="IP_position">
+                            <span>IP 보안</span>
+                            <input type="checkbox" id="IP" name="IP" class="IP_padding">
+                            <label for="IP"></label>
+                        </span>
+                    </div>
+                    <button class="login_button">로그인</button>
+                </div>
+            </div>
+        </form>
+        <div class="find">
+            <a href="#" class="border_r">비밀번호 찾기</a>
+            <a href="#" class="border_r">아이디 찾기</a>
+            <a href="#">회원 가입</a>
+        </div>
+        <div class="ad"></div>
     </main>
     <footer>
-
+        <div>
+            <span class="border_r"><a href="#">이용약관</a></span>
+            <span class="border_r"><a href="#" class="font_bold">개인정보처리방침</a></span>
+            <span class="border_r"><a href="#">책임의 한계와 법적고지</a></span>
+            <span><a href="#">회원정보 고객센터</a></span>
+        </div>
+        <div class="footer_margin_top">
+            <span class="mini_logo">
+                Copyright <span class="none"> © NAVER Corp.</span> All Rights Reserved.
+            </span>
+        </div>
     </footer>
 </body>
 </html>

@@ -1,4 +1,222 @@
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+a {
+    text-decoration: none;
+    color: rgb(146, 143, 143);
+}
+.top {
+    height: 186px;
+    position: relative;
+}
+.lang_choice {
+    position: absolute;
+    top: 1vh;
+    right: 1vw;
+    display: block;
+    min-width: 95px;
+}
+header .logo {
+    background-image: url(https://ssl.pstatic.net/static/nid/login/m_sp_00_common_978240a6.png);
+    background-size: 244px 107px;
+    display: inline-block;
+    margin-top: 108px;
+    vertical-align: top;
+    background-position: 0 -51px;
+    background-repeat: no-repeat;
+    width: 155px;
+    height: 30px;
+}
+#language {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 18px;
+    margin: 0 auto;
+    border: 1px solid #ccc;
+    padding: 4px 10px 6px 8px;
+}
+.container_login {
+    text-align: center;
+    margin: 0 auto;
+    height: 340px;
+}
+.login_id, .login_num {
+    align-content: center;
+    border-right: 1px solid #ccc;
+}
+.color_ccc {
+    color: rgb(122, 119, 119);
+}
+li > a {
+    color: #000;
+}
+ul {
+    width: 50vw;
+    height: 1vh;
+    list-style-type: none;
+    padding: 30px;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+li {
+    display: grid;
+    align-content: center;
+}
+.id_pw {
+    width: 50vw;
+    padding: 30px;
+    padding-top: 0;
+    font-size: 16px;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.idbox {
+    margin: 0 auto;
+    width: 90%;
+    padding: 14px 5px 14px 40px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-image: url(../IMG/naver_ID.ico);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 18px;
+}
+.idbox:focus {
+    outline: none;
+    border: 1px solid rgb(0, 184, 31);
+}
+.pwbox:focus {
+    outline: none;
+    border: 1px solid rgb(0, 184, 31);
+}
+.pwbox {
+    margin: 0 auto;
+    width: 90%;
+    padding: 14px 5px 14px 40px;
+    border: 1px solid #ccc;
+    border-top: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-image: url(../IMG/naver_PW.ico);
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 18px;
+}
+.login_etc {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: rgb(146, 143, 143);
+}
+.login_id::before {
+    margin: 10px;
+    content: url(../IMG/naver_login_color.ico);
+}
+.login_num::before {
+    margin: 10px;
+    content: url(../IMG/naver_login_num.ico);
+}
+.login_qr::before {
+    margin: 10px;
+    content: url(../IMG/qr.ico);
+}
+input[id="keep_login_checkbox"] + label {
+    display: block;
+    background: url(../IMG/naver_check.ico) no-repeat 0 0px / contain;
+}
+input[id="keep_login_checkbox"]:checked + label {
+    background: url(../IMG/naver_checked.ico) no-repeat 0 1px / contain;
+}
+input[type="checkbox"] {
+    display: none;
+}
+input[id="IP"] + label {
+    display: block;
+    width: 33px;
+    height: 18px;
+    background: url(../IMG/IP_check.ico) no-repeat 0 0px / contain;
+}
+input[id="IP"]:checked + label {
+    display: block;
+    background: url(../IMG/IP_checked.ico) no-repeat 0 0px / contain;
+}
+.IP_position {
+    display: flex;
+}
+.padding {
+    padding-left: 20px;
+}
+button {
+    display: block;
+    width: 100%;
+    margin-top: 30px;
+    padding: 13px 0 13px;
+    border-radius: 6px;
+    border: solid 1px rgba(0,0,0,.15);
+    background-color: #03c75a;
+    color: white;
+    font-size: 21px;
+    font-weight: 900;
+}
+.find {
+    font-size: 14px;
+}
+main {
+    margin-bottom: 20px;
+    max-width: 800;
+}
+main .border_r::after {
+    content: ' ';
+    margin-right: 5px;
+    border-right: 1px solid #ccc;
+}
+.ad {
+    content: url(../IMG/ad.png);
+    width: 55%;
+    height: auto;
+    margin: 20px auto;
+}
+footer a {
+    text-decoration: none;
+    color: rgb(146, 143, 143);
+    font-size: 12px;
+}
+.font_bold {
+    font-weight: 900;
+}
+footer .border_r::after {
+    content: ' ';
+    margin-right: 5px;
+    border-right: 1px solid #ccc;
+}
+footer > div > span {
+    font-size: 12px;
+    color: rgb(146, 143, 143);
+}
+.mini_logo::before {
+    content: url(../IMG/naver_mini_logo.jpg);
+}
+.none {
+    color: #000;
+}
+.footer_margin_top {
+    margin-top: 10px;
 }
