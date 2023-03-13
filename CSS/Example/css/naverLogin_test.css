@@ -101,6 +101,7 @@ li {
 .idbox {
     margin: 0 auto;
     width: 90%;
+    height: 20px;
     padding: 14px 5px 14px 40px;
     border: 1px solid #ccc;
     border-top-left-radius: 10px;
@@ -122,6 +123,7 @@ li {
 .pwbox {
     margin: 0 auto;
     width: 90%;
+    height: 20px;
     padding: 14px 5px 14px 40px;
     border: 1px solid #ccc;
     border-top: none;
