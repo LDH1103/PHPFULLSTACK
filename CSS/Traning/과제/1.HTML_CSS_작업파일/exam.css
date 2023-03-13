@@ -1,5 +1,5 @@
 /* grid */
-/* * {
+* {
     margin: 0;
     padding: 0;
     scroll-behavior:smooth;
@@ -86,11 +86,11 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.24);
     text-align: center;
-} */
+}
 
 
 /* flex */
-* {
+/* * {
     margin: 0;
     padding: 0;
     scroll-behavior:smooth;
@@ -178,4 +178,4 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.24);
     text-align: center;
-}
+} */
