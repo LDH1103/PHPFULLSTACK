@@ -1,5 +1,5 @@
 /* grid */
-* {
+/* * {
     margin: 0;
     padding: 0;
     scroll-behavior:smooth;
@@ -86,11 +86,11 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.24);
     text-align: center;
-}
+} */
 
 
 /* flex */
-/* * {
+* {
     margin: 0;
     padding: 0;
     scroll-behavior:smooth;
@@ -119,14 +119,14 @@ a:hover {
 .hero > h1 {
     width: 300px;
     margin-top: 100px;
-    margin-left: 20px;
+    margin-left: 3vw;
 }
 .hero > article {
     width: 500px;
     margin-top: 50px;
     margin-bottom: 50px;
-    margin-right: 20px;
-    padding: 50px;
+    margin-right: 3vw;
+    padding: 3vw;
 }
 .hero a {
     position: relative;
@@ -178,4 +178,4 @@ footer {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.24);
     text-align: center;
-} */
+}
