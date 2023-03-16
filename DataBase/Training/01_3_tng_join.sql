@@ -5,7 +5,8 @@ SELECT
 	, ti.title
 FROM employees emp
 	INNER JOIN titles ti
-		ON emp.emp_no = ti. emp_no
+		ON emp.emp_no = ti.emp_no
+WHERE ti.to_date >= NOW()
 ;
 
 -- 사원의 사원번호, 성별, 현재 월급을 출력
@@ -42,7 +43,6 @@ FROM employees emp
 WHERE dept.to_date >= NOW()
 ORDER BY emp.emp_no
 ;
-
 
 -- 현재 월급의 상위 10위까지 사원의 사번, 풀네임, 월급을 출력
 SELECT 
