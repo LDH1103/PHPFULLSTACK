@@ -1,4 +1,4 @@
-U-- UPDATE의 기본구조
+-- UPDATE의 기본구조
 -- UPDATE 테이블명
 -- SET ( 컬럼1 = 값1, 컬럼2 = 값2 )
 -- WHERE 조건
