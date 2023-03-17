@@ -40,7 +40,7 @@ FROM employees emp
 		ON emp.emp_no = dept.emp_no
 	INNER JOIN departments dep
 		ON dept.dept_no = dep.dept_no
-WHERE dept.to_date >= NOW()
+WHERE dept.to_date > NOW()
 ORDER BY emp.emp_no
 ;
 
