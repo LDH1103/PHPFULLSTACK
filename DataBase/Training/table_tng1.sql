@@ -1,3 +1,5 @@
+CREATE DATABASE test_1;
+
 USE test_1;
 
 -- employees
