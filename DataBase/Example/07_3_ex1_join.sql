@@ -32,7 +32,9 @@ FROM departments dept
 -- FROM 테이블1
 -- 	CROSS JOIN 테이블2
 -- WHERE 검색조건;
-
+SELECT dept.dept_no, dept.dept_name, d_m.emp_no
+FROM departments dept
+	CROSS JOIN dept_manager d_m;
 
 -- 4. SELF JOIN : 자기 자신을 조인
 -- SELECT 컬럼1, 컬럼2 ...

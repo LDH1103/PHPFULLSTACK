@@ -5,7 +5,7 @@ USE test_1;
 -- employees
 
 CREATE TABLE employees (
-	 emp_no INT(11) NOT NULL
+	emp_no INT(11) NOT NULL
 	, birth_date DATE
 	, first_name VARCHAR(14) NOT NULL
 	, last_name VARCHAR(16) NOT NULL
