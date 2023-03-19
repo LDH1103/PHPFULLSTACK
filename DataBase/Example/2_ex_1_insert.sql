@@ -9,7 +9,7 @@ INSERT INTO employees (
 VALUES 
 (
 	500000
-	,'1996-11-23'
+	, DATE(1996-11-23)
 	,'DongHo'
 	,'Lee'	
 	,'M'
