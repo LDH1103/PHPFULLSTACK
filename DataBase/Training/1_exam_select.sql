@@ -10,7 +10,7 @@ INSERT INTO employees (
 VALUES (
 	500001
 	,DATE(19961123)
-	,'DongHo'
+	,'DH'
 	,'Lee'	
 	,'M'
 	,NOW()
@@ -42,15 +42,15 @@ WHERE emp_no = 500001;
 -- 직책
 INSERT INTO titles (
 	emp_no
-	,title
-	,from_date
-	,to_date
+	, title
+	, from_date
+	, to_date
 )
 VALUES (
 	500001
-	,'Engineer'
-	,DATE(19961123)
-	,NOW()
+	, 'Engineer'
+	, DATE(19961123)
+	, NOW()
 )
 
 UPDATE titles
@@ -64,21 +64,23 @@ WHERE emp_no = 500001;
 -- 소속부서
 INSERT INTO dept_emp(
 	emp_no
-	,dept_no
-	,from_date
-	,to_date
+	, dept_no
+	, from_date
+	, to_date
 )
 VALUES (
 	500001
-	,'d009'
-	,DATE(19961123)
-	,DATE(99990101)
-);
+	, 'd004'
+	, DATE(19961123)
+	, DATE(99990101)
+)
+;
 
 UPDATE dept_emp
-SET	from_date = DATE(20230315)
-WHERE emp_no = 500001 
-	AND dept_no = 'd009';
+SET	
+	from_date = DATE(20230319)
+	, dept_no = 'd009'
+WHERE emp_no = 500000;
 
 SELECT *
 FROM dept_emp
@@ -146,15 +148,15 @@ WHERE emp_no = 111939;
 
 INSERT INTO dept_manager(
 	dept_no
-	,emp_no
-	,from_date
-	,to_date
+	, emp_no
+	, from_date
+	, to_date
 )
 VALUES (
 	'd009'
-	,500001
-	,DATE(20230315)
-	,DATE(99990101)
+	, 500001
+	, DATE(20230315)
+	, DATE(99990101)
 )
 
 SELECT *
@@ -220,7 +222,8 @@ WHERE emp_no = (
 						);
 -- 9번 
 SELECT AVG(salary)
-FROM salaries;
+FROM salaries
+WHERE to_date = DATE(99990101);
 
 -- 10번
 SELECT AVG(salary)
