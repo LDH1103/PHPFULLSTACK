@@ -5,18 +5,47 @@
 --  PK에만 적용할 수 있습니다.
 
 -- 2. auto_increment 생성
-CREATE TABLE 테이블명 (
+CREATE TABLE test_member (
 	mem_no		INT(11) PRIMARY KEY AUTO_INCREMENT
 	,mem_name	VARCHAR(50)
 );
 
+INSERT INTO test_member (mem_name)
+VALUES ('이동호');
+INSERT INTO test_member (mem_name)
+VALUES ('박상준');
+
+SELECT *
+FROM test_member;
+
+DELETE
+FROM test_member
+WHERE mem_no = 2;
+
+
+
+-- 2번을 지웠다고 해서 2번부터 다시 시작하는게 아닌, 3번 부터 시작함
+
+COMMIT;
+
 -- 3. auto_increment 수정
 --	- 이미 생성한 테이블의 컬럼에 추가할 때
+
+CREATE TABLE test_member (
+	mem_no		INT(11) PRIMARY KEY
+	,mem_name	VARCHAR(50)
+);
+
+
 ALTER TABEL 테이블명 MODIFY 컬럼명 INT NOT NULL AUTO_INCREMENT;
+
+ALTER TABLE test_member MODIFY mem_no INT(11) AUTO_INCREMENT;
 
 --	- auto_increment의 값을 초기화 할 때
 ALTER TABLE 테이블명 AUTO_INCREMENT=1;
-DELETE FROM 테이블명;
+
+ALTER TABLE test_member AUTO_INCREMENT=10;
+
 TRUNCATE TABLE 테이블명;
 
 -- 4. auto_increment사용시 주의사항
