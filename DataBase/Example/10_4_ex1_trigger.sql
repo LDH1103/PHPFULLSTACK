@@ -29,11 +29,28 @@
 	END $$
 	DELIMITER ;
 
+	DELIMITER $$
+	CREATE TRIGGER test_update
+	AFTER UPDATE
+	ON departments
+	FOR EACH ROW
+	BEGIN
+		UPDATE titles
+		SET title = 'trigger test'
+		WHERE emp_no = '10001';
+	END $$
+	DELIMITER ;
+
 5. 트리거 실행
 	설정한 테이블에서 설정한 쿼리를 실행하면 자동으로 작동
+	
+	UPDATE departments
+	SET dept_name = 'update test'
+	WHERE dept_no = 'd009';
 
 6. 트리거 확인
 	SHOW TRIGGERS;
 
 7. 트리거 삭제
-	DELETE TRIGGERS;
+	DROP TRIGGER 트리거 명;
+	DROP TRIGGER test_update;
