@@ -29,9 +29,9 @@
 	부분 완료(Partially Committed) : 트랜잭션의 마지막 연산까지 실행하고, Commit 연산이 실행되기 직전의 상태
 	완료(Committed) : 트랜잭션이 성공적으로 종료되어 Commit 연산을 실행한 후의 상태
 
-			실패 - 철회
+			실패(오류 발생) - 철회(ROLLBACK;)
 	활동 <
-			부분완료 - 완료
+			부분완료(COMMIT 실행 전) - 완료(COMMIT;)
 
 5. Transaction의 연산
 	- COMMIT;
