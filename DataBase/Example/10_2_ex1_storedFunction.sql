@@ -20,9 +20,21 @@
 		RETURN 반환값;
 	END $$
 	DELIMITER ;
+	
+	DELIMITER $$
+	CREATE FUNCTION fc_sum(num INT)
+		RETURNS INT
+	BEGIN
+		RETURN num + num + num;
+	END $$
+	DELIMITER ;
 
 4. 스토어드 함수 실행
 	SELECT 함수명(매개변수0);
 
+	SELECT fc_sum(3);
+
 5. 스토어드 함수 삭제
 	DROP FUNCTION 함수명;
+	
+	DROP FUNCTION fc_sum;

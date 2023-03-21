@@ -26,7 +26,7 @@
 		-- 
 		FETCH cur_sal INTO sal;
 
-		-- 행이 긑이면 루프 종료
+		-- 행이 끝이면 루프 종료
 		IF end_row THEN
 			LEAVE cursor_loop;
 		END IF;

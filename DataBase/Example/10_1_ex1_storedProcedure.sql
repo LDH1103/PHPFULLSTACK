@@ -40,8 +40,23 @@
 		END $$
 		DELIMITER;
 
+		DELIMITER $$
+		CREATE PROCEDURE test_proc(
+			IN in_num INT
+		) 
+		BEGIN
+			SELECT *
+			FROM employees
+			LIMIT in_num;
+		END $$
+		DELIMITER ;
+
 6. 프로시저 호출
 	CALL 프로시저명(매개변수);
+	
+	CALL test_proc(10);
 
 7. 프로시저 삭제
 	DROP PROCEDURE 프로시저명;
+	
+	DROP PROCEDURE test_proc;
