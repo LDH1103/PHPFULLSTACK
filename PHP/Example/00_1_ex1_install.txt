@@ -1,7 +1,8 @@
 1. PHP 설치
 	1-1. 다운로드 페이지 접속
 		https://windows.php.net/download
-	
+        8.2.4 Thread Safe zip파일
+
 	1-2. 각 설치 환경에 맞는 파일 다운로드
 		** 주의 : 실습은 Apache 웹서버를 사용할 것이므로 "Thread Safe" 버전을 받을 것 **
 		(VS16 x64 Thread Safe의 zip파일)
