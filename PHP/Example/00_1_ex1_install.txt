@@ -54,8 +54,8 @@
 				DirectoryIndex index.php index.html
 			</IfModule>
 		- 가장 마지막줄에 아래 설정 추가 (PHP연동 관련 설정)
-			PHPIniDir "C:/php8"
-			LoadModule php_module "C:/php8/php8apache2_4.dll"
+			PHPIniDir "C:/php8.2.4"
+			LoadModule php_module "C:/php8.2.4/php8apache2_4.dll"
 			AddHandler application/x-httpd-php .php
 			AddType application/x-httpd-php .php .html
 		- 저장
