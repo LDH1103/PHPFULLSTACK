@@ -1,48 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <!-- <label for="p1"></label>
+        <input type="number" id="p1" name="p1">
+        <input type="submit" value="제출"> -->
+        <label for="post"></label>
+        <input type="submit" value="0" id="p1" name="p1">
+        <input type="submit" value="1" id="p1" name="p1">
+        <input type="submit" value="2" id="p1" name="p1">
+    </form>
+</body>
+</html>
+
 <?php
-    // 0 ~ 10 값을 랜덤으로 받기 : rand(0, 10);
 
     // 0 = 가위, 1 = 바위, 2 = 보
     // $p1 = rand(0, 2);
-    // $p2 = rand(0, 2);
-    // $p1 = 2;
-    // $p2 = 2;
-    // $blank = ' ';
-    // $text_p1 = 'p1';
-    // $text_p2 = 'p2';
-    // $text_whowin = 'win';
-    // $text_draw = 'draw';
-    // $s_0 = '= scissors';
-    // $r_1 = '= rock';
-    // $p_2 = '= paper';
-
-
-    // if ($p1 < 0 || $p1 > 2 || $p2 < 0 || $p2 > 2) {
-    //     echo 'wrong value';
-    // } else if ($p1 === 0 && $p2 === 0) {
-    //     echo $text_p1.$blank.$s_0.$blank.$text_p2.$s_0.$blank.$text_draw;
-    // } else if ($p1 === 0 && $p2 === 1) {
-    //     echo $text_p1.$blank.$s_0.$blank.$text_p2.$blank.$r_1.$blank.$text_p2.$blank.$text_whowin;
-    // } else if ($p1 === 0 && $p2 === 2) {
-    //     echo $text_p1.$blank.$s_0.$blank.$text_p2.$blank.$p_2.$blank.$text_p1.$blank.$text_whowin;
-    // } else if ($p1 === 1 && $p2 === 0) {
-    //     echo $text_p1.$blank.$r_1.$blank.$text_p2.$blank.$s_0.$blank.$text_p1.$blank.$text_whowin;
-    // } else if ($p1 === 1 && $p2 === 1) {
-    //     echo $text_p1.$blank.$r_1.$blank.$text_p2.$r.$blank.$text_draw;
-    // } else if ($p1 === 1 && $p2 === 2) {
-    //     echo $text_p1.$blank.$r_1.$blank.$text_p2.$blank.$p_2.$blank.$text_p1.$blank.$text_whowin;
-    // } else if ($p1 === 2 && $p2 === 0) {
-    //     echo $text_p1.$blank.$p_2.$blank.$text_p2.$blank.$r_0.$blank.$text_p1.$blank.$text_whowin;
-    // } else if ($p1 === 2 && $p2 === 1) {
-    //     echo $text_p1.$blank.$p_2.$blank.$text_p2.$blank.$s_1.$blank.$text_p1.$blank.$text_whowin;
-    // } else if ($p1 === 2 && $p2 === 2) {
-    //     echo $text_p1.$blank.$p_2.$blank.$text_p2.$blank.$p_2.$blank.$text_p1.$blank.$text_whowin;
-    // } 
     
-
-    // 0 = 가위, 1 = 바위, 2 = 보
-    $p1 = rand(0, 2);
     $p2 = rand(0, 2);
-    // $p1 = 0;
+    $p1 = (int)$_POST['p1'];
+    var_dump($_POST);
+    
+    // $p2 = 0;
     $blank = ' ';
     $text_p1 = 'p1';
     $text_p2 = 'p2';
@@ -90,5 +76,5 @@
         $text_whowin = '비겼습니다';
     } echo $text_p1.$blank."\n".$text_p2.$blank."\n".$text_whowin;
 
-    
+
 ?>
