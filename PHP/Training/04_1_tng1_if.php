@@ -101,11 +101,11 @@
 
 
 
-    $score = 0;
-    $y_score = '당신의 점수는';
-    $scroe_is = '점 입니다';
-    $blank = ' ';
-    $grade = '<A>';
+    // $score = 0;
+    // $y_score = '당신의 점수는';
+    // $scroe_is = '점 입니다';
+    // $blank = ' ';
+    // $grade = '<A>';
 
 
     if ($score > 100 || $score < 0 )
