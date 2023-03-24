@@ -24,7 +24,7 @@
     $p2000 = 2000;
 
     echo "점심메뉴$line";
-    echo $tang.$blank.$p6000+$p2000.$line;
-    echo $zza.$blank.$p6000.$line;
-    echo $zzam.$blank.$p6000;
+    echo $tang.$blank.number_format($p6000 + $p2000).$line;
+    echo $zza.$blank.number_format($p6000).$line;
+    echo $zzam.$blank.number_format($p6000);
 ?>

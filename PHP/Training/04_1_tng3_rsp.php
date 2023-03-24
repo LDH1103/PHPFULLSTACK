@@ -40,14 +40,14 @@
     
 
     // 0 = 가위, 1 = 바위, 2 = 보
-    $p1 = rand(0, 2);
+    // $p1 = rand(0, 2);
+    $p1 = 0;
     $p2 = rand(0, 2);
-    // $p1 = 0;
+
     $blank = ' ';
     $text_p1 = 'p1';
     $text_p2 = 'p2';
-    $text_whowin = 'win';
-    $user_value = '';
+    $text_whowin = '';
 
 
     if ($p1 < 0 || $p1 > 2) {

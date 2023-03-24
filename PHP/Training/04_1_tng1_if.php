@@ -101,11 +101,11 @@
 
 
 
-    // $score = 0;
-    // $y_score = '당신의 점수는';
-    // $scroe_is = '점 입니다';
-    // $blank = ' ';
-    // $grade = '<A>';
+    $score = 990;
+    $y_score = '당신의 점수는';
+    $score_is = '점 입니다';
+    $blank = ' ';
+    $grade = '<A>';
 
 
     if ($score > 100 || $score < 0 )
@@ -138,7 +138,7 @@
         {
             $grade = '<F>';
         }
-        echo $y_score.$blank.$score.$scroe_is.$blank.$grade;
+        echo $y_score.$blank.$score.$score_is.$blank.$grade;
     }
 
 

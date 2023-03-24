@@ -2,13 +2,16 @@
 
     // swith 기본 구조
 
-    // switch ($variable) {
-    //     case 'value':
-    //         # code...
+    // switch (조건) {
+    //     case '값1':
+    //         값1일 경우 처리
     //         break;
-        
+    //     case '값2':
+    //         값2일 경우 처리
+    //         break;
+
     //     default:
-    //         # code...
+    //         어떤값도 아닐경우 처리
     //         break;
     // }
 
