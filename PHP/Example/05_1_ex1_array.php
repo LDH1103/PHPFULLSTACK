@@ -120,16 +120,24 @@
     // foreach( $array as $key => $ val ) {}
     // foreach( $array as $ val ) {}
 
-    // $arr1 = array(
-    //             "key1" => "val1"
-    //             , "key3" => "val3" 
-    //             , "key4" => "val4"
-    //             , "key2" => "val2"
-    //             );
-    // foreach( $arr1 as $key => $val )
+    $arr1 = array(
+                "key1" => "val1"
+                , "key3" => "val3" 
+                , "key4" => "val4"
+                , "key2" => "val2"
+                );
+                
+    // foreach( $arr1 as $key => $val ) // key값까지
     // {
     //     echo $key." : ".$val."\n";
     // }
+
+    // foreach( $arr1 as $val ) // value만
+    // {
+    //     echo $val."\n";
+    // }
+
+
 
     // $arr1 = array(
     //             "a" => "1"
@@ -142,15 +150,15 @@
     //     echo $i." : ".$j."\n";
     // }
 
-    $arr_food = array(
-                    "된장찌개" => "파"
-                    , "볶음밥" => "양파"
-                    , "김치" => "마늘"
-                    , "비빔밥" => "참기름"
-                    );
-    foreach( $arr_food as $key => $val )
-    {
-        echo $key." 주 재료 : ".$val."\n";
-    }
-    
+    // $arr_food = array(
+    //                 "된장찌개" => "파"
+    //                 , "볶음밥" => "양파"
+    //                 , "김치" => "마늘"
+    //                 , "비빔밥" => "참기름"
+    //                 );
+    // foreach( $arr_food as $key => $val )
+    // {
+    //     echo $key." 주 재료 : ".$val."\n";
+    // }
+
 ?>
