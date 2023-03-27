@@ -70,9 +70,30 @@
 
     // 배열의 원소 삭제 : unset()
     // 키값자체가 삭제됨(2번방을 삭제한다고 해도 3번방이 2번방으로 땡겨지는게 아님, 2번방은 빈자리로 둠)
-    $arr_week = array("Sun", "Mon", "delete", "Tue", "Wed");
-    unset($arr_week[2]);
-    print_r($arr_week);
+    // $arr_week = array("Sun", "Mon", "delete", "Tue", "Wed");
+    // unset($arr_week[2]);
+    // print_r($arr_week);
 
+    
+    // 중복되지 않는 원소를 반환 : array_diff()
+    // $arr_diff_1 = array("a", "b", "c");
+    // $arr_diff_2 = array("a", "b", "d");
+    // $arr_diff = array_diff($arr_diff_1, $arr_diff_2); // $arr_diff_1에 있는 값 중, $arr_diff_2에 속해있지 않은 값을 출력
+    // print_r($arr_diff);
 
+    
+    // 배열의 정렬 : asort(), arsort(), ksort(), krsort()
+    
+    // asort(); : 오름차순
+    // $arr_asort = array("b", "a", "d", "c");
+    // asort($arr_asort);
+    // print_r($arr_asort);
+
+    // arsort(); : 내림차순
+    $arr_arsort = array("b", "a", "d", "c");
+    arsort($arr_arsort);
+    print_r($arr_arsort);
+    
+
+    
 ?>
