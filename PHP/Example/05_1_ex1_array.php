@@ -84,16 +84,73 @@
     
     // 배열의 정렬 : asort(), arsort(), ksort(), krsort()
     
-    // asort(); : 오름차순
+    // asort(); : 오름차순 정렬
     // $arr_asort = array("b", "a", "d", "c");
     // asort($arr_asort);
     // print_r($arr_asort);
 
-    // arsort(); : 내림차순
-    $arr_arsort = array("b", "a", "d", "c");
-    arsort($arr_arsort);
-    print_r($arr_arsort);
+    // arsort(); : 내림차순 정렬
+    // $arr_arsort = array("b", "a", "d", "c");
+    // arsort($arr_arsort);
+    // print_r($arr_arsort);
     
+    // ksort(); : key값에 맞춰서 오름차순 정렬
+    // $arr_ksort = array("key1" => "val1"
+    //                 , "key3" => "val3" 
+    //                 , "key4" => "val4"
+    //                 , "key2" => "val2"
+    //             );
+    // ksort($arr_ksort);
+    // print_r($arr_ksort);
 
+    // krsort : key값에 맞춰서 내림차순 정렬
+    // $arr_krsort = array("key1" => "val1"
+    //                 , "key3" => "val3" 
+    //                 , "key4" => "val4"
+    //                 , "key2" => "val2"
+    //                 );
+    // krsort($arr_krsort);
+    // print_r($arr_krsort);
+
+
+    // array의 사이즈를 반환하는 함수 : (array에 있는 원소들을 count해줌)
+    // echo count($arr_krsort);
+
+
+    // foreach( $array as $key => $ val ) {}
+    // foreach( $array as $ val ) {}
+
+    // $arr1 = array(
+    //             "key1" => "val1"
+    //             , "key3" => "val3" 
+    //             , "key4" => "val4"
+    //             , "key2" => "val2"
+    //             );
+    // foreach( $arr1 as $key => $val )
+    // {
+    //     echo $key." : ".$val."\n";
+    // }
+
+    // $arr1 = array(
+    //             "a" => "1"
+    //             , "b" => "2" 
+    //             , "c" => "3"
+    //             , "d" => "4"
+    //             );
+    // foreach( $arr1 as $i => $j )
+    // {
+    //     echo $i." : ".$j."\n";
+    // }
+
+    $arr_food = array(
+                    "된장찌개" => "파"
+                    , "볶음밥" => "양파"
+                    , "김치" => "마늘"
+                    , "비빔밥" => "참기름"
+                    );
+    foreach( $arr_food as $key => $val )
+    {
+        echo $key." 주 재료 : ".$val."\n";
+    }
     
 ?>
