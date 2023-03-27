@@ -5,7 +5,7 @@
 
     // 배열
 
-    $week = array("Sun", "Mon", "Tue", "Wed"); // $week 한 변수에 문자열 4개를 넣음, 순서대로 0번방, 1번방, ...
+    // $week = array("Sun", "Mon", "Tue", "Wed"); // $week 한 변수에 문자열 4개를 넣음, 순서대로 0번방, 1번방, ...
     // echo $week[0]; // 0번방에 있는 Sun을 출력
     // echo "\n";
     // echo $week[0]." ".$week[3];
@@ -31,22 +31,22 @@
     // 연상 배열
 
     // $arr_ass = array("key1" => "val1"
-    //                     , "key2" => "val2"
-    //                     , 3 => "val3" // 키값은 문자열이 아니어도 됨, 보통은 문자열, 보통 데이터형식은 통일
-    //                     , "key4" => "val4");
-    // echo $arr_ass[3]; // key1에 해당하는 값을 출력
+    //                 , "key2" => "val2"
+    //                 , 3 => "val3" // 키값은 문자열이 아니어도 됨, 보통은 문자열, 보통 데이터형식은 통일
+    //                 , "key4" => "val4");
+    // echo $arr_ass["key1"]; // key1에 해당하는 값을 출력
 
 
     // 다차원 배열
 
-    // $arr_temp = array(
-    //                 array(1, 2, 3, 4)
-    //                 , array(5, 6, 7, 8)
-    //                 , array(
-    //                     array(9, 10, 11)
-    //                     // , array(12, 13, 14)
-    //                 )
-    //             );
+    $arr_temp = array(
+                    array(1, 2, 3, 4)
+                    , array(5, 6, 7, 8)
+                    , array(
+                        array(9, 10, 11)
+                        // , array(12, 13, 14)
+                    )
+                );
     
     // echo $arr_temp[0][1]; // 2를출력
     // echo $arr_temp[1][3]; // 8을 출력
@@ -120,12 +120,12 @@
     // foreach( $array as $key => $ val ) {}
     // foreach( $array as $ val ) {}
 
-    $arr1 = array(
-                "key1" => "val1"
-                , "key3" => "val3" 
-                , "key4" => "val4"
-                , "key2" => "val2"
-                );
+    // $arr1 = array(
+    //             "key1" => "val1"
+    //             , "key2" => "val2" 
+    //             , "key3" => "val3"
+    //             , "key4" => "val4"
+    //             );
                 
     // foreach( $arr1 as $key => $val ) // key값까지
     // {

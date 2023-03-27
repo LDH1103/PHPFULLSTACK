@@ -18,8 +18,6 @@
 
     // $week = array("Sun", "Mon", "Tue", "Wed");
     // $week2 = array($week[1], $week[3], $week[0], $week[2]);
-
-    // echo $week2[0]." ".$week2[1]." ".$week2[2]." ".$week2[3];
     // print_r($week2);
 
 
@@ -35,14 +33,14 @@
 
     // 키 : 김치 원소를 삭제
 
-    // $arr_food_del = array(
-    //                 "된장찌개" => "파"
-    //                 , "볶음밥" => "양파"
-    //                 , "김치" => "마늘"
-    //                 , "비빔밥" => "참기름"
-    //                 );
-    // unset($arr_food_del["김치"]);
-    // print_r($arr_food_del);
+    $arr_food_del = array(
+                    "된장찌개" => "파"
+                    , "볶음밥" => "양파"
+                    , "김치" => "마늘"
+                    , "비빔밥" => "참기름"
+                    );
+    unset($arr_food_del["김치"]);
+    print_r($arr_food_del);
 
 
 
@@ -50,34 +48,26 @@
     // foreach문을 이용해서 키가 "삭제"인 요소를 제거
     // if문 사용, unset("삭제") X, 키가 ""삭제 이외는 "키 : 값"포맷으로 출력
 
-    $arr_food = array(
-                "된장찌개" => "파"
-                , "볶음밥" => "양파"
-                , "삭제" => "값값"
-                , "김치" => "마늘"
-                , "비빔밥" => "참기름"
-                );
+    // $arr_food = array(
+    //             "된장찌개" => "파"
+    //             , "볶음밥" => "양파"
+    //             , "삭제" => "값값"
+    //             , "김치" => "마늘"
+    //             , "비빔밥" => "참기름"
+    //             );
 
-    foreach( $arr_food as $key => $val )
-    {
-        if (!($key === "삭제"))
-        {
-            echo $key." : ".$val."\n";
-        }
-        else 
-        {
-            unset($arr_food["삭제"]);
-        }
-    }
+    // foreach( $arr_food as $key => $val )
+    // {
+    //     if (!($key === "삭제"))
+    //     {
+    //         echo $key." : ".$val."\n";
+    //     }
+    //     else 
+    //     {
+    //         unset($arr_food["삭제"]);
+    //     }
+    // }
 
-    var_dump($arr_food);
-    
-    // if ($key === "삭제")
-    // {
-    //     unset($arr_food[2]);
-    // }
-    // else 
-    // {
-    //     echo $key." : ".$val."\n";
-    // }
+
+    // var_dump($arr_food);
 ?>
