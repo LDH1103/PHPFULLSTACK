@@ -53,7 +53,7 @@
         echo "\n";
     }
 
-    // 직각삼각형 함수
+    // 직각삼각형
 
     function star_no($a) {
         $no = 1;
