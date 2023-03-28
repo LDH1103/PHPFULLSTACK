@@ -11,7 +11,7 @@
 
     my_len1($arr_base);
 
-    function my_len(&$a) {
+    function my_len($a) {
         $result = 0;
         foreach ($a as $val) {
             $result += 1;
