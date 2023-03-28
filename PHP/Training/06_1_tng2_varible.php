@@ -59,14 +59,30 @@
             $no++;
         }
     }
-    echo star_no(10);
+    star_no(5);
 
-    // function star_no1($a) {
-    //     for ($n1 = 0; $n1 < $a; $n1++) {
-    //         echo print_star($a);
-    //     }
-    // }
-    // echo star_no1(5);
+    echo "\n";
 
+    function star_no2($a) {
+        for ($n1 = 0; $n1 < $a; $n1++) {
+            print_star($a);
+        }
+    }
+    star_no2(5);
+
+    echo "\n";
+
+    function star_no3($a) {
+        $no = 1;
+        for ($n1 = 0; $n1 < $a; $n1++) {
+            print_star($no);
+            $no++;
+        }
+        for ($n2 = -1; $n2 < $a; $n2++) {
+            print_star($no);
+            $no--;
+        }
+    }
+    star_no3(5);
 
 ?>
