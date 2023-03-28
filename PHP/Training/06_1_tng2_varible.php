@@ -44,6 +44,7 @@
     //     }
     // }
 
+    // 별 출력 함수
 
     function print_star($a) {
         for ($n1 = 0; $n1 < $a; $n1++) { 
@@ -51,6 +52,8 @@
         }
         echo "\n";
     }
+
+    // 직각삼각형 함수
 
     function star_no($a) {
         $no = 1;
@@ -63,6 +66,8 @@
 
     echo "\n";
 
+    // ㅁ 모양
+
     function star_no2($a) {
         for ($n1 = 0; $n1 < $a; $n1++) {
             print_star($a);
@@ -71,6 +76,8 @@
     star_no2(5);
 
     echo "\n";
+
+    // >모양
 
     function star_no3($a) {
         $no = 0;
