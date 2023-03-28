@@ -57,19 +57,19 @@
     //     return $result;
     // }
 
-    function fnc_args_minus() {
-        $args = func_get_args();
-        $result = $args[0];
-        
-        foreach ($args as $key => $val) {
-            if (!($key === 0)) {
-                $result -= $val;
-            }
-        }
-        return $result;
-    }
+    // function fnc_args_minus() {
+    //     $args = func_get_args();
+    //     $result = $args[0];
 
-    echo fnc_args_minus(10, 2, 5)."\n";
+    //     foreach ($args as $key => $val) {
+    //         if (!($key === 0)) {
+    //             $result -= $val;
+    //         }
+    //     }
+    //     return $result;
+    // }
+
+    // echo fnc_args_minus(10, 2, 5)."\n";
 
 
     // 곱하기
@@ -88,19 +88,19 @@
     //     return $result;
     // }
 
-    function fnc_args_multipl() {
-        $args = func_get_args();
-        $result = $args[0];
-        
-        foreach ($args as $key => $val) {
-            if (!($key === 0)) {
-                $result *= $val;
-            }
-        }
-        return $result;
-    }
+    // function fnc_args_multipl() {
+    //     $args = func_get_args();
+    //     $result = $args[0];
 
-    echo fnc_args_multipl(10, 2, 5)."\n";
+    //     foreach ($args as $key => $val) {
+    //         if (!($key === 0)) {
+    //             $result *= $val;
+    //         }
+    //     }
+    //     return $result;
+    // }
+
+    // echo fnc_args_multipl(10, 2, 5)."\n";
 
 
     // 나누기
