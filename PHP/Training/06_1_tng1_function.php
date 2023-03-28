@@ -61,8 +61,8 @@
         $args = func_get_args();
         $result = $args[0];
         
-        foreach ($args as $val) {
-            if (!($val === $args[0])) {
+        foreach ($args as $key => $val) {
+            if (!($key === 0)) {
                 $result -= $val;
             }
         }
@@ -91,9 +91,9 @@
     function fnc_args_multipl() {
         $args = func_get_args();
         $result = $args[0];
-
-        foreach ($args as $val) {
-            if (!($val === $args[0])) {
+        
+        foreach ($args as $key => $val) {
+            if (!($key === 0)) {
                 $result *= $val;
             }
         }
@@ -123,8 +123,8 @@
         $args = func_get_args();
         $result = $args[0];
         
-        foreach ($args as $val) {
-            if (!($val === $args[0])) {
+        foreach ($args as $key => $val) {
+            if (!($key === 0)) {
                 $result /= $val;
             }
         }
