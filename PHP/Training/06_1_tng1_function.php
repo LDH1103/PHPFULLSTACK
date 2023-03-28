@@ -91,7 +91,7 @@
     function fnc_args_multipl() {
         $args = func_get_args();
         $result = $args[0];
-        
+
         foreach ($args as $val) {
             if (!($val === $args[0])) {
                 $result *= $val;
@@ -101,6 +101,7 @@
     }
 
     echo fnc_args_multipl(10, 2, 5)."\n";
+
 
     // 나누기
 
