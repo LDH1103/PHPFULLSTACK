@@ -14,7 +14,7 @@
     function my_len($a) {
         $result = 0;
         foreach ($a as $val) {
-            $result += 1;
+            $result++;
         }
         return $result;
     }
