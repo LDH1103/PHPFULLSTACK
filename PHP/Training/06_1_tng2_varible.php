@@ -55,18 +55,18 @@
     function star_no($a) {
         $no = 1;
         for ($n1 = 0; $n1 < $a; $n1++) {
-            echo print_star($no);
+            print_star($no);
             $no++;
         }
     }
     echo star_no(10);
 
-    function star_no1($a) {
-        for ($n1 = 0; $n1 < $a; $n1++) {
-            echo print_star($a);
-        }
-    }
-    echo star_no1(5);
+    // function star_no1($a) {
+    //     for ($n1 = 0; $n1 < $a; $n1++) {
+    //         echo print_star($a);
+    //     }
+    // }
+    // echo star_no1(5);
 
 
 ?>
