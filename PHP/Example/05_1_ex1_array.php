@@ -126,7 +126,7 @@
     //             , "key3" => "val3"
     //             , "key4" => "val4"
     //             );
-                
+
     // foreach( $arr1 as $key => $val ) // key값까지
     // {
     //     echo $key." : ".$val."\n";
@@ -136,7 +136,6 @@
     // {
     //     echo $val."\n";
     // }
-
 
 
     // $arr1 = array(
