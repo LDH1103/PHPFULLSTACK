@@ -4,21 +4,69 @@
     
     $arr_base = array(1, 2, 3, 4, 5);
 
-    function my_len1($a) {
-        $max_key = max(array_keys($a)) + 1;
-        echo $max_key."\n";
-    }
+    // function my_len1($a) {
+    //     $max_key = max(array_keys($a)) + 1;
+    //     echo $max_key."\n";
+    // }
 
-    my_len1($arr_base);
+    // my_len1($arr_base);
 
-    function my_len($a) {
-        $result = 0;
-        foreach ($a as $val) {
-            $result++;
+    // function my_len($a) {
+    //     $result = 0;
+    //     foreach ($a as $val) {
+    //         $result++;
+    //     }
+    //     return $result;
+    // }
+
+    // echo my_len($arr_base);
+
+    // function my_len($a) {
+    //     $result = 0;
+    //     foreach ($a as $val) {
+    //         $result++;
+    //     }
+    //     return $result;
+    // }
+    
+    // echo my_len($arr_base);
+
+    
+
+    // 별찍기를 함수로
+
+    // function fnc_star($a) {
+    //     for ($n1 = 1; $n1 <= $a; $n1++) {
+    //         for ($n2 = 1; $n2 < $n1 ; $n2++) { 
+    //             echo "*";
+    //         }
+    //         echo "*\n";
+    //     }
+    // }
+
+
+    function print_star($a) {
+        for ($n1 = 0; $n1 < $a; $n1++) { 
+            echo "*";
         }
-        return $result;
+        echo "\n";
     }
 
-    echo my_len($arr_base);
+    function star_no($a) {
+        $no = 1;
+        for ($n1 = 0; $n1 < $a; $n1++) {
+            echo print_star($no);
+            $no++;
+        }
+    }
+    echo star_no(10);
+
+    function star_no1($a) {
+        for ($n1 = 0; $n1 < $a; $n1++) {
+            echo print_star($a);
+        }
+    }
+    echo star_no1(5);
+
 
 ?>
