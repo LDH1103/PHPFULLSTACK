@@ -67,13 +67,12 @@
     }
 
     my_max($arr);
-
-
+    
 
     function my_min($arr) {
         $arr_min = $arr[0];
         $i = 0;
-        
+
         foreach ($arr as $val) {
             if ( $arr_min > $arr[$i]) {
                 $arr_min = $arr[$i];
