@@ -10,6 +10,7 @@
     // sum(1, 2);
     // sum(2, 4);
 
+
     // return 함수 (리턴값이 있는)
 
     function sum2($n1, $n2) {
