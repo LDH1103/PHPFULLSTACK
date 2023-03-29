@@ -20,7 +20,7 @@
 
     for($n1 = 0; $n1 < $a; $n1++) {
         for($n2 = 0; $n2 < $a; $n2++) {
-            if ($arr[$n1] < $arr[$n2]) {
+            if($arr[$n1] < $arr[$n2]) {
                 $tmp = $arr[$n1];
                 $arr[$n1] = $arr[$n2];
                 $arr[$n2] = $tmp;
