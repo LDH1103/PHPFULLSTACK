@@ -55,29 +55,25 @@
 
     function my_max($arr) {
         $arr_max = $arr[0];
-        $i = 0;
 
-        foreach ($arr as $val) {
-            if ( $arr_max < $arr[$i]) {
-                $arr_max = $arr[$i];
+        for ($n = 1; $n < count($arr); $n++) {
+            if ( $arr_max < $arr[$n]) {
+                $arr_max = $arr[$n];
             }
-            $i++;
         }
         echo $arr_max."\n";
     }
 
     my_max($arr);
-    
+
 
     function my_min($arr) {
         $arr_min = $arr[0];
-        $i = 0;
 
-        foreach ($arr as $val) {
-            if ( $arr_min > $arr[$i]) {
-                $arr_min = $arr[$i];
+        for ($n = 1; $n < count($arr); $n++) {
+            if ( $arr_min > $arr[$n]) {
+                $arr_min = $arr[$n];
             }
-            $i++;
         }
         echo $arr_min."\n";
     }
