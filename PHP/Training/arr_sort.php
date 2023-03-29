@@ -51,33 +51,33 @@
 
     // 배열 안의 최대 값, 최소 값을 출력 해 주는 함수를 구현 : 함수명은 "my_max", "my_min"
     
-    $arr = array(5, 10, 7, 3, 1, 20);
+    // $arr = array(5, 10, 7, 3, 1, 20);
 
-    function my_max($arr) {
-        $arr_max = $arr[0];
+    // function my_max($arr) {
+    //     $arr_max = $arr[0];
 
-        for ($n = 1; $n < count($arr); $n++) {
-            if ( $arr_max < $arr[$n]) {
-                $arr_max = $arr[$n];
-            }
-        }
-        echo $arr_max."\n";
-    }
+    //     for ($n = 1; $n < count($arr); $n++) {
+    //         if ( $arr_max < $arr[$n]) {
+    //             $arr_max = $arr[$n];
+    //         }
+    //     }
+    //     echo $arr_max."\n";
+    // }
 
-    my_max($arr);
+    // my_max($arr);
 
 
-    function my_min($arr) {
-        $arr_min = $arr[0];
+    // function my_min($arr) {
+    //     $arr_min = $arr[0];
 
-        for ($n = 1; $n < count($arr); $n++) {
-            if ( $arr_min > $arr[$n]) {
-                $arr_min = $arr[$n];
-            }
-        }
-        echo $arr_min."\n";
-    }
+    //     for ($n = 1; $n < count($arr); $n++) {
+    //         if ( $arr_min > $arr[$n]) {
+    //             $arr_min = $arr[$n];
+    //         }
+    //     }
+    //     echo $arr_min."\n";
+    // }
 
-    my_min($arr);
+    // my_min($arr);
 
 ?>
