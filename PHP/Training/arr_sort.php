@@ -1,7 +1,7 @@
 <?php
 
-    $arr = array(5, 10, 7, 3, 1);
-    $a = count($arr);
+    // $arr = array(5, 10, 7, 3, 1);
+    // $a = count($arr);
 
     // foreach ($arr as $key => $val) {
     //     echo $key." > ".$val."\n";
@@ -12,7 +12,7 @@
     //     echo $i." > ".$arr[$i]."\n";
     // }
 
-    
+
     // 스와이핑
 
     // $tmp = $arr[0];
@@ -32,6 +32,9 @@
     // }
     // print_r($arr);
 
+    $arr = array(5, 10, 7, 3, 1);
+    $a = count($arr);
+    
     for ($n1 = 0; $n1 < $a; $n1++) {
         for ($n2 = 0; $n2 < $a; $n2++) {
             if ($arr[$n1] < $arr[$n2]) {
