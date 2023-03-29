@@ -1,7 +1,7 @@
 <?php
 
-    // $arr = array(5, 10, 7, 3, 1);
-    // $a = count($arr);
+    $arr = array(5, 10, 7, 3, 1);
+    $a = count($arr);
 
     // foreach ($arr as $key => $val) {
     //     echo $key." > ".$val."\n";
@@ -83,6 +83,26 @@
 
     // 1~45숫자 중 랜덤한 6개의 다른번호를 출력
 
-    echo rand(1, 45);
+    // $rand_number = mt_rand(1, 45);
+    // for ($i = 0; $i < 6; $i++) {
+    //     echo mt_rand(1, 45)."\n";
+    // }
+
+	$nums = array(0, 0, 0, 0, 0, 0);
+
+	for($n1 = 0; $n1 < 6;) {
+		$tmp = 0;
+		$rand_num = mt_rand(1, 45);
+		for($n2 = 0; $n2 <= $n1; $n2++) {
+			if($nums[$n2] === $rand_num) {
+				$tmp = 1;
+			}
+		}
+		if($tmp === 0) {
+			$nums[$n1] = $rand_num;
+            echo $nums[$n1]." ";
+			$n1++;
+		}
+	}
 
 ?>
