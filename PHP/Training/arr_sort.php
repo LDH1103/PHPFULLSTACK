@@ -34,18 +34,55 @@
     // }
     // print_r($arr);
 
-    $arr = array(5, 10, 7, 3, 1);
-    $arr_count = count($arr);
+    // $arr = array(5, 10, 7, 3, 1);
+    // $arr_count = count($arr);
 
-    for ($n1 = 0; $n1 < $arr_count; $n1++) {
-        for ($n2 = 0; $n2 < $arr_count; $n2++) {
-            if ($arr[$n1] < $arr[$n2]) {
-                $tmp = $arr[$n1];
-                $arr[$n1] = $arr[$n2];
-                $arr[$n2] = $tmp;
+    // for ($n1 = 0; $n1 < $arr_count; $n1++) {
+    //     for ($n2 = 0; $n2 < $arr_count; $n2++) {
+    //         if ($arr[$n1] < $arr[$n2]) {
+    //             $tmp = $arr[$n1];
+    //             $arr[$n1] = $arr[$n2];
+    //             $arr[$n2] = $tmp;
+    //         }
+    //     }
+    // }
+    // print_r($arr);
+
+
+    // 배열 안의 최대 값, 최소 값을 출력 해 주는 함수를 구현 : 함수명은 "my_max", "my_min"
+    
+    $arr = array(5, 10, 7, 3, 1, 20);
+
+    function my_max($arr) {
+        $arr_max = $arr[0];
+        $i = 0;
+
+        foreach ($arr as $val) {
+            if ( $arr_max < $arr[$i]) {
+                $arr_max = $arr[$i];
             }
+            $i++;
         }
+        echo $arr_max."\n";
     }
-    print_r($arr);
+
+    my_max($arr);
+
+
+
+    function my_min($arr) {
+        $arr_min = $arr[0];
+        $i = 0;
+        
+        foreach ($arr as $val) {
+            if ( $arr_min > $arr[$i]) {
+                $arr_min = $arr[$i];
+            }
+            $i++;
+        }
+        echo $arr_min."\n";
+    }
+
+    my_min($arr);
 
 ?>
