@@ -23,8 +23,14 @@
 
     // class 호출하기 : new 클래스명 (변수에 담아줌)
     $obj_Student = new Student;
-    // 변수명 -> 클래스 안에서 사용할것
-    $obj_Student -> print_student("홍길동", 27);
+    
+    // class의 method를 호출
+    // $obj_Student -> print_student("홍길동", 27);
+
+    // class의 멤버변수 사용 방법
+    $obj_Student -> std_name = "갑돌이";
+    echo $obj_Student -> std_name;
+    
 
 
 ?>
