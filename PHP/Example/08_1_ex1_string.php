@@ -37,9 +37,9 @@
     // 문자열 자르기
     
     // $str_1 = "가나다라마";
-    // echo substr($str_1, 3); // 한글을 자르려면 한글자당 3byte
-    // echo mb_substr($str_1, 3); // 멀티 바이트(알파벳이 아닌 글자)를 글자수대로 자를려면 mb_substr, 알파벳도 가능
-    // echo mb_substr($str_1, 2, 1); // 3번째 글자부터 1개만 남겨두기
+    // echo substr($str_1, 3)."\n"; // 한글을 자르려면 한글자당 3byte
+    // echo mb_substr($str_1, 3)."\n"; // 멀티 바이트(알파벳이 아닌 글자)를 글자수대로 자를려면 mb_substr, 알파벳도 가능
+    // echo mb_substr($str_1, 2, 1)."\n"; // 3번째 글자부터 1개만 남겨두기
     // echo mb_substr($str_1, -1); // 음수도 가능 (뒤에서부터 자르기)
 
 
@@ -53,7 +53,7 @@
     // 문자열의 길이를 구하는 함수
 
     // $str_len = "가나다라";
-    // echo strlen($str_len); // 한글은 3byte기 떄문에 12가 출력
+    // echo strlen($str_len)."\n"; // 한글은 3byte기 떄문에 12가 출력
     // echo mb_strlen($str_len);
 
 

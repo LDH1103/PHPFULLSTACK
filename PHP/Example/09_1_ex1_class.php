@@ -22,7 +22,7 @@
 
         // private객체를 class밖에서 사용할수 있는 방법
         public function set_std_id($param_id) {
-            // this 포인터 : class 자기 자신을 가르키고 있음
+            // this 포인터 : class 자기 자신을 가리키고 있음
             $this -> std_id = $param_id;
         }
 
@@ -35,16 +35,16 @@
     $obj_Student = new Student;
 
     // class의 method를 호출
-    // $obj_Student -> print_student("홍길동", 27);
+    $obj_Student -> print_student("홍길동", 27);
 
     // class의 멤버변수 사용 방법
 
     // public
-    // $obj_Student -> std_name = "갑돌이";
-    // echo $obj_Student -> std_name;
+    $obj_Student -> std_name = "갑돌이";
+    echo $obj_Student -> std_name;
     
     // private : 지시자가 private기 때문에 접근 권한이 없어 에러가 남
-    // $obj_Student -> $std_id = "갑순이";
+    $obj_Student -> $std_id = "갑순이";
 
     // private객체를 class밖에서 사용할수 있는 방법
     // getter, setter로 private 객체에 접근
@@ -53,6 +53,6 @@
     
 
     // protected
-    // $obj_Student -> $std_age = 24; // 상속받은 class 내에서는 사용 가능
+    $obj_Student -> $std_age = 24; // 상속받은 class 내에서는 사용 가능
 
 ?>
