@@ -37,7 +37,7 @@
         private $car_color;
 
         // $car_fn : 차의 기능을 저장하는 멤버 변수
-        private $car_fn;
+        private $car_fn = array();
 
         // method명 : car_make
         // parameter : string $param_name, string $param_color
@@ -60,6 +60,7 @@
         // 기능 : 자동차의 기능을 멤버변수에 셋팅
         public function car_function($car_fn_set) {
             $this -> car_fn = $car_fn_set;
+            return $this -> car_fn;
         }
         
         // method명 : car_function_out
@@ -74,7 +75,8 @@
     $obj_car = new Car;
     $obj_car -> car_make("아반떼", "검은");
     $obj_car -> car_out();
-    $obj_car -> car_function(" 자율주행");
+    echo "\n";
+    $obj_car -> car_function("자율주행");
     $obj_car -> car_function_out();
     
 
