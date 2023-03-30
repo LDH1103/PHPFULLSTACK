@@ -63,11 +63,13 @@
         $str_all = $a;
         $str_expl = explode("Hello", $str_all);
         $result_str = implode("Happy", $str_expl);
-        echo $result_str;
+        return $result_str;
     }
 
-    my_str_replace("I am always Hello.");
+    $result = my_str_replace("I am always Hello.");
+    echo $result;
 
+    
 
     // // 문자열로 된 숫자 2개를 정수로 변환하여 더한 후 다시 문자열로 변환하여 출력
 
