@@ -70,37 +70,53 @@
     
     
     // 마름모
-    $max = 10;
-    for ($n1 = 0; $n1 <= $max; $n1++) 
-    { 
-        for ($blank = $max - $n1; $blank > 0; $blank--) 
-        { 
-            echo " ";
-        }
-        for ($n2 = 0; $n2 <= $n1; $n2++) 
-        { 
-            echo "*";
-        }
-        for ($n3 = 1; $n3 <= $n1; $n3++) 
-        { 
-            echo "*";
-        }
-        echo "\n";
-    }
-    for ($n1 = 0; $n1 <= $max; $n1++) 
-    { 
-        for ($blank = 0; $blank < $n1; $blank++) 
-        { 
-            echo " ";
-        }
-        for ($n2 = 1; $n2 <= $max - $n1; $n2++) 
-        { 
-            echo "*";
-        }
-        for ($n3 = 1; $n3 <= $max - $n1; $n3++) 
-        { 
-            echo "*";
-        }
-        echo "\n";
-    }
+    // $max = 10;
+    // for ($n1 = 0; $n1 <= $max; $n1++) 
+    // { 
+    //     for ($blank = $max - $n1; $blank > 0; $blank--) 
+    //     { 
+    //         echo " ";
+    //     }
+    //     for ($n2 = 0; $n2 <= $n1; $n2++) 
+    //     { 
+    //         echo "*";
+    //     }
+    //     for ($n3 = 1; $n3 <= $n1; $n3++) 
+    //     { 
+    //         echo "*";
+    //     }
+    //     echo "\n";
+    // }
+    // for ($n1 = 0; $n1 <= $max; $n1++) 
+    // { 
+    //     for ($blank = 0; $blank < $n1; $blank++) 
+    //     { 
+    //         echo " ";
+    //     }
+    //     for ($n2 = 1; $n2 <= $max - $n1; $n2++) 
+    //     { 
+    //         echo "*";
+    //     }
+    //     for ($n3 = 1; $n3 <= $max - $n1; $n3++) 
+    //     { 
+    //         echo "*";
+    //     }
+    //     echo "\n";
+    // }
+
+
+    // $n1 = 2;
+    // $n2 = 1;
+
+    // for ($i = 0; $i < 8; $i++) { 
+    //     echo $n1."단"."\n";
+    //     $n2 = 1;
+    //     for ($j = 0; $j < 9; $j++) { 
+    //         echo $n1." * ".$n2." = ".$n1 * $n2."\n";
+    //         $n2++;
+    //     }
+    //     $n1++;
+    //     echo "\n";
+    // }
+
 ?>
