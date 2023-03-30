@@ -54,20 +54,39 @@
     // $str_impl = implode("Happy", $str_expl);
     // echo $str_impl;
 
+
+
+    // 함수로 만들기
     // 함수명 : my_str_replace
     // 리턴값 : String $result_str
 
 
+    // function my_str_replace($a) {
+    //     $result_expl = explode("Hello", $a);
+    //     $result_str = implode("Happy", $result_expl);
+    //     return $result_str;
+    // }
 
-    function my_str_replace($a) {
-        $str_expl = explode("Hello", $a);
-        $result_str = implode("Happy", $str_expl);
-        return $result_str;
-    }
+    // $result = my_str_replace("I am always Hello.");
+    // echo $result;
 
-    $result = my_str_replace("I am always Hello.");
-    echo $result;
 
+    // 재사용성 개선
+
+    // function my_str_replace($param_str, $param_separator, $param_ch) {
+    //     $arr_expl = explode($param_separator, $param_str);
+    //     $result_str = implode($param_ch, $arr_expl);
+    //     return $result_str;
+    // }
+
+    // $result = my_str_replace("I am always Hello.", "Hello", "Apple");
+    // echo $result;
+
+
+    // PHP 기본제공 함수
+
+    // $str = "I am always Hello.";
+    // echo str_replace("Hello", "Happy", $str); // str_replace(찾을 단어, 바꿀 단어, 문장);
 
 
     // // 문자열로 된 숫자 2개를 정수로 변환하여 더한 후 다시 문자열로 변환하여 출력
@@ -81,16 +100,5 @@
 
     // var_dump($num3);
     // echo "\n";
-
-
-    // 반복문을 이용하며 뒤에서부터 한글자씩 출력
-    // "Hello PHP !!"
-
-    // $arr_expl = explode("/", "H/e/l/l/o/ /P/H/P/ /!/!");
-
-    // $n1 = count($arr_expl);
-    // foreach ($arr_expl as $val) {
-    //     echo $arr_expl[count($arr_expl)];
-    // }
 
 ?>
