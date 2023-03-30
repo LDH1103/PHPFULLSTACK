@@ -35,8 +35,8 @@
     printf (STR, "Happy");
     echo "\n";
     
-    // $str_1 = "I am always Hello.";
-    // echo mb_substr($str_1, 0, 12)."Happy."."\n"; 
+    $str_1 = "I am always Hello.";
+    echo mb_substr($str_1, 0, 12)."Happy."."\n"; 
 
     $str_expl = "I am always Hello.";
     $arr_expl = explode(" ", $str_expl);
@@ -53,6 +53,8 @@
     $num2 = "615";
     $num3 = (int)$num1 + (int)$num2;
     $num3 = (string)$num3;
+
+    $num4 = $num1 + $num2;
 
     var_dump($num3);
 
