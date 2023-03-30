@@ -60,8 +60,7 @@
 
 
     function my_str_replace($a) {
-        $str_all = $a;
-        $str_expl = explode("Hello", $str_all);
+        $str_expl = explode("Hello", $a);
         $result_str = implode("Happy", $str_expl);
         return $result_str;
     }
@@ -69,7 +68,7 @@
     $result = my_str_replace("I am always Hello.");
     echo $result;
 
-    
+
 
     // // 문자열로 된 숫자 2개를 정수로 변환하여 더한 후 다시 문자열로 변환하여 출력
 
