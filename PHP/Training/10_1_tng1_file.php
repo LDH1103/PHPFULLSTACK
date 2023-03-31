@@ -54,16 +54,15 @@
 
     // 함수로 구현
 
-    function gugumake($dan) {
-        $gugu = "";
-        $gugu .= $dan."단\n";
+    function fnc_gugumake($dan) {
+        $gugu = $dan."단\n";
         for ($i = 1; $i < 10; $i++) { 
             $gugu .= "$dan * $i = ".$dan*$i."\n";
         }
         return $gugu;
     }
     
-    fputs($f_gugudan, gugumake(2));
+    fputs($f_gugudan, fnc_gugumake(2));
     
     fclose($f_gugudan);
 ?>
