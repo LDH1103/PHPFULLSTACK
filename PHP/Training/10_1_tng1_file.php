@@ -27,19 +27,40 @@
 
     $f_gugudan = fopen("../Example/sam/gugudan.txt", "w");
 
+    // $n1 = 2;
+    // $n2 = 1;
+
+    // for ($i = 1; $i < 9; $i++) { 
+    //     fputs($f_gugudan, $n1."단"."\n");
+    //     $n2 = 1;
+    //     for ($j = 0; $j < 9; $j++) { 
+    //         fputs($f_gugudan, $n1." * ".$n2." = ".$n1 * $n2."\n");
+    //         $n2++;
+    //     }
+    //     $n1++;
+    //     fputs($f_gugudan, "\n");
+    // }
+
+
+
+    // fputs를 한번만 쓰기
+
     $n1 = 2;
     $n2 = 1;
-
+    $gu = "";
+    
     for ($i = 1; $i < 9; $i++) { 
-        fputs($f_gugudan, $n1."단"."\n");
+        $gu .= $n1."단"."\n";
         $n2 = 1;
         for ($j = 0; $j < 9; $j++) { 
-            fputs($f_gugudan, $n1." * ".$n2." = ".$n1 * $n2."\n");
+            $gu .= $n1." * ".$n2." = ".$n1 * $n2."\n";
             $n2++;
         }
         $n1++;
-        fputs($f_gugudan, "\n");
+        $gu .= "\n";
     }
-
+    
+    fputs($f_gugudan, $gu);
+    
     fclose($f_gugudan);
 ?>
