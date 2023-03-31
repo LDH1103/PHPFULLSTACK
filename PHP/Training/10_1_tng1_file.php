@@ -74,11 +74,11 @@
 
     // 국밥과 크림우동 사이에 스테이크 추가
 
-    $f_food2 = file("../Example/sam/food2.txt");
-    
+    $f_food2 = file("../Example/sam/food2.txt"); // 파일을 배열로 만들어주는 함수
+
     $print_food = "";
     foreach ($f_food2 as $val) {
-        if (trim($val) === "크림우동") {
+        if (trim($val) === "크림우동") { // 빈 공간을 제거해주기 위해 trim
             $print_food .= "스테이크\n".$val;
         }
         else {
