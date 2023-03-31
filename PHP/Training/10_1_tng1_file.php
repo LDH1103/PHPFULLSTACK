@@ -25,7 +25,7 @@
     // .........
     // 2 * 9 = 18
 
-    $f_gugudan = fopen("../Example/sam/gugudan.txt", "w");
+    // $f_gugudan = fopen("../Example/sam/gugudan.txt", "w");
 
     // for ($i = 2; $i <= 9; $i++) { 
     //     fputs($f_gugudan, $i."단"."\n");
@@ -54,19 +54,42 @@
 
     // 함수로 구현
 
-    function fnc_gugumake($dan) {
-        $gugu = $dan."단\n";
-        for ($i = 1; $i < 10; $i++) { 
-            $gugu .= "$dan * $i = ".$dan*$i."\n";
+    // function fnc_gugumake($dan) {
+    //     $gugu = $dan."단\n";
+    //     for ($i = 1; $i < 10; $i++) { 
+    //         $gugu .= "$dan * $i = ".$dan*$i."\n";
+    //     }
+    //     return $gugu;
+    // }
+    
+    // // fputs($f_gugudan, fnc_gugumake(2));
+
+    // for ($i = 2; $i < 10; $i++) { 
+    //     fputs($f_gugudan, fnc_gugumake($i));
+    // }
+    
+    // fclose($f_gugudan);
+
+
+
+    // 국밥과 크림우동 사이에 스테이크 추가
+
+    $f_food2 = file("../Example/sam/food2.txt");
+    
+    $print_food = "";
+    foreach ($f_food2 as $val) {
+        if (trim($val) === "크림우동") {
+            $print_food .= "스테이크\n".$val;
         }
-        return $gugu;
+        else {
+            $print_food .= $val;
+        }
     }
-    
-    // fputs($f_gugudan, fnc_gugumake(2));
-    
-    for ($i = 2; $i < 10; $i++) { 
-        fputs($f_gugudan, fnc_gugumake($i));
-    }
-    
-    fclose($f_gugudan);
+    print $print_food;
+
+    $f_food2 = fopen("../Example/sam/food2.txt", "w");
+    fputs($f_food2, $print_food);
+
+    fclose($f_food2);
+
 ?>
