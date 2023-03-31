@@ -62,7 +62,11 @@
         return $gugu;
     }
     
-    fputs($f_gugudan, fnc_gugumake(2));
+    // fputs($f_gugudan, fnc_gugumake(2));
+    
+    for ($i = 2; $i < 10; $i++) { 
+        fputs($f_gugudan, fnc_gugumake($i));
+    }
     
     fclose($f_gugudan);
 ?>
