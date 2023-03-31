@@ -37,4 +37,13 @@
 
     mysqli_close($dbc); // db연결끊기
 
+
+    // function으로 만들기
+
+    function db_connect($a) {
+        $a = mysqli_connect("localhost", "root", "root506", "employees", 3306);
+    }
+
+
+
 ?>
