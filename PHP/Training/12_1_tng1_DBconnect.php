@@ -35,13 +35,25 @@
                                         WHERE 
                                             emp_no <= 10005");
 
-    if (mysqli_num_rows($result_querry) === 0) {
-        echo "데이터가 0건 입니다.";
-    } else {
-        while ($temp_assoc = mysqli_fetch_assoc($result_querry)) {
-            echo implode(" ",$temp_assoc)."\n";
-        }
-    } 
+    // mysqli_num_rows 를 이용해서 레코드 수를 체크하는 방법
+    // if (mysqli_num_rows($result_querry) === 0) {
+    //     echo "데이터가 0건 입니다.";
+    // } else {
+    //     while ($temp_assoc = mysqli_fetch_assoc($result_querry)) {
+    //         echo implode(" ",$temp_assoc)."\n";
+    //     }
+    // } 
+
+    $flg_cnt = false;
+    while ($temp_assoc = mysqli_fetch_assoc($result_querry)) {
+        echo implode(" ",$temp_assoc)."\n";
+        $flg_cnt = true;
+    }
+    if(!$flg_cnt) {
+        echo "데이터가 0건 입니다";
+    }
+
+
 
     mysqli_close($dbc);
 
