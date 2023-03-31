@@ -35,6 +35,6 @@
     }
 
 
-    mysqli_close($dbc); // sql닫기
+    mysqli_close($dbc); // db연결끊기
 
 ?>
