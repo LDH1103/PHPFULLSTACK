@@ -8,7 +8,7 @@
     // var_dump($dbc);
 
     // 쿼리 요청
-    $result_querry = mysqli_query($dbc, "SELECT emp_no, first_name FROM employees LIMIT 1;");
+    $result_querry = mysqli_query($dbc, "SELECT emp_no, first_name FROM employees LIMIT 5;");
     // var_dump($result_querry);
 
     // 값 한개씩 가져오기 : mysqli_fetch_row
