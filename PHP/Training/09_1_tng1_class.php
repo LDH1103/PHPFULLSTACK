@@ -60,7 +60,6 @@
         // 기능 : 자동차의 기능을 멤버변수에 셋팅
         public function car_function($car_fn_set) {
             $this -> car_fn = $car_fn_set;
-            return $this -> car_fn;
         }
         
         // method명 : car_function_out
