@@ -5,7 +5,7 @@
     // 사번이 10005 이하인 사원의 사번, 이름(성 이름), 성별, 생일
     $result_querry = mysqli_query($dbc, "SELECT 
                                             emp_no
-                                            , CONCAT(last_name, first_name)
+                                            , CONCAT(last_name, ' ',first_name)
                                             , gender
                                             , birth_date 
                                         FROM employees 
