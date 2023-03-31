@@ -39,17 +39,31 @@
 
     // fputs를 한번만 쓰기
 
-    $gu = "";
+    // $gu = "";
     
-    for ($i = 2; $i <= 9; $i++) { 
-        $gu .= $i."단"."\n";
-        for ($j = 1; $j <= 9; $j++) { 
-            $gu .= $i." * ".$j." = ".$i * $j."\n";
+    // for ($i = 2; $i <= 9; $i++) { 
+    //     $gu .= $i."단"."\n";
+    //     for ($j = 1; $j <= 9; $j++) { 
+    //         $gu .= $i." * ".$j." = ".$i * $j."\n";
+    //     }
+    //     $gu .= "\n";
+    // }
+    
+    // fputs($f_gugudan, $gu);
+
+
+    // 함수로 구현
+
+    function gugumake($dan) {
+        $gugu = "";
+        $gugu .= $dan."단\n";
+        for ($i = 1; $i < 10; $i++) { 
+            $gugu .= "$dan * $i = ".$dan*$i."\n";
         }
-        $gu .= "\n";
+        return $gugu;
     }
     
-    fputs($f_gugudan, $gu);
+    fputs($f_gugudan, gugumake(2));
     
     fclose($f_gugudan);
 ?>
