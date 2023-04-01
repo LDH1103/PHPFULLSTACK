@@ -127,7 +127,7 @@
     // 리턴 : $result_int int
     // -----------------------------
 
-    function my_sum_all ($param_int) {
+    function my_sum_all($param_int) {
         $result_int = 0;
         for ($i = 1; $i <= $param_int; $i++) {
             $result_int += $i;
