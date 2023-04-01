@@ -111,12 +111,30 @@
     //           $param_loc string
     // 리턴 : $result_str string
     // -----------------------------
-    function clean_clean_room($param_name, $param_loc) {
-        $result = $param_name."씨, ".$param_loc."을/를 청소해 주세요.\n";
-        return $result;
-    }
+    // function clean_clean_room($param_name, $param_loc) {
+    //     $result = $param_name."씨, ".$param_loc."을/를 청소해 주세요.\n";
+    //     return $result;
+    // }
     
-    $result = clean_clean_room("봉정","책상");
-    echo $result;
+    // $result = clean_clean_room("봉정","책상");
+    // echo $result;
+
+
+    // -----------------------------
+    // 함수명 : my_sum_all
+    // 기능 : 1부터 지정숫자까지의 합을 구해서 리턴
+    // 파라미터 : $parma_int int
+    // 리턴 : $result_int int
+    // -----------------------------
+
+    function my_sum_all ($param_int) {
+        $result_int = 0;
+        for ($i = 1; $i <= $param_int; $i++) {
+            $result_int += $i;
+        }
+        return $result_int;
+    }
+
+    echo my_sum_all(50);
 
 ?>
