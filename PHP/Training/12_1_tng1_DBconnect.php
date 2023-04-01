@@ -1,6 +1,6 @@
 <?php
 
-    $dbc = mysqli_connect("localhost", "root", "root506", "employees", 3306);
+    $dbc = mysqli_connect("localhost", "root", "shlove1103**", "employees", 3306);
     
     // 사번이 10005 이하인 사원의 사번, 이름(성 이름), 성별, 생일
     // $result_querry = mysqli_query($dbc, "SELECT 
@@ -33,7 +33,7 @@
                                         FROM 
                                             employees 
                                         WHERE 
-                                            emp_no <= 10005");
+                                            emp_no <= 1");
 
     // mysqli_num_rows 를 이용해서 레코드 수를 체크하는 방법
     // if (mysqli_num_rows($result_querry) === 0) {
