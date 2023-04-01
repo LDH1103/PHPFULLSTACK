@@ -111,6 +111,7 @@
     //           $param_loc string
     // 리턴 : $result_str string
     // -----------------------------
+    
     // function clean_clean_room($param_name, $param_loc) {
     //     $result = $param_name."씨, ".$param_loc."을/를 청소해 주세요.\n";
     //     return $result;
