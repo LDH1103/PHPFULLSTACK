@@ -13,7 +13,12 @@
     $pre_limit = 5;
 
     $stmt = $dbc -> stmt_init();
-    $stmt -> prepare(" SELECT emp_no, salary FROM salaries WHERE to_date = ? AND salary >= ? ORDER BY salary DESC LIMIT ? ");
+    $stmt -> prepare(" SELECT emp_no, salary 
+                        FROM salaries 
+                        WHERE to_date = ? 
+                            AND salary >= ? 
+                        ORDER BY salary DESC 
+                        LIMIT ? ");
     $stmt -> bind_param("sii", $pre_todate, $pre_salary, $pre_limit);
     $stmt -> execute();
     $result = $stmt -> get_result();
