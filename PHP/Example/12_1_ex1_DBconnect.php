@@ -3,7 +3,7 @@
     // php.ini 938번째줄 주석 해제 extension=mysqli
 
     // DB 연결
-    $dbc = mysqli_connect("localhost", "root", "shlove1103**", "employees", 3306); // 호스트명, username, pw, DB이름, 포트번호
+    $dbc = mysqli_connect("localhost", "root", "root506", "employees", 3306); // 호스트명, username, pw, DB이름, 포트번호
 
     // var_dump($dbc);
 
