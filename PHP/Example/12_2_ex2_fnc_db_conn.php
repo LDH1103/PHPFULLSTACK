@@ -9,7 +9,7 @@
     function my_db_conn( &$param_conn ) {
         $db_host       = "localhost";  // host
         $db_user       = "root";       // user
-        $db_password   = "root506";    // password
+        $db_password   = "shlove1103**";    // password
         $db_name       = "employees";  // DB name
         $db_charset    = "utf8mb4";    // charset
         $db_dns        = "mysql:host=".$db_host.";dbname=".$db_name.";charset=".$db_charset;
@@ -22,8 +22,17 @@
         $param_conn = new PDO( $db_dns, $db_user, $db_password, $db_option );
     }
 
-    function my_db_result() {
-
+    // -----------------------------------
+    // 함수명   : my_db_arr_result
+    // 기능     : 
+    // 파라미터 : $obj_conn, $sql, $arr_prepare
+    // 리턴    : $result
+    // -----------------------------------
+    function my_db_arr_result( $obj_conn, $sql, $arr_prepare ) {
+        $stmt = $obj_conn->prepare( $sql );
+        $stmt->execute( $arr_prepare );
+        $result = $stmt->fetchAll();
+        return $result;
     }
 
     $obj_conn = null; // PDO Class
@@ -43,13 +52,11 @@
     array(
         ":limit_start" => 5
         );
-    $stmt = $obj_conn->prepare( $sql );
-    $stmt->execute( $arr_prepare );
-    $result = $stmt->fetchAll();
-    
-
-
+    $result = my_db_arr_result($obj_conn, $sql, $arr_prepare);
     var_dump( $result );
+
+
+    // var_dump( $result );
 
     $obj_conn = null; // DB 연결 끊기
 

@@ -7,23 +7,21 @@
     my_db_conn( $obj_conn );
 
     // 전체 월급의 평균
-    $sql =
-    " SELECT "
-    ."    AVG(salary) "
-    ." FROM " 
-    ."    salaries "
-    ." WHERE " 
-    ."    to_date = :to_date ";
+    // $sql =
+    // " SELECT "
+    // ."    AVG(salary) "
+    // ." FROM " 
+    // ."    salaries "
+    // ." WHERE " 
+    // ."    to_date = :to_date ";
 
-    $arr_prepare = 
-        array(
-            ":to_date" => 99990101
-        );
-    $stmt = $obj_conn->prepare( $sql );
-    $result = $stmt->execute( $arr_prepare );
-    $obj_conn->commit();
-    echo $result;
-    var_dump( $result );
+    // $to_date = "9999-01-01";
+    // $stmt = $obj_conn->prepare($sql);
+    // $stmt->bindParam(':to_date', $to_date);
+    // $stmt->execute();
+    // $result = $stmt->fetch();
+    // echo "AVG(salary) : $".$result["AVG(salary)"];
+
     
     // 새로운 사원 정보를 employees 테이블에 등록
     // $sql =
@@ -66,7 +64,7 @@
     // ."      employees "
     // ." SET " 
     // ."      first_name = :first_name "
-    // ."      last_name = :last_name "
+    // ."      , last_name = :last_name "
     // ." WHERE " 
     // ."      emp_no = :emp_no ";
 
@@ -78,7 +76,7 @@
     //     );
 
     // $stmt = $obj_conn->prepare( $sql );
-    // $result = $stmt->execute( $arr_prepare );
+    // $stmt->execute( $arr_prepare );
     // $obj_conn->commit();
     // var_dump( $result );
 
