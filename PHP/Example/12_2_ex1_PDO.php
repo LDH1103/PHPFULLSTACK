@@ -53,13 +53,13 @@
     // $result =
     //     array (
     //         array (
-    //             "salary" => 38735
-    //             ,"emp_no" => 10001
+    //             "emp_no" => 10001
+    //             ,"salary" => 38735
     //             ,"birth_date" => "1953-09-02"
     //         )
     //         ,array(
-    //             "salary" => 72527
-    //             ,"emp_no" => 10002
+    //             "emp_no" => 10002
+    //             ,"salary" => 72527
     //             ,"birth_date" => "1964-06-02"
     //         )
     //     );
