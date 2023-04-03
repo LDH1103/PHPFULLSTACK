@@ -54,13 +54,6 @@ $dbc = mysqli_connect("localhost", "root", "root506", "employees", 3306);
 // }
 
 
-
-// $i = 5;
-// $result_querry = mysqli_query($dbc, " SELECT emp_no, first_name FROM employees LIMIT $i ");
-// while ($temp_row = mysqli_fetch_row($result_querry)) {
-//     echo "$temp_row[0] $temp_row[1]\n";
-// }
-
 mysqli_close($dbc);
 
 ?>

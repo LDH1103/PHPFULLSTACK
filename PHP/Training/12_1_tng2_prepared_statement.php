@@ -22,7 +22,7 @@
         echo "emp_no : ".$row["emp_no"]." / salary : ".$row["salary"]."\n";
     }
     
-
+    
     mysqli_close($dbc);
 
 
