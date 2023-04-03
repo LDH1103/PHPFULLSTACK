@@ -9,7 +9,7 @@
     function my_db_conn( &$param_conn ) {
         $db_host       = "localhost";  // host
         $db_user       = "root";       // user
-        $db_password   = "shlove1103**";    // password
+        $db_password   = "root506";    // password
         $db_name       = "employees";  // DB name
         $db_charset    = "utf8mb4";    // charset
         $db_dns        = "mysql:host=".$db_host.";dbname=".$db_name.";charset=".$db_charset;
