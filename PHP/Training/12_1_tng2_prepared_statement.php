@@ -19,7 +19,7 @@
     $result = $stmt -> get_result();
 
     while ($row = $result -> fetch_assoc()) {
-        echo "emp_no : ".$row["emp_no"].", salary : ".$row["salary"]."\n";
+        echo "emp_no : ".$row["emp_no"].", salary : $".$row["salary"]."\n";
     }
 
     
