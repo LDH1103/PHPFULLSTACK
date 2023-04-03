@@ -36,6 +36,7 @@
 
 
     mysqli_close($dbc); // db연결끊기
+    // $dbc->close(); // db연결끊는 다른방법
 
 
     // function으로 만들기
