@@ -15,6 +15,7 @@
     ." WHERE " 
     ."    to_date = DATE(99990101) ";
 
+    // --------- prepare 메소드로 하는 방법
     // $obj_conn = null;
     // my_db_conn( $obj_conn );
     // $stmt = $obj_conn->prepare( $sql );
@@ -22,11 +23,12 @@
     // $result = $stmt->fetch();
     // echo "AVG(salary) : $".$result["AVG(salary)"];
     
+    // --------- query 메소드로 하는 방법
     $obj_conn = null;
     my_db_conn( $obj_conn );
     $stmt = $obj_conn->query( $sql );
     $result = $stmt->fetch();
-    var_dump( $result );
+    echo "AVG(salary) : $".$result["AVG(salary)"];
 
     
     // 새로운 사원 정보를 employees 테이블에 등록
