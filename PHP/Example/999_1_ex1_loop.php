@@ -165,7 +165,7 @@
     // echo $str;
 
     function fnc_print_star( $param_int ) {
-        for ( $n1 = 0; $n1 < $param_int; $n1++ ) { 
+        for ( $i = 0; $i < $param_int; $i++ ) { 
             echo "*";
         }
         echo "\n";
@@ -175,6 +175,10 @@
     fnc_print_star( 2 );
     fnc_print_star( 3 );
     fnc_print_star( 4 );
-    fnc_print_star( 5 );
+    fnc_print_star( 5 ); 
+
+    for ($i = 0; $i <= 5; $i++) { 
+        fnc_print_star( $i ); 
+    }
 
 ?>
