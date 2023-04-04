@@ -57,11 +57,11 @@
 
         $stmt_1 = $obj_conn->query( $sql1 );
         $result_1 = $stmt_1->fetchAll();
-        var_dump( $result_1 );
+        // var_dump( $result_1 );
 
         $stmt_2 = $obj_conn->query( $sql2 );
         $result_2 = $stmt_2->fetchAll();
-        var_dump( $result_2 );
+        // var_dump( $result_2 );
 
         echo "정상 종료";
     } catch( Exception $e ) {
@@ -71,30 +71,6 @@
     } finally {
         $obj_conn = null;
     }
-
-    // try {
-    //     $obj_conn = null;
-    //     my_db_conn( $obj_conn );
-
-    //     $stmt_1 = $obj_conn->query( $sql1 );
-    //     $result_1 = $stmt_1->fetchAll();
-    //     var_dump( $result_1 );
-
-    //     $stmt_2 = $obj_conn->query( $sql2 );
-    //     $result_2 = $stmt_2->fetchAll();
-    //     var_dump( $result_2 );
-
-    // } catch( Exception $e ) {
-    //     echo " ---- 에러 발생 ---- \n";
-    //     echo $e->getMessage();
-    //     echo "\n ---- 에러 발생 ---- \n";
-    // } finally {
-    //     if( empty( $e ) ) {
-    //         echo "정상 종료";
-    //     }
-    //     $obj_conn = null;
-    // }
-
 
 
 
