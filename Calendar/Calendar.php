@@ -79,7 +79,7 @@ echo '</body>';
 	.action a{ text-decoration: none; color:#333; }
 	h1{ text-align:center; }
 	table{ width:100%;}
-	table th,td{ width: 14%; text-align:center; }
+	table th,td{ width: 14%; text-align:center; padding:10%; }
 	table th.wcode_0,table td.wcode_0{ color:red; }
 	table th.wcode_6,table td.wcode_6{ color:blue; }
 	table td.prevnext{ color:#eee; }
