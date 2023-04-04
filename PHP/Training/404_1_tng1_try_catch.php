@@ -45,8 +45,6 @@
 
 
 
-
-
     // 한번에 하기
     $sql1 = " SELECT * FROM department ";
     $sql2 = " SELECT * FROM dept_manager ";
@@ -71,10 +69,5 @@
     } finally {
         $obj_conn = null;
     }
-
-
-
-
-
 
 ?>

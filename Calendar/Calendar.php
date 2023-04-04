@@ -1,12 +1,15 @@
 <?php 
 $date = empty($_GET['date']) ? date('Y-m-d') : $_GET['date'];
+$date1 = empty($_GET['date']) ? date('Y-m') : $_GET['date'];
 $firstDate = date('Y-m-01',strtotime($date));
 $firstDateWcode = date('w',strtotime($firstDate));
 $lastDateDay = date('t', strtotime($date));
 $lastDateWcode = date('w',strtotime( date('Y-m-'.$lastDateDay,strtotime($date)) ));
 
 $prevDate = date('Y-m-d',strtotime("-1 month",strtotime($firstDate)));
+$prevDate1 = date('Y-m',strtotime("-1 month",strtotime($firstDate)));
 $nextDate = date('Y-m-d',strtotime("+1 month",strtotime($firstDate)));
+$nextDate1 = date('Y-m',strtotime("+1 month",strtotime($firstDate)));
 $prevLastDateDay = date('t', strtotime($prevDate));
 
 $week = array();
@@ -44,9 +47,9 @@ while(1){
 echo '
 <body>
 	<div class="action">
-		<a href="?date='.$prevDate.'">이전달</a>
-		<strong>'.$date.'</strong>
-		<a href="?date='.$nextDate.'">다음달</a>
+		<a href="?date='.$prevDate1.'">이전달</a>
+		<strong>'.$date1.'</strong>
+		<a href="?date='.$nextDate1.'">다음달</a>
 	</div>
 	<table>
 		<tr>
