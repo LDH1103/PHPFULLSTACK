@@ -217,40 +217,97 @@
 
     
     // ---------- class ----------
-    class Food {
-        // 접근 제어 지시자
-        // public    : 어디서든(class 밖에서도) 접근 가능
-        // private   : 해당 class 내에서만 접근 가능
-        // protected : class 자기 자신과 상속 클래스 내에서만 접근 가능
+    // class Food {
+    //     // 접근 제어 지시자
+    //     // public    : 어디서든(class 밖에서도) 접근 가능
+    //     // private   : 해당 class 내에서만 접근 가능
+    //     // protected : class 자기 자신과 상속 클래스 내에서만 접근 가능
 
-        // 멤버 변수
-        private $str_name;
-        private $int_price;
+    //     // 멤버 변수
+    //     protected $str_name;
+    //     protected $int_price;
 
-        // 메소드 = calss 안에 있는 함수
-        // setter
-        public function __construct( $param_name, $param_price ) {
-            $this->str_name = $param_name;
-            $this->int_price = $param_price;
+    //     // 메소드 = calss 안에 있는 함수
+    //     // setter
+    //     public function __construct( $param_name, $param_price ) {
+    //         $this->str_name = $param_name;
+    //         $this->int_price = $param_price;
+    //     }
+
+    //     // getter
+    //     public function fnc_print_food() {
+    //         $str = $this->str_name." : ".$this->int_price."원\n";
+    //         echo $str;
+    //     }
+
+    //     public function fnc_modify_price( $param_price ) {
+    //         $this->int_price = $param_price;
+    //     }
+    // }
+
+    // // $obj_food = new Food( "탕수육", 10000 );
+    // // $obj_food->fnc_print_food();
+
+    // // // Food Class 멤버 변수 $int_price의 값을 12000으로 바꾸기
+    // // $obj_food->fnc_modify_price( 12000 );
+    // // $obj_food->fnc_print_food();
+
+    // // 상속 : 부모 클래스의 객체들을 자식 클래스가 상속받아 사용할수 있음
+    // class KoreanFood extends Food { // 부모로부터 상속 받으려면 클래스명 extends 부모 클래스명
+    //     protected $side_dish;
+
+    //     public function __construct( $param_name, $param_price, $param_side_dish ) {
+    //         $this->str_name = $param_name;
+    //         $this->int_price = $param_price;
+    //         $this->side_dish = $param_side_dish;
+    //     }
+
+    //     // 오버라이딩 : 부모 클래스에서 정의된 메소드를 자식 클래스에서 재정의
+    //     public function fnc_print_food() {
+    //         // $str = $this->str_name." : ".$this->int_price."원\n"."반찬 : ".$this->side_dish."\n";
+    //         parent::fnc_print_food(); // 부모 클래스에 있는 fnc_print_food를 실행하겠다
+    //         $str = "반찬 : ".$this->side_dish."\n"; // 부모 클래스의 fnc_print_food에 내용 추가
+    //         echo $str;
+    //     }
+
+    // }
+
+    // $obj_korean_food = new KoreanFood( "치킨", 20000, "치킨무" );
+    // $obj_korean_food->fnc_print_food();
+
+
+    class People {
+        protected $name;
+
+        public function setName( $str_name ) {
+            $this->name = $str_name;
         }
-
-        // getter
-        public function fnc_print_food() {
-            $str = $this->str_name." : ".$this->int_price."원\n";
-            echo $str;
-        }
-
-        public function fnc_modify_price( $param_price ) {
-            $this->int_price = $param_price;
+        public function peoplePrint() {
+            $print_people = "이름 : ".$this->name;
+            echo $print_people;
         }
     }
-    
-    $obj_food = new Food( "탕수육", 10000 );
-    $obj_food->fnc_print_food();
 
-    // Food Class 멤버 변수 $int_price의 값을 12000으로 바꾸기
-    $obj_food->fnc_modify_price( 12000 );
-    $obj_food->fnc_print_food();
+    // $obj_people = new People();
+    // $obj_people->setName( "LDH" );
+    // $obj_people->peoplePrint();
 
+    class Student extends People {
+        protected $id;
+
+        public function setid( $str_name, $str_id ) {
+            $this->name = $str_name;
+            $this->id = $str_id;
+        }
+        public function studentPrint() {
+            parent::peoplePrint();
+            $print_people = "\n"."ID : ".$this->id;
+            echo $print_people;
+        }
+    }
+
+    $obj_student = new Student();
+    $obj_student->setid( "LDH", "aaa" );
+    $obj_student->studentPrint();
 
 ?>
