@@ -140,13 +140,20 @@
 		}
 	}
 	
+	// 변수로 만들어놓기
+	"Player 카드 : ".implode( ", ", $game->player_card )."\n";
+	"Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n\n";
+	"Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
+	"Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
+
 	$input = null;
 	while ( !( $input === 0 ) ) {
+		sleep( 3 );
 		$game = new Blackjack();
-		echo "---------------------새 게임------------------------\n";
-		echo "\nPlayer 카드 : ".implode( ", ", $game->player_card )."\n";
-		echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-		echo "\nDealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
+		echo "---------------------새 게임------------------------\n\n";
+		echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
+		echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n\n";
+		echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
 		echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 
 		while (true) {
@@ -158,12 +165,16 @@
 					break;
 				}
 				echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
-				echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+				echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n\n";
+				echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
+				echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 			} else if ( $input === 2 ) { 
 				if ( !$game->fnc_compare_card() ) { // 2 입력시 21초과일경우 break
 					break;
 				}
-				echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n\n";
+				echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
+				echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n\n";
+				echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
 				echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 				break; 
 			} else if ( $input === 0 ) { // 0 입력시 break
@@ -171,10 +182,10 @@
 			}
 		}
 
-		echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
-		echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-		echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
-		echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
+		// echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
+		// echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+		// echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
+		// echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 		echo "\n".$game->fnc_check_winner()."\n\n";
 		echo "----------------------------------------------------\n";
 	}
