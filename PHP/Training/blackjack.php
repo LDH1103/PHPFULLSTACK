@@ -134,7 +134,7 @@
 				} else if ( count( $this->player_card ) > count( $this->dealer_card ) ) {
 					return "Dealer 승리";
 				} else {
-					return "비겼다!";
+					return "비겼습니다";
 				}
 			}
 		}
