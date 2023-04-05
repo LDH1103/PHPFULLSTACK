@@ -283,32 +283,27 @@
             $this->name = $param_name;
         }
         public function peoplePrint() {
-            $print_people = "이름 : ".$this->name;
-            echo $print_people;
+            echo "이름 : ".$this->name;
+
         }
     }
-
-    $obj_people = new People();
-    $obj_people->setName( "이동호" );
-    $obj_people->peoplePrint();
-    echo "\n\n";
 
     class Student extends People {
         protected $id;
 
-        public function setid( $param_name, $param_id ) {
-            $this->name = $param_name;
+        public function setid( $param_id ) {
             $this->id = $param_id;
         }
         public function studentPrint() {
             parent::peoplePrint();
-            $print_people = "\n"."ID : ".$this->id;
-            echo $print_people;
+            echo "\nID : ".$this->id;
         }
     }
 
     $obj_student = new Student();
-    $obj_student->setid( "이동호", "aaa" );
+    $obj_student->setName( "이동호" );
+    $obj_student->setid( "aaa" );
     $obj_student->studentPrint();
+
 
 ?>
