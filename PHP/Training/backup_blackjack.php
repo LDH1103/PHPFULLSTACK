@@ -32,11 +32,11 @@
 		// 기능 		: 덱 세팅
 		public function fnc_set_deck() {
 			$pattern = array( "♡", "◇", "♧", "♤" );
-			$ranks = array( "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" );
+			$nums = array( "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" );
 			$deck = array();
-			foreach ( $pattern as $suit ) {
-				foreach ( $ranks as $rank ) {
-					array_push( $deck, "$rank$suit" );
+			foreach ( $pattern as $patt ) {
+				foreach ( $nums as $num ) {
+					array_push( $deck, "$num$patt" );
 				}
 			}
 			return $deck;
@@ -152,20 +152,23 @@
 		echo "----------------------------------------------------\n";
 		fscanf( STDIN, "%d\n", $input ); 
 		if ( $input === 1 ) {
-			if ( !$game->fnc_get_card() ) {
+			if ( !$game->fnc_get_card() ) { // 1 입력시 21초과일경우 break
 				break;
 			}
 			echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
-		} elseif ( $input === 2 ) {
-			if ( !$game->fnc_compare_card() ) {
+			echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+		} else if ( $input === 2 ) { 
+			if ( !$game->fnc_compare_card() ) { // 2 입력시 21초과일경우 break
 				break;
 			}
 			echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n\n";
+			echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 			break;
-		} elseif ( $input === 0 ) {
+		} else if ( $input === 0 ) { // 0 입력시 break
 			break;
 		}
 	}
+
 	echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
 	echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
 	echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
@@ -173,4 +176,6 @@
 	echo "\n".$game->fnc_check_winner()."\n\n";
 	echo "----------------------------------------------------";
 	
+	// todo : 0입력 전까지 안끝나게 하기 ------------------------------------
+
 ?>
