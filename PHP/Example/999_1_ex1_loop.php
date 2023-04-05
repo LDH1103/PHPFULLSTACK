@@ -284,7 +284,6 @@
         }
         public function peoplePrint() {
             echo "이름 : ".$this->name;
-
         }
     }
 

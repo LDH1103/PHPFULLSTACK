@@ -73,14 +73,13 @@ foreach($week as $k=>$v){
 echo '</body>';
 ?>
 <style>
-	body{  width:450px; }
-	.action{ text-align:center; margin:10px 0; }
-	.action strong{ font-size:45px; }
+	.action{ text-align:center; margin:0 auto; }
+	.action strong{ font-size:45px; padding:20px; }
 	.action a{ text-decoration: none; color:#333; }
 	h1{ text-align:center; }
-	table{ width:100%;}
-	table th,td{ width: 14%; text-align:center; padding:10%; }
+	table{ width:60%; margin:0 auto;}
+	table th,td{ text-align:start; padding:7%;  }
 	table th.wcode_0,table td.wcode_0{ color:red; }
 	table th.wcode_6,table td.wcode_6{ color:blue; }
-	table td.prevnext{ color:#eee; }
+	table td.prevnext{ color:#bfb9b8; }
 </style>
