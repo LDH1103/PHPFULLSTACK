@@ -288,9 +288,10 @@
         }
     }
 
-    // $obj_people = new People();
-    // $obj_people->setName( "LDH" );
-    // $obj_people->peoplePrint();
+    $obj_people = new People();
+    $obj_people->setName( "이동호" );
+    $obj_people->peoplePrint();
+    echo "\n\n";
 
     class Student extends People {
         protected $id;
@@ -307,7 +308,7 @@
     }
 
     $obj_student = new Student();
-    $obj_student->setid( "LDH", "aaa" );
+    $obj_student->setid( "이동호", "aaa" );
     $obj_student->studentPrint();
 
 ?>
