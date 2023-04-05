@@ -139,43 +139,43 @@
 			}
 		}
 	}
-
-	$game = new Blackjack();
-	echo "----------------------------------------------------";
-	echo "\nPlayer 카드 : ".implode( ", ", $game->player_card )."\n";
-	echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-	echo "\nDealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
-	echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
-
-	while (true) {
-		echo "\n1 : 카드 더받기\n2 : 카드 비교\nO : 게임 종료\n";
-		echo "----------------------------------------------------\n";
-		fscanf( STDIN, "%d\n", $input ); 
-		if ( $input === 1 ) {
-			if ( !$game->fnc_get_card() ) { // 1 입력시 21초과일경우 break
-				break;
-			}
-			echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
-			echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-		} else if ( $input === 2 ) { 
-			if ( !$game->fnc_compare_card() ) { // 2 입력시 21초과일경우 break
-				break;
-			}
-			echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n\n";
-			echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
-			break;
-		} else if ( $input === 0 ) { // 0 입력시 break
-			break;
-		}
-	}
-
-	echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
-	echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-	echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
-	echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
-	echo "\n".$game->fnc_check_winner()."\n\n";
-	echo "----------------------------------------------------";
 	
-	// todo : 0입력 전까지 안끝나게 하기 ------------------------------------
+	while ( !( $input === 0 ) ) {
+		$game = new Blackjack();
+		echo "----------------------------------------------------";
+		echo "\nPlayer 카드 : ".implode( ", ", $game->player_card )."\n";
+		echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+		echo "\nDealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
+		echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
+
+		while (true) {
+			echo "\n1 : 카드 더받기\n2 : 카드 비교\nO : 게임 종료\n";
+			echo "----------------------------------------------------\n";
+			fscanf( STDIN, "%d\n", $input ); 
+			if ( $input === 1 ) {
+				if ( !$game->fnc_get_card() ) { // 1 입력시 21초과일경우 break
+					break;
+				}
+				echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
+				echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+			} else if ( $input === 2 ) { 
+				if ( !$game->fnc_compare_card() ) { // 2 입력시 21초과일경우 break
+					break;
+				}
+				echo "Dealer 카드 : ".implode( ", ", $game->dealer_card )."\n\n";
+				echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
+				break;
+			} else if ( $input === 0 ) { // 0 입력시 break
+				break;
+			}
+		}
+
+		echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
+		echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
+		echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
+		echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
+		echo "\n".$game->fnc_check_winner()."\n\n";
+		echo "----------------------------------------------------\n";
+	}
 
 ?>
