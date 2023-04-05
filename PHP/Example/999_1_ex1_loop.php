@@ -222,7 +222,7 @@
         // public    : 어디서든(class 밖에서도) 접근 가능
         // private   : 해당 class 내에서만 접근 가능
         // protected : class 자기 자신과 상속 클래스 내에서만 접근 가능
-        
+
         // 멤버 변수
         private $str_name;
         private $int_price;
@@ -240,7 +240,7 @@
             echo $str;
         }
 
-        public function fnc_change_price( $param_price ) {
+        public function fnc_modify_price( $param_price ) {
             $this->int_price = $param_price;
         }
     }
@@ -249,10 +249,8 @@
     $obj_food->fnc_print_food();
 
     // Food Class 멤버 변수 $int_price의 값을 12000으로 바꾸기
-
-    $obj_food->fnc_change_price( 12000 );
+    $obj_food->fnc_modify_price( 12000 );
     $obj_food->fnc_print_food();
-
 
 
 ?>
