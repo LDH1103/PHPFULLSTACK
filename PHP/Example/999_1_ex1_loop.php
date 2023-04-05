@@ -279,8 +279,8 @@
     class People {
         protected $name;
 
-        public function setName( $str_name ) {
-            $this->name = $str_name;
+        public function setName( $param_name ) {
+            $this->name = $param_name;
         }
         public function peoplePrint() {
             $print_people = "이름 : ".$this->name;
@@ -296,9 +296,9 @@
     class Student extends People {
         protected $id;
 
-        public function setid( $str_name, $str_id ) {
-            $this->name = $str_name;
-            $this->id = $str_id;
+        public function setid( $param_name, $param_id ) {
+            $this->name = $param_name;
+            $this->id = $param_id;
         }
         public function studentPrint() {
             parent::peoplePrint();
