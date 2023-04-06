@@ -184,10 +184,6 @@
 			}
 		}
 
-		// echo "\nPlayer 카드: ".implode( ", ", $game->player_card )."\n";
-		// echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
-		// echo "\nDealer 카드: ".implode( ", ", $game->dealer_card )."\n";
-		// echo "Dealer 점수 : ".$game->fnc_calculate_score( $game->dealer_card )."\n";
 		echo "\n".$game->fnc_check_winner()."\n\n";
 		echo "----------------------------------------------------\n";
 	}
