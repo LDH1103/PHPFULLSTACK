@@ -1,5 +1,23 @@
-<?php
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post">
+        <label for="post"></label>
+        <input type="submit" value="0" id="input" name="input">
+        <input type="submit" value="1" id="input" name="input">
+        <input type="submit" value="2" id="input" name="input">
+    </form>
+</body>
+</html>
 
+<?php
+    define('STDIN', fopen('php://stdin', 'r'));
 	//블랙잭 게임
 	//-카드 숫자를 합쳐 가능한 21에 가깝게 만들면 이기는 게임
 
@@ -140,7 +158,7 @@
 		}
 	}
 
-	$input = null; // input 초기화
+	$input = (int)$_POST['input']; // input 초기화
 	while( !( $input === 0 ) ) {
 		sleep( 3 );
 		$game = new Blackjack();
@@ -190,6 +208,5 @@
 		echo "\n".$game->fnc_check_winner()."\n\n";
 		echo "----------------------------------------------------\n";
 	}
-
 
 ?>
