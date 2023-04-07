@@ -166,7 +166,7 @@
 				echo "Player 카드 : ".implode( ", ", $game->player_card )."\n";
 				echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
 			} else if( $input === 2 ) { 
-				if( !$game->fnc_compare_card() ) { // 2 입력시 21초과일경우 break
+				if( !$game->fnc_compare_card() ) { // 2 입력시 점수비교
 					echo "\nPlayer 카드 : ".implode( ", ", $game->player_card )."\n";
 					echo "Player 점수 : ".$game->fnc_calculate_score( $game->player_card )."\n";
 					echo "\nDealer 카드 : ".implode( ", ", $game->dealer_card )."\n";
