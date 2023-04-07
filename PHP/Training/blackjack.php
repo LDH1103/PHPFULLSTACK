@@ -65,8 +65,7 @@
 			foreach($havingcard as $card) {
 				// A가 나왔을때 11점을 더하면 게임오버라면 1점만 더하고, 아니라면 11점을 더하기
 				// strpos() : 문자열에서 특정 문자열의 첫 번째 발생 위치를 반환, 문자열이 없다면 false를 반환함
-				if( strpos( $card, "A" 
-				) !== false ) {
+				if( strpos( $card, "A" ) !== false ) {
 					if ($sum + 11 > 21) {
 						$sum += 1;
 					} else {
