@@ -109,17 +109,28 @@
 
 
     // 입력받은 숫자들의 합을 구하는 PHP 코드를 작성하세요.
-    function sum_num() {
-        $args = func_get_args();
-        $sum = 0;
+    // function sum_num() {
+    //     $args = func_get_args();
+    //     $sum = 0;
 
-        foreach ($args as $val) {
-            $sum += $val;
-        }
-        return $sum;
-    }
+    //     foreach ($args as $val) {
+    //         $sum += $val;
+    //     }
+    //     return $sum;
+    // }
     
-    echo sum_num(1,10);
+    // echo sum_num(1,10);
 
+
+    // 파일 확장자에 따라 이미지 파일인지 아닌지를 검사하는 PHP 함수를 작성하십시오. 예를 들어, "image.jpg"는 이미지 파일이고, "document.doc"는 이미지 파일이 아닙니다.
+    function fnc_test( $a ) {
+        if ( strpos($a, ".jpg") !== false ) {
+            echo "이미지 파일입니다.";
+        } else {
+            echo "이미지 파일이 아닙니다.";
+        }
+    }
+
+    fnc_test( "document.doc" );
 
 ?>
