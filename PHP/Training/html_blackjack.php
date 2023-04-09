@@ -160,12 +160,11 @@ if (isset($_POST["player"])) {
     }
 }
 
-// first, check if the form has been submitted
+
 if(isset($_POST["player"])) {
-    // instantiate the Blackjack class
+
     $game = new Blackjack();
     
-    // handle the different form submissions
     switch($_POST["player"]) {
     case "게임 종료":
     echo "<h2>" . $game->fnc_check_winner() . "</h2>";
@@ -185,7 +184,6 @@ if(isset($_POST["player"])) {
     }
     }
     
-    // display the current game status
     echo "<h2>Player Score: " . $game->player_score . "</h2>";
     echo "<pre>" . print_r($game->player_card, true) . "</pre>";
     echo "<h2>Dealer Score: " . $game->dealer_score . "</h2>";
@@ -194,7 +192,6 @@ if(isset($_POST["player"])) {
     
     </body>
     </html>
-    // end of code
 ?>
 
 </body>
