@@ -139,12 +139,6 @@
         }
     }
 
-	
-	if ( session_start() ) {
-		session_unset();
-        session_destroy();
-	}
-
     session_start();
     if ( !isset( $_SESSION['game'] ) || isset( $_POST["new_game"] ) ) {
         $_SESSION['game'] = new Blackjack();
