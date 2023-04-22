@@ -13,18 +13,21 @@
     font-size: 20px;
 }
 .container {
-    margin: 100px 0px;
+    margin: 20vh 0;
 }
 .score {
-    width: 550px;
+    width: 65vw;
+    max-width: 550px;
     margin: 10px auto;
     border: 1px solid rgba(0, 0, 0, 0.226);
     padding: 15px;
 }
 .btns {
-    width: 500px;
+    width: 70vw;
+    min-width: 350px;
+    max-width: 550px;
     text-align: center;
-    margin: 10px auto;
+    margin: auto;
     padding: 15px;
 }
 .top {
@@ -34,8 +37,8 @@
     text-align: center;
 }
 .btn_center {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 .winner_msg {
     color: rgba(255, 0, 0, 0.747);
