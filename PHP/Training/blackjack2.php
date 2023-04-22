@@ -39,10 +39,10 @@
 			$this->player_card = array();
 			$this->dealer_card = array();
 			// 2장씩 나눠주고 덱에서 빼기
-			for($i = 0; $i < 2; $i++) { 
-				array_push( $this->player_card, array_shift( $this->deck ) );
-				array_push( $this->dealer_card, array_shift( $this->deck ) );
-			}
+            array_push( $this->player_card, array_shift( $this->deck ) );
+            array_push( $this->player_card, array_shift( $this->deck ) );
+            array_push( $this->dealer_card, array_shift( $this->deck ) );
+            array_push( $this->dealer_card, array_shift( $this->deck ) );
 			$this->player_score = $this->fnc_calculate_score( $this->player_card );
 			$this->dealer_score = $this->fnc_calculate_score( $this->dealer_card );
 		}
