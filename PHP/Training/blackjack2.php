@@ -132,11 +132,9 @@
 
     // var_dump 보기편하게 줄바꿈
     function pre_dump( $array ) {   
-        if ( $array != "deck" ) {
-            echo "<pre>";
-            echo var_dump($array);
-            echo "</pre>";
-        }
+		echo "<pre>";
+		echo var_dump( $array );
+		echo "</pre>";
     }
 
     session_start();
