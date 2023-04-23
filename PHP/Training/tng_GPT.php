@@ -123,14 +123,38 @@
 
 
     // 파일 확장자에 따라 이미지 파일인지 아닌지를 검사하는 PHP 함수를 작성하십시오. 예를 들어, "image.jpg"는 이미지 파일이고, "document.doc"는 이미지 파일이 아닙니다.
-    function fnc_test( $a ) {
-        if ( strpos($a, ".jpg") !== false ) {
-            echo "이미지 파일입니다.";
-        } else {
-            echo "이미지 파일이 아닙니다.";
-        }
+    // function fnc_test( $a ) {
+    //     if ( strpos($a, ".jpg") !== false ) {
+    //         echo "이미지 파일입니다.";
+    //     } else {
+    //         echo "이미지 파일이 아닙니다.";
+    //     }
+    // }
+
+    // fnc_test( "document.doc" );
+
+    // 두 개의 정수 배열이 주어지면 배열의 모든 요소를 합산하고 결과를 반환하는 함수를 작성하세요.
+    // function sum_array( $param_arr_1, $param_arr_2 ) {
+    //     $sum = 0;
+    //     foreach ( $param_arr_1 as $val ) {
+    //         $sum += $val;
+    //     }
+    //     foreach ( $param_arr_2 as $val ) {
+    //         $sum += $val;
+    //     }
+    //     return $sum;
+    // }
+
+    // $arr_1 = array( 1, 2, 3, 4, 5 );
+    // $arr_2 = array( 1, 2, 3, 4, 5 );
+    // echo sum_array( $arr_1, $arr_2 );
+
+    // 정렬되지 않은 정수 배열이 주어지면 배열에서 가장 큰 두 개의 숫자를 찾는 함수를 작성하세요.
+    function find_max2( $param_arr ) {
+        rsort($param_arr);
+        echo $param_arr[0]." ".$param_arr[1];
     }
 
-    fnc_test( "document.doc" );
-
+    $arr = array( 1, 10, 9, 8, 7, 3, 2, 100 );
+    find_max2( $arr )
 ?>
