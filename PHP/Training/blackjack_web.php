@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Jack</title>
-    <link rel=stylesheet href='blackjack2.css' type='text/css'>
+    <link rel=stylesheet href='blackjack_web.css' type='text/css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
 <body>
@@ -166,7 +166,7 @@
     echo "Dealer : ".$game->fnc_calculate_score( $game->dealer_card )."<br>";
     echo "</div>";
     
-    echo "<form method='POST' action='blackjack2.php'>";
+    echo "<form method='POST' action='blackjack_web.php'>";
     echo "<div class='btns'>";
     echo "<input type='submit' name='new_game' value='새 게임' class='btn btn-outline-dark'>";
     // 플레이어의 점수가 21점 이하고, 카드비교 버튼을 클릭하지 않았을때
