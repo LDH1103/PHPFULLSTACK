@@ -20,13 +20,20 @@ let fontSize = 16;
 document.getElementById( "id_p" ).style.fontSize = fontSize + "px";
 
 function fontBig( fontSizeBefore ) {
-    fontSize = fontSizeBefore + 1;
-    document.getElementById( "id_p" ).style.fontSize = fontSize + "px";
-    return fontSize;
+    if( fontSizeBefore <= 30 ) {
+        fontSize = fontSizeBefore + 1;
+        document.getElementById( "id_p" ).style.fontSize = fontSize + "px";
+    }
 }
 
 function fontSmall( fontSizeBefore ) {
-    fontSize = fontSizeBefore - 1;
+    if( fontSizeBefore > 10 ) {
+        fontSize = fontSizeBefore - 1;
+        document.getElementById( "id_p" ).style.fontSize = fontSize + "px";
+    }
+}
+
+function fontDefault( fontSize ) {
+    fontSize = 16;
     document.getElementById( "id_p" ).style.fontSize = fontSize + "px";
-    return fontSize;
 }
