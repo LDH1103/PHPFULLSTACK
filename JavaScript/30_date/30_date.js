@@ -1,6 +1,7 @@
 // DATE
-// const NOW = new Date(); // 기본형
+const NOW1 = new Date(); // 기본형
 const NOW = new Date( "2023-04-30 15:20:30.123" ); // 날짜를 지정해서 가져올수 있음
+console.log( NOW1 );
 console.log( NOW );
 
 // getFullYear() : 연도만 가져오는 메소드

@@ -40,9 +40,13 @@ console.log( NONELI );
 const TITLE2 = document.querySelector( "h1" );
 const TITLE3 = document.querySelector( "#title" );
 const LI2 = document.querySelector( ".none_li" ); 
+console.log( TITLE2 );
+console.log( TITLE3 );
+console.log( LI2 );
 
 // querySelectorAll() : 모든 요소를 선택
 const LI3 = document.querySelectorAll( ".none_li" );
+console.log( LI3 );
 
 
 // 2. 요소 조작하기
@@ -51,26 +55,26 @@ const LI3 = document.querySelectorAll( ".none_li" );
 const DIV1 = document.querySelector( "#div1" );
 // textContent : 순수한 텍스트 데이터를 전달, 이전의 태그들은 모두 제거
 // 태그도 글자로 인식
-TITLE.textContent = "<span>text로 바꿧지롱~</span>"; 
+TITLE.textContent = "<span>text로 바꿨지롱~</span>"; 
 DIV1.textContent = "텍스트로 넣었어요"; // h2가 사라짐
 
 // innerHTML : 태그는 태그로 인식, 이전의 태그들은 모두 제거
-TITLE.innerHTML = "<span>inner로 바꿧지롱~</span>";
-DIV1.innerHTML = "이너로 넣었어요" // h2가 사라짐
+// TITLE.innerHTML = "<span>inner로 바꿨지롱~</span>";
+// DIV1.innerHTML = "이너로 넣었어요" // h2가 사라짐
 
 
 // 요소에 속성을 추가
-// const IT = document.getElementById( 'it' );
+const IT = document.getElementById( 'it' );
 // IT.setAttribute( "placeholder", "셋어트리뷰트로 삽입" );
 
 const AA = document.getElementById( 'aa' );
-AA.setAttribute( "href", "https://www.naver.com" );
+// AA.setAttribute( "href", "https://www.naver.com" );
 
 
 // 요소의 속성을 제거
-const IT = document.getElementById( 'it' );
-IT.removeAttribute( "placeholder" );
-AA.removeAttribute( "herf" );
+// const IT = document.getElementById( 'it' );
+// IT.removeAttribute( "placeholder" );
+// AA.removeAttribute( "herf" );
 
 // IT.addEventListener( "mouseenter", function() {
 //     IT.setAttribute( "placeholder", "셋어트리뷰트로 삽입" );
@@ -91,7 +95,7 @@ AA.removeAttribute( "herf" );
 // AA.classList.add( "aa1" );
 // AA.classList.add( "aa2" );
 // AA.classList.add( "aa3" );
-AA.classList.add( "aa1", "aa2", "aa3" ); // 한번에 여러 class 추가 가능
+// AA.classList.add( "aa1", "aa2", "aa3" ); // 한번에 여러 class 추가 가능
 
 // 참고 사이트 : mdn
 

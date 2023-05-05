@@ -2,7 +2,7 @@
 console.log( Math.ceil( 3.33 ) );
 
 // Math.round : 반올림
-console.log( Math.round( 3.33 ) );
+console.log( Math.round( 3.5 ) );
 
 // Math.floor : 내림
 console.log( Math.floor( 3.8 ) );
