@@ -1,0 +1,20 @@
+.container_1 {
+    width : 100vw;
+    height : 95vh;
+}
+.msg_1 {
+    width : 90px;
+    height : 90px;
+    background-color : black;
+    position : relative;
+}
+.msg_2 {
+    margin : 0 auto;
+    width : 50px;
+    height : 50px;
+    background-color : white;
+    position : absolute;
+    top : 50%;
+    left : 50%;
+    transform : translate( -50%, -50% );
+}
