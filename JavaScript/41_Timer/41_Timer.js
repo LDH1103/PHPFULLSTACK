@@ -17,14 +17,14 @@ clearInterval( myInterval ); // 인터벌 제거
 // training ------------------------------------------------
 
 // 1 ~ 5를 1초마다 콘솔에 출력
-// let i = 1;
-// const tInterval = setInterval( () => { 
-//     console.log( i ); 
-//     i++; 
-//     if( i > 5 ) { 
-//         clearInterval( tInterval ); 
-//     } 
-// }, 1000 );
+let i = 1;
+const tInterval = setInterval( () => { 
+    console.log( i ); 
+    i++; 
+    if( i > 5 ) { 
+        clearInterval( tInterval ); 
+    } 
+}, 1000 );
 
 
 

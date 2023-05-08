@@ -25,6 +25,10 @@
         const can1 = document.getElementById( "can1" );
         const btn1 = document.getElementById( "btn1" );
         const ctx = can1.getContext( "2d" );
+        can1.addEventListener( "mousedown", draw );
+        can1.addEventListener( "mousemove", draw );
+        can1.addEventListener( "mouseup", draw );
+        can1.addEventListener( "mouseout", draw );
         let drawble = false;
 
         btn1.addEventListener("click", function(){
@@ -45,30 +49,31 @@
         function draw(e){
             function getPosition(){
                 return {
-                X: e.pageX - can1.offsetLeft, 
-                Y: e.pageY - can1.offsetTop
+                    X: e.pageX - can1.offsetLeft, 
+                    Y: e.pageY - can1.offsetTop
                 }
             }
+
             switch(e.type){
-                case "mousedown":{
+            case "mousedown":{
                 drawble = true;
                 ctx.beginPath();
                 ctx.moveTo(getPosition().X, getPosition().Y);
             }
-            break;
+                break;
             case "mousemove":{
                 if(drawble){
                     ctx.lineTo(getPosition().X, getPosition().Y);
                     ctx.stroke();
                 }
             }
-            break;
+                break;
             case "mouseup":
             case "mouseout":{
                 drawble = false;
                 ctx.closePath();
             }
-            break;
+                break;
         }
     }
     </script>

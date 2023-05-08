@@ -79,21 +79,21 @@ btn2.addEventListener( "click", () => {
 
 
 
-// 이벤트 삭제
-// removeEventListner( eventType, function )
-// addEventListener()로 등록된 이벤트의 인수와 같은 인수를 세팅해야 삭제됨
+// // 이벤트 삭제
+// // removeEventListner( eventType, function )
+// // addEventListener()로 등록된 이벤트의 인수와 같은 인수를 세팅해야 삭제됨
 
-// 익명함수는 인식하지못함
+// // 익명함수는 인식하지못함
 // btn3.removeEventListener( "click", () => {
 //     newWindow.close(); 
 // });
 
-// btn3.addEventListener( "click", popUpClose( newWindow ) );
-// btn3.removeEventListener( "click", popUpClose( newWindow ) );
+btn3.addEventListener( "click", () => popUpClose( newWindow ) );
+btn3.removeEventListener( "click", () => popUpClose( newWindow ) );
 
-// function popUpClose( win ) {
-//     win.close();
-// }
+function popUpClose( win ) {
+    win.close();
+}
 
 
 // 이벤트 타입
