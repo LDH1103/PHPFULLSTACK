@@ -49,12 +49,11 @@
 function promise1( str, time ) {
     return new Promise(( resolve ) => {
         setTimeout( () => {
-            console.log( str );
-            resolve( str );
+            resolve( console.log( str ) );
         }, time );
     });
 }
 
 promise1( "A", 3000 )
-.then( () => { return promise1( "B", 2000 ) })
-.then( () => { return promise1( "C", 1000 ) })
+.then( () => promise1( "B", 2000 ) )
+.then( () => promise1( "C", 1000 ) )
