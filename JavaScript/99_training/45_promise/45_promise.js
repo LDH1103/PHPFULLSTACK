@@ -22,34 +22,14 @@
 //     }, 2000 );
 // }, 3000 );
 
-
 // Promise를 이용해서 A, B, C 순서대로 콘솔에 출력
 // ( Promise 함수로 등록해서 구현 )
-
-// function promise1( str, time ) {
-//     return new Promise(( resolve ) => {
-//         setTimeout( () => {
-//             resolve( str );
-//         }, time );
-//     });
-// }
-
-// promise1( "A", 3000 )
-// .then(( str ) => {
-//     console.log( str );
-//     return promise1( "B", 2000 );
-// })
-// .then(( str ) => {
-//     console.log( str );
-//     return promise1( "C", 1000 );
-// })
-// .then(( str ) => console.log( str ));
-
 
 function promise1( str, time ) {
     return new Promise(( resolve ) => {
         setTimeout( () => {
-            resolve( console.log( str ) );
+            console.log( str );
+            resolve();
         }, time );
     });
 }
