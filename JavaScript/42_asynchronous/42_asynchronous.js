@@ -20,15 +20,15 @@
 // console.log( sum() );
 
 // 비동기 처리에서의 콜백 지옥
-// setTimeout( () => { 
-//     console.log("A");
-//     setTimeout( () => {
-//         console.log("B");
-//         setTimeout( () => {
-//             console.log("C");
-//         }, 1000 );
-//     }, 2000 );
-// }, 3000 );
+setTimeout( () => { 
+    console.log("A");
+    setTimeout( () => {
+        console.log("B");
+        setTimeout( () => {
+            console.log("C");
+        }, 1000 );
+    }, 2000 );
+}, 3000 );
 
 // 로그인 콜백 지옥 체험
 const Login = {
