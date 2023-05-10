@@ -31,20 +31,25 @@ function makeList( data ) {
 }
 
 // 에러 처리
-function chkResponse( res ) {
-    return new Promise(( resolve, reject )=> {
-        if( res.ok ) {
-            resolve( res );
-        } else {
-            reject( "API 에러" );
-        }
-    });
+async function getApiData( url ) {
+	fetch( url )
+	.then( res => {
+		if( res.ok ) { // 응답이 200번대 이면 OK
+			return res.json();
+		} else { // 응답이 200번대 이외의 경우 에러 처리
+			throw new Error( 'API 에러' );
+		}
+	})
+	.then( data => makeList( data ) )
+	.catch( alert( '전체 에러' ) );
 }
+
 
 
 function toggle() {
     if( url === "" ) {
         getVal();
+        getApiData( url );
     } else {
         removeImg();
         url = "";
