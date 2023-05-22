@@ -1,0 +1,1 @@
+xcopy D:\workspace\PHPFULLSTACK\Laravel C:\Apache24\htdocs /H /Y /F /E /exclude:D:\workspace\PHPFULLSTACK\Laravel\exclude.txt
