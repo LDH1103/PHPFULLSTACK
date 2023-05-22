@@ -156,14 +156,19 @@ Route::get('/makesign', function() {
 
     // 서명된 URL 링크 생성하기
     // $signUrl = URL::signedRoute('inviations', ['inviation' => 5816, 'group' => 678]);
+    // URL::signedRoute() 함수를 사용하여 'sign' 라우트의 서명된 URL을 생성하고 $signUrl 변수에 저장
     $signUrl = URL::signedRoute('sign');
 
     // 유효기간이 있는 서명된 URL 링크 생성하기
+    // URL::temporarySignedRoute() 함수를 사용하여 'sign' 라우트의 유효기간이 있는 서명된 URL을 생성하고 $limitSignUrl 변수에 저장
+    // now()->addSecond(10)를 사용하여 현재 시간으로부터 10초 후에 URL이 만료되도록 설정
     $limitSignUrl = URL::temporarySignedRoute('sign', now()->addSecond(10));
 
     return $baseUrl . '<br><br> ' . $signUrl . '<br><br>' . $limitSignUrl . '<br><br><a href="' . $limitSignUrl . '">유효기간이 있는 서명된 URL</a>';
 });
 
+// /sign 경로에 GET 요청이 오면 'Sign!!' 문자열을 반환함
+// 이 라우트는 'sign' 이라는 이름을 가지며 'signed' 미들웨어를 통해 서명된 요청만 허용함
 Route::get('/sign', function() {
     return 'Sign!!';
 })->name('sign')->middleware('signed');
