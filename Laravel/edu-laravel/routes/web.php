@@ -195,3 +195,4 @@ Route::resource('/tasks', TasksController::class);
 // --------------------------
 use App\Http\Controllers\BladeController;
 Route::get('/blade', [BladeController::class, 'index'])->name('blade.index');
+
