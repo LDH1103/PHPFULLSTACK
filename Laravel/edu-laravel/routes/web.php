@@ -161,7 +161,7 @@ Route::get('/makesign', function() {
     // 유효기간이 있는 서명된 URL 링크 생성하기
     $limitSignUrl = URL::temporarySignedRoute('sign', now()->addSecond(10));
 
-    return $baseUrl . '<br><br> ' . $signUrl . '<br><br>' . $limitSignUrl . '<br><br><a href="' . $limitSignUrl . '">유효기간이 있는 서명된 URL</a>';
+    return $baseUrl . '<br><br>' . $signUrl . '<br><br>' . $limitSignUrl . '<br><br><a href="' . $limitSignUrl . '">유효기간이 있는 서명된 URL</a>';
 });
 
 Route::get('/sign', function() {
