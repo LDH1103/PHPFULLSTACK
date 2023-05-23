@@ -42,6 +42,7 @@
     @endfor
 @endsection
 
+{{-- foreach와 forelse의 경우, $loop라는 변수가 자동으로 생성됨 --}}
 @section('foreach')
     <hr>
     <h5>foreach</h5>
@@ -53,7 +54,6 @@
     @endforeach
 @endsection
 
-{{-- foreach와 forelse의 경우, $loop라는 변수가 자동으로 생성됨 --}}
 @section('forelse')
     <hr>
     <h5>forelse</h5>
