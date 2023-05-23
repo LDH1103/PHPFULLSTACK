@@ -1,1 +1,9 @@
 .git
+bootstrap
+config
+database
+lang
+public
+storage
+tests
+vendor
