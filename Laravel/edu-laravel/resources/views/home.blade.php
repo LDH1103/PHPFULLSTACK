@@ -12,7 +12,7 @@
     <br>
     <br>
     <form action="/method" method="POST">
-        <!-- csrf : form태그 안에 @csrf를 적어줘야 정상적으로 작동함, 서큐리티 문제때문 -->
+        {{-- <!-- csrf : form태그 안에 @csrf를 적어줘야 정상적으로 작동함, 서큐리티 문제때문 --> --}}
         @csrf
         <button type="submit">POST</button>
     </form>

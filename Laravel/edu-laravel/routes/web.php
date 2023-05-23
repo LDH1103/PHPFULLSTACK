@@ -93,7 +93,7 @@ Route::get('/segment/{id}', function($id) {
 // URL 세그먼트로 지정 파라미터 획득 : 기본값 설정(404 ERROR 안뜨게)
 // Route::get('/segment2/{id?}', function($id = 'base') {
 //     return 'segment2 ID : '.$id;
-// }); 
+// });
 
 // Request로도 세그먼트 파라미터 획득 가능, 세그먼트 파라미터가 없어도 404 ERROR 발생 안함
 Route::get('/segment2/{id?}', function(Request $request) {
@@ -103,11 +103,11 @@ Route::get('/segment2/{id?}', function(Request $request) {
     // } else {
     //     return 'segment2 ID : '.$request->id;
     // }
-}); 
+});
 
 
 // -----------------------------------
-// 라우트의 이름 지정 : Controller나 View에서 사용할떄 
+// 라우트의 이름 지정 : Controller나 View에서 사용할떄
 // -----------------------------------
 Route::get('/names/home', function() {
     return view('nameshome');
@@ -168,3 +168,10 @@ Route::get('/sign', function() {
     return 'Sign!!';
 })->name('sign')->middleware('signed');
 // })->name('inviations')->middleware('signed');
+
+// --------------------------------
+// 컨트롤러
+// --------------------------------
+// 커맨드로 컨트롤러 생성 : php artisan make:controller TestController
+use App\Http\Controllers\TestController;
+Route::get('/test', [TestController::class, 'index'])->name('tests.index');
