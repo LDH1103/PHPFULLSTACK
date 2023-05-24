@@ -48,6 +48,16 @@
 @endsection
 
 {{-- foreach와 forelse의 경우, $loop라는 변수가 자동으로 생성됨 --}}
+{{-- + 
+    $loop->index : 현재 반복의 인덱스 (0부터 시작)
+    $loop->iteration : 현재 반복의 번호 (1부터 시작)
+    $loop->remaining : 현재 반복 이후의 남은 반복 횟수
+    $loop->count : 전체 반복 횟수
+    $loop->first : 첫 번째 반복인지 여부 (boolean)
+    $loop->last : 마지막 반복인지 여부 (boolean)
+    $loop->depth : 중첩된 반복문의 깊이 (첫 번째 반복문은 1, 두 번째 반복문은 2, ...)
+    $loop->parent : 상위 반복문의 $loop 변수 
+--}}
 @section('foreach')
     <hr>
     <h5>foreach</h5>
