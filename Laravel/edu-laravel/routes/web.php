@@ -245,13 +245,13 @@ Route::resource('/tasks', TasksController::class);
 //DELETE          tasks/{task} ............................................... tasks.destroy › TasksController@destroy
 //GET|HEAD        tasks/{task}/edit ................................................ tasks.edit › TasksController@edit
 
-// + GET /tasks: 모든 리소스의 목록을 반환하는 액션 (index)
-// + GET /tasks/create: 리소스 생성을 위한 폼을 표시하는 액션 (create)
-// + POST /tasks: 새로운 리소스를 저장하는 액션 (store)
-// + GET /tasks/{id}: 특정 리소스의 세부 정보를 반환하는 액션 (show)
-// + GET /tasks/{id}/edit: 리소스를 수정하기 위한 폼을 표시하는 액션 (edit)
-// + PUT /tasks/{id} 또는 PATCH /tasks/{id}: 기존 리소스를 업데이트하는 액션 (update)
-// + DELETE /tasks/{id}: 특정 리소스를 삭제하는 액션 (destroy)
+// + GET /tasks : 모든 리소스의 목록을 반환하는 액션 (index)
+// + GET /tasks/create : 리소스 생성을 위한 폼을 표시하는 액션 (create)
+// + POST /tasks : 새로운 리소스를 저장하는 액션 (store)
+// + GET /tasks/{id} : 특정 리소스의 세부 정보를 반환하는 액션 (show)
+// + GET /tasks/{id}/edit : 리소스를 수정하기 위한 폼을 표시하는 액션 (edit)
+// + PUT /tasks/{id} 또는 PATCH /tasks/{id} : 기존 리소스를 업데이트하는 액션 (update)
+// + DELETE /tasks/{id} : 특정 리소스를 삭제하는 액션 (destroy)
 
 // --------------------------
 // 블레이드 템플릿
