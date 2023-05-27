@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // 초기 데이터 삽입용 시더 호출
-        $this->call(CategorySeeder::class);
+        // $this->call(CategorySeeder::class);
 
         // 더미 데이터 삽입용 팩토리 호출
         \App\Models\Board::factory(20000)->create();

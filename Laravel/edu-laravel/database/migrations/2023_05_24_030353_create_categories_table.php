@@ -31,7 +31,7 @@ return new class extends Migration
             $table->id();
             $table->char('no', 1)->unique();
             $table->string('name', 30)->unique();
-            $table->char('active_flg', 1)->default('1');
+            $table->char('active_flg', 1)->default('1'); 
         });
     }
 
