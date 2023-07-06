@@ -8,13 +8,15 @@
     <h4 :style="styleR">{{ product2 }}</h4>
     <p>{{ price2 }}원</p>
   </div> -->
-  <div v-for="item in products" :key="item">
+  <!-- <div v-for="item in products" :key="item"> -->
+  <div>
     <!-- 값만 -->
-    <!-- <h4 v-for="name in products" :key="name">{{ name }}</h4>  -->
+    <!-- <h4 v-for="item in products" :key="item">{{ item.name }}</h4>  -->
+    <h4 v-for="item in products" :key="item">{{ item }}</h4> 
     <!-- 인덱스 -->
-    <!-- <h4 v-for="(name, i) in products" :key="name">{{ i }}</h4> -->
-    <h4>{{ item.name }}</h4>
-    <p>{{ item.price }}원</p>
+    <!-- <h4 v-for="(item, i) in products" :key="i">{{ i }}</h4> -->
+    <!-- <h4>{{ item.name }}</h4>
+    <p>{{ item.price }}원</p> -->
   </div>
 </template>
 
@@ -28,7 +30,7 @@ export default {
         ,{name : '바지', price : '5000'}
         ,{name : '점퍼', price : '10000'}
       ]
-      // ,product1 : '양말'
+      // product1 : '양말'
       // ,price1 : '3800'
       // ,product2 : '바지'
       // ,price2 : '5000'
