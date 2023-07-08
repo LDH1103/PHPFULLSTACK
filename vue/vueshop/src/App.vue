@@ -10,7 +10,7 @@
   <!-- 부모가 데이터 바인딩한 데이터 자식에 보내주기  -->
   <!-- :보내줄 이름="보내줄 변수" -->
   <!-- <Navi :product1="product1"/> -->
-  <Navi :navList="navList"/>
+  <Navi :navList="navList" />
   <!-- <Navi></Navi>랑 같음 -->
 
   <!-- 모달 -->
@@ -48,11 +48,11 @@
     <p>{{ price2 }}원</p>
   </div> -->
   <!-- <div> -->
-    <!-- 값만 -->
-    <!-- <h4 v-for="item in products" :key="item">{{ item.name }}</h4>  -->
-    <!-- <h4 v-for="item in products" :key="item">{{ item }}</h4>  -->
-    <!-- 인덱스 -->
-    <!-- <h4 v-for="(item, i) in products" :key="i">{{ i }}</h4> -->
+  <!-- 값만 -->
+  <!-- <h4 v-for="item in products" :key="item">{{ item.name }}</h4>  -->
+  <!-- <h4 v-for="item in products" :key="item">{{ item }}</h4>  -->
+  <!-- 인덱스 -->
+  <!-- <h4 v-for="(item, i) in products" :key="i">{{ i }}</h4> -->
   <!-- <div v-for="item in products" :key="item">
     <h4>{{ item.name }}</h4>
     <p>{{ item.price }}원</p>
@@ -60,22 +60,23 @@
 
   <!-- if -->
   <!-- <p v-if="1 === '1'">if문 테스트</p> -->
-  <Modal @closeModal="modalFlg = false" :modalFlg="modalFlg" :productNum="productNum" :products="products" @countPlus="plus(productNum)" @countMinus="minus(productNum)"/>
-  <ProductList :product="product" @toggleModal="modalToggle(i)" @product="productNum = i" v-for="(product, i) in products" :key="i"/>
+  <Modal @closeModal="modalFlg = false" :modalFlg="modalFlg" :productNum="productNum" :products="products"
+    @countPlus="plus(productNum)" @countMinus="minus(productNum)" />
+  <ProductList :product="product" @toggleModal="modalToggle(i)" @product="productNum = i" v-for="(product, i) in products"
+    :key="i" />
   <!-- 이벤트 핸들러 -->
   <!-- <div v-for="(item, i) in products" :key="item">
     <img :src="require(`@/assets/${item.img}`)" alt="이미지" style="width : 200px;"> -->
-    <!-- <img :src="item.img" alt="이미지" style="width : 200px;"> -->
-    <!-- <h4 @click="modalToggle(i)" class="pointer">{{ item.name }}</h4>
+  <!-- <img :src="item.img" alt="이미지" style="width : 200px;"> -->
+  <!-- <h4 @click="modalToggle(i)" class="pointer">{{ item.name }}</h4>
     <p>{{ item.price }}원</p>
     <p>{{ item.count }}개</p>
     <br> -->
-    <!-- <button v-on:click="item.count++">수량증가</button> -->
-    <!-- <button v-on:click="item.count--">수량감소</button> -->
-    <!-- <button @click="item.count++">수량증가</button> -->
-    <!-- <button @click="item.count--">수량감소</button> -->
+  <!-- <button v-on:click="item.count++">수량증가</button> -->
+  <!-- <button v-on:click="item.count--">수량감소</button> -->
+  <!-- <button @click="item.count++">수량증가</button> -->
+  <!-- <button @click="item.count--">수량감소</button> -->
   <!-- </div> -->
-
 </template>
 
 <script>
@@ -91,8 +92,8 @@ export default {
   name: 'App',
   data() { // 데이터 바인딩
     return {
-      navList : ['홈', '상품', '기타']
-      ,products : data // import로 받아온 data 사용
+      navList: ['홈', '상품', '기타']
+      , products: data // import로 받아온 data 사용
       // products : [
       //   // {name : '티셔츠', price : '3800', count : 1, img : '티셔츠.jpg'}
       //   // ,{name : '바지', price : '5000', count : 1, img : '바지.jpg'}
@@ -101,39 +102,39 @@ export default {
       //   ,{name : '바지', price : '5000', count : 1, img : require('@/assets/바지.jpg')}
       //   ,{name : '점퍼', price : '10000', count : 1, img : require('@/assets/점퍼.jpg')}
       // ]
-      ,product1 : '양말'
+      , product1: '양말'
       // ,price1 : '3800'
       // ,product2 : '바지'
       // ,price2 : '5000'
       // ,styleR : 'color : red'
-      ,modalFlg : false
-      ,productNum : 0
+      , modalFlg: false
+      , productNum: 0
     }
   },
   // 함수를 설정하는 영역
-  methods : {
+  methods: {
     plus(i) {
       this.products[i].count++;
     }
-    ,minus(i){
-      if(this.products[i].count > 0) {
+    , minus(i) {
+      if (this.products[i].count > 0) {
         this.products[i].count--;
       }
     }
-    ,modalToggle(i) {
+    , modalToggle(i) {
       this.modalFlg = !this.modalFlg;
       this.productNum = i;
     }
-    ,modalClose(i) {
+    , modalClose(i) {
       this.modalFlg = false;
       this.products[i].count = 1;
     }
   },
   // 컴포넌트 정의
-  components : {
+  components: {
     Navi
-    ,ProductList
-    ,Modal
+    , ProductList
+    , Modal
   }
 }
 </script>
