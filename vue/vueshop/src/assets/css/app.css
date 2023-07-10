@@ -30,3 +30,54 @@
 button, h4 {
     cursor: pointer;
 }
+
+/* 0710 */
+.discount {
+    background: beige;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+/* .startTransition {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.endTransition {
+    opacity: 1;
+} */
+
+/* <Transition에 이름주기> */
+/* 등장 애니메이션 */
+/* name-enter-(from, active, to) */
+/* 시작하기 전의 상태 */
+.modalTransition-enter-from {
+    /* opacity: 0; */
+    transform: translateY(1000px);
+}
+/* 어떻게 효과를 줄지 */
+.modalTransition-enter-active {
+    transition: all 1s;
+}
+/* 최종 상태 */
+.modalTransition-enter-to {
+    /* opacity: 1; */
+    transform: translateY(0px);
+
+}
+
+/* 퇴장 애니메이션 */
+.modalTransition-leave-from {
+    /* opacity: 1; */
+    transform: translateY(0px);
+}
+.modalTransition-leave-active {
+    transition: all 1s;
+}
+.modalTransition-leave-to {
+    /* opacity: 0; */
+    transform: translateY(1000px);
+}
+/* /0710 */

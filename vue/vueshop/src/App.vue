@@ -13,6 +13,24 @@
   <Navi :navList="navList" />
   <!-- <Navi></Navi>랑 같음 -->
 
+  <!-- 0710 -->
+  <button @click="hookTest = !hookTest">훅 테스트{{ hookTest }}</button>
+  <div class="discount" v-if="flg">
+    <p>지금 당장 구매하시면, {{ int }}% 할인</p>
+  </div>
+  <br>
+  <!-- @input을 사용한 방법 -->
+  <!-- 이벤트가 발생하면 vue는 자동으로 $event변수를 생성함 -->
+  <!-- <input type="text" @input="inputTest = $event.target.value" :value="inputTest"> -->
+
+  <!-- v-model을 사용한 방법 -->
+  <!-- v-model을 사용한 방법은 글자가 완전히 작성되어야함 -->
+  <!-- <input type="text" v-model="inputTest"> -->
+  <br>
+  <span>{{ inputTest }}</span>
+  <br>
+  <!-- /0710 -->
+
   <!-- 모달 -->
   <!-- <div class="bg_black" v-if="modalFlg">
     <div class="bg_white">
@@ -60,10 +78,26 @@
 
   <!-- if -->
   <!-- <p v-if="1 === '1'">if문 테스트</p> -->
-  <Modal @closeModal="modalFlg = false" :modalFlg="modalFlg" :productNum="productNum" :products="products"
-    @countPlus="plus(productNum)" @countMinus="minus(productNum)" />
-  <ProductList :product="product" @toggleModal="modalToggle(i)" @product="productNum = i" v-for="(product, i) in products"
-    :key="i" />
+  <!-- modalFlg가 true일때만 endTransition class를 줌 -->
+  <!-- <div class="startTransition" :class="{endTransition : modalFlg}"> -->
+  <Transition name="modalTransition">
+    <Modal 
+      @closeModal="modalFlg = false" 
+      :modalFlg="modalFlg" 
+      :productNum="productNum" 
+      :products="products"
+      @countPlus="plus(productNum)" 
+      @countMinus="minus(productNum)" 
+    />
+  </Transition>
+  <!-- </div> -->
+  <ProductList 
+    :product="product" 
+    @toggleModal="modalToggle(i)"
+    @product="productNum = i" 
+    v-for="(product, i) in products"
+    :key="i" 
+  />
   <!-- 이벤트 핸들러 -->
   <!-- <div v-for="(item, i) in products" :key="item">
     <img :src="require(`@/assets/${item.img}`)" alt="이미지" style="width : 200px;"> -->
@@ -92,7 +126,13 @@ export default {
   name: 'App',
   data() { // 데이터 바인딩
     return {
-      navList: ['홈', '상품', '기타']
+      // 0710
+      inputTest : ''
+      ,hookTest: false
+      ,flg: false
+      ,int: 20
+      // /0710
+      ,navList: ['홈', '상품', '기타']
       , products: data // import로 받아온 data 사용
       // products : [
       //   // {name : '티셔츠', price : '3800', count : 1, img : '티셔츠.jpg'}
@@ -111,8 +151,29 @@ export default {
       , productNum: 0
     }
   },
+  // 0710
+  // 실시간 감시 함수 정의 영역
+  watch: {
+    inputTest(input) {
+      if( input == 3 ) {
+        alert('333');
+        this.inputTest = '';
+      }
+    }
+  }
+  // 업데이트 되면 실행되는 함수
+  ,updated() {
+    this.flg = true
+  }
+  ,mounted() {
+    let interval = setInterval(() => {
+      this.int--;
+      if(this.int == 0) clearInterval(interval);
+    }, 1000);
+  }
+  // /0710
   // 함수를 설정하는 영역
-  methods: {
+  ,methods: {
     plus(i) {
       this.products[i].count++;
     }
