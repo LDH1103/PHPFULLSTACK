@@ -22,7 +22,7 @@
 
         <!-- 글 작성 -->
         <div>
-            <textarea class="write-box" name="content" id="content" placeholder="글쓰세요"></textarea>
+            <textarea v-model="content" @input="$store.commit('changePostContent', content)" class="write-box" name="content" id="content" placeholder="글쓰세요"></textarea>
         </div>
     </div>
 
@@ -61,12 +61,13 @@ export default {
                 ,"walden"
                 ,"willow"
                 ,"xpro2"
-            ]
+            ],
+            content : '',
         }
     },
     components: {
         PostComponent
-    }
+    },
 }
 </script>
 <style>

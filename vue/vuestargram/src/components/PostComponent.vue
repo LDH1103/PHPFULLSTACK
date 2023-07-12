@@ -2,7 +2,7 @@
     <!-- {{ $store.state.boardData }} -->
     <div class="post" v-for="data in $store.state.boardData" :key="data">
         <!-- 이미지 -->
-        <div class="post-img" :style="{ backgroundImage: `url(${data.img})` }"></div>
+        <div class="post-img" :class="data.filter" :style="{ backgroundImage: `url(${data.img})` }"></div>
 
         <div class="post-content">
             <p>좋아요 {{data.likes}}</p>

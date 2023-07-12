@@ -7,9 +7,10 @@
     <ul>
       <li class="header-button header-button-left" @click="$store.commit('changeTabFlg', 0); $store.commit('changeNone');" v-if="$store.state.tabFlg != 0">취소</li>
       <li>
-        <img class="logo" alt="Vue logo" src="./assets/logo.png">
+        <img class="logo" alt="Vue logo" src="./assets/logo.png" style="cursor: pointer;" @click="refreshPage">
       </li>
       <li class="header-button header-button-right" @click="$store.commit('changeTabFlg', 2);" v-if="$store.state.tabFlg == 1">다음</li>
+      <li class="header-button header-button-right" @click="$store.dispatch('writeContent');" v-if="$store.state.tabFlg == 2">작성</li>
     </ul>
   </div>
 
@@ -24,7 +25,7 @@
   <div class="footer">
     <div class="footer-button-store">
       <label for="file" class="label-store">+</label>
-      <input @change="updateImg" accept="image/*" type="file" id="file" class="input-file">
+      <input @change="updateImgUrl" accept="image/*" type="file" id="file" class="input-file">
     </div>
   </div>
 </template>
@@ -34,22 +35,29 @@ import ConteinerComponent from './components/ConteinerComponent';
 
 export default {
   name: 'App',
+  // created() {
+  //   // 초기데이터 가져오기
+  //   // actions에 접근 : dispatch
+  //   this.$store.dispatch('getMainList');
+  // },
   created() {
-    // 초기데이터 가져오기
-    // actions에 접근 : dispatch
     this.$store.dispatch('getMainList');
   },
   components: {
     ConteinerComponent
   },
   methods: {
-    updateImg(e) {
+    updateImgUrl(e) {
       let file = e.target.files;
       let imgUrl = URL.createObjectURL(file[0]);
       this.$store.commit('changeImgUrl', imgUrl);
       this.$store.commit('changeTabFlg', 1);
+      this.$store.commit('changePostImg', file[0]);
       e.target.value = '';
-    }
+    },
+    refreshPage() {
+      window.location.reload();
+    },
   },
 }
 </script>
