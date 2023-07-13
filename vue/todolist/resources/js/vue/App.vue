@@ -85,9 +85,7 @@ export default {
             axios.delete('http://localhost:8000/api/items/' + id)
             .then(res => {
                 const index = this.listData.findIndex(item => item.id === id);
-                if (index !== -1) {
-                    this.listData.splice(index, 1);
-                }
+                this.listData.splice(index, 1);
                 this.loading = false;
             })
             .catch( err => { 
@@ -109,9 +107,7 @@ export default {
             axios.put('http://localhost:8000/api/items/' + data.id, udtData)
             .then(res => {
                 const index = this.listData.findIndex(item => item.id === data.id);
-                if (index !== -1) {
-                    this.listData[index].completed = !data.completed;
-                }
+                this.listData[index].completed = !data.completed;
                 this.loading = false;
             })
             .catch( err => { 
@@ -149,11 +145,11 @@ export default {
     background-color: rgba(120, 159, 255, 0.103);
     display: grid;
     grid-template-columns: 0.5fr 5fr 0.5fr;
-    border-top: 1px solid #000;
+    border-top: 1px solid #00000026;
 }
 
 .list:last-child {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #00000026;
 }
 
 .divContent {
