@@ -16,4 +16,20 @@ foreach ($result_arr as $val) {
     echo $val . " = 7 \n";
 }
 
+// ------------------------------------------
+
+// function find_odd($int_1, $int_2) {
+//     $result = '';
+
+//     for ($i = $int_1; $i < $int_2; $i++) {
+//         if ($i % 2 !== 0) {
+//             $result .= $i . ' ';
+//         }
+//     }
+
+//     return $result;
+// }
+
+// echo find_odd(2, 30);
+
 ?>
