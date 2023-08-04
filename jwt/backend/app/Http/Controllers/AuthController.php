@@ -32,8 +32,9 @@ class AuthController extends Controller
         Log::debug('------ issueToken End ------');
 
         $res = [
-            'errflg' => '0'
-            ,'token' => $token
+            'errflg'    => '0'
+            ,'token'    => $token
+            ,'user_id'  => $req->id
         ];
 
         return response(json_encode($res), 200);
