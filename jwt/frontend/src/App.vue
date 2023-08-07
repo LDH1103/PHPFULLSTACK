@@ -48,15 +48,17 @@ export default {
       if (id === '') {
         this.err = '아이디를 입력해주세요.';
       } else {
-        axios.get('http://localhost:8003/api/token?id=' + id)
+        axios.get('http://localhost:8000/api/token?id=' + id)
         .then(res => {
           console.log(res.data);
           this.user_id = res.data.user_id;
           this.input_id = '';
           this.token = res.data.token;
         })
-        .catch(error => {
-          console.error(error);
+        .catch(err => {
+          if (err.status >= 400) {
+            console.log(err);
+          }
         });
       }
     },
