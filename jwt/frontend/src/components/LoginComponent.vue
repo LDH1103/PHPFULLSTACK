@@ -15,7 +15,7 @@ export default {
     },
     methods: {
         btn() {
-            this.dispatch('login', this.id);
+            this.$store.dispatch('login', this.id);
         },
     },
 }

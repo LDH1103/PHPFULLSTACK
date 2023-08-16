@@ -25,6 +25,8 @@
       <div v-if="err !== ''" style="color: red;">{{ err }}</div>
     </div> -->
     <router-view />
+    <br>
+    <button @click="home()">홈으로</button>
   </div>
 </template>
 
@@ -51,6 +53,9 @@ export default {
     },
     logout() {
       router.push('login');
+    },
+    home() {
+      router.push('/');
     },
     // login() {
     //   axios.get('http://localhost:8000/api/token?id=mimimi')
